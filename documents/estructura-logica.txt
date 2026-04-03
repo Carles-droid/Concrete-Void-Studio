@@ -1,0 +1,1837 @@
+
+Estructura Home Page
+
+1. Hero
+
+**Eyebrow
+Estudio de arquitectura corporal
+
+**Título (Brand Statement)
+Arquitectura inscrita en la piel
+
+**Texto breve
+Concrete Void Studio opera desde 19.4326° N / 99.1332° W — 2240 m, en Ciudad de México. Desde esta latitud urbana exploramos el tatuaje como arquitectura: estructuras de tinta diseñadas para habitar la piel.
+
+**Elementos
+imagen fuerte (tatuaje geométrico / brutalista)
+botón primario: Iniciar intervención
+botón secundario: Explorar archivo
+
+-------------------------------------------------------------------------------------------
+2. Statement visual
+
+Bloque muy corto para reforzar identidad.
+
+**Texto
+El cuerpo se convierte en superficie arquitectónica.
+La piel es el concreto donde se inscriben estas estructuras.
+
+**Visual
+fotografía a pantalla completa
+o composición gráfica brutalista
+
+-------------------------------------------------------------------------------------------
+3. Archivo (preview galería)
+
+**Eyebrow
+Arquitecturas desarrolladas
+
+**Título
+Archivo
+
+**Texto
+Registro visual de intervenciones donde la tinta se convierte en estructura, volumen y memoria.
+
+**Contenido
+grid de 6 tatuajes
+hover minimalista
+
+Botón:
+Explorar archivo completo
+-------------------------------------------------------------------------------------------
+Ajuste adicional (muy recomendable)
+Entre Archivo y Arquitectos puedes añadir una línea divisoria conceptual muy sutil:
+Ejemplo:
+Las estructuras no aparecen.
+Se diseñan.
+Esto prepara al usuario para la sección Arquitectos.
+-------------------------------------------------------------------------------------------
+4.  Arquitectos (preview artistas)
+
+**Eyebrow
+Arquitectos de la tinta
+
+**Título
+Arquitectos
+
+**Texto
+Autores de cada intervención. Cada artista desarrolla un lenguaje visual propio dentro del universo estructural del estudio.
+
+**Contenido 3 artistas
+cards de artistas
+foto + nombre + estilo
+
+**Botón
+Conocer a los arquitectos
+
+-------------------------------------------------------------------------------------------
+5. Filosofía del estudio
+
+En este bloque se muestra el manifiesto completo.
+
+**Título
+Arquitectura, memoria y decadencia
+
+Manifiesto completo:
+"…………"
+
+-------------------------------------------------------------------------------------------
+6. Intervención (CTA principal)
+
+Bloque de acción principal.
+
+**Eyebrow
+Intervenir la superficie
+
+**Título
+Iniciar una intervención
+
+**Texto
+Toda estructura comienza como un proyecto.
+Solicita tu intervención y desarrolla una pieza pensada para habitar tu piel.
+
+**Botón principal
+Solicitar intervención
+
+-------------------------------------------------------------------------------------------
+7. Protocolo (FAQ preview)
+
+**Eyebrow
+Directrices de la intervención
+
+**Título
+Protocolo
+
+**Contenido
+3 preguntas frecuentes:
+¿Cómo solicitar una intervención?
+¿Cuánto tiempo toma el proceso?
+¿Cómo prepararse para la sesión?
+
+**Botón
+Ver protocolo completo
+
+-------------------------------------------------------------------------------------------
+8. Brand statement final
+
+Bloque editorial antes del footer.
+
+**Texto grande
+Arquitecturas visuales destinadas a habitar la piel.
+
+-------------------------------------------------------------------------------------------
+9. Footer
+
+**Logo Secundario
+**Brand statement
+Construcciones para un mundo en ruinas
+
+**Contenido
+navegación
+redes
+contacto
+coordenadas 
+copyright
+info del desarrollador (INSOMNE)
+
+-------------------------------------------------------------------------------------------
+La home guía al usuario en este orden:
+
+Concepto (hero)
+Identidad visual
+Obra (galería)
+Filosofía
+Autores
+Acción (booking)
+Confianza (FAQ)
+
+-------------------------------------------------------------------------------------------
+Ubicación de logos:
+
+**Logo primario
+Uso institucional principal.
+
+Aparece en:
+Header / Navbar
+Hero (versión grande o marca de agua opcional)
+Página de inicio (primer scroll)
+
+**Logo secundario
+Uso conceptual / editorial.
+
+Aparece en:
+Footer
+Sección manifiesto
+
+Funciones:
+refuerzo de marca
+elemento gráfico atmosférico
+
+
+-------------------------------------------------------------------------------------------
+Estructura del Header
+1. Tipo de header
+
+Sticky header (permanece visible al hacer scroll).
+
+Comportamiento recomendado:
+fondo transparente en hero
+cambia a fondo sólido oscuro después del primer scroll
+reducción ligera de altura al hacer scroll
+
+2. Layout del header
+
+Estructura horizontal en 3 zonas.
+[ LOGO ]      [ NAVEGACIÓN ]      [ CTA ]
+
+3. Zona izquierda — Identidad
+
+Elemento:
+Logo primario
+
+Características:
+versión horizontal
+altura aproximada: 28–36px
+clic dirige a Estructura (home)
+
+Debajo del logo puede aparece un micro descriptor muy sutil que desaparece al hacer scroll:
+Concrete Void Studio
+CDMX · 19.4326°N
+
+4. Zona central — Navegación principal
+
+Estructura
+Archivo
+Arquitectos
+Intervención
+Protocolo
+
+Características:
+
+tipografía uppercase
+el espacio entre los elementos se delimita con un  "|"  elementos
+hover minimalista, aparece un rectángulo en el enlace y cambio de color
+
+5. Zona derecha — Acción principal
+
+Elemento:
+Botón CTA
+
+Texto:
+Iniciar intervención
+
+Estilo recomendado:
+outline o ghost button
+borde fino
+hover sólido
+
+6. Estructura visual del header
+
+LOGO | Estructura | Archivo | Arquitectos | Intervención | Protocolo | [Iniciar intervención]
+
+7. Versión mobile
+
+[ LOGO ]        [ ☰ ]
+
+Estructura
+Archivo
+Arquitectos
+Intervención
+Protocolo
+
+----------------
+
+Iniciar intervención
+
+*Se va a usar menu overlay full screen para mantener estética editorial.
+
+8. Comportamiento al hacer scroll
+
+Estado inicial (hero):
+
+Header transparente
+Texto blanco
+
+Después de scroll:
+
+Fondo negro
+Blur ligero opcional
+
+9. Espaciado recomendado
+
+Altura header:
+
+desktop: 80–96px
+scroll reducido: 64px
+
+Padding lateral:
+padding-left: 6–8vw
+padding-right: 6–8vw
+
+10. Jerarquía dentro del header
+
+Prioridad visual:
+
+Logo
+Navegación
+CTA
+-------------------------------------------------------------------------------------------
+
+
+Layout del Hero
+1. Estructura general
+
+El hero utiliza layout de dos columnas asimétricas.
+
+|-----------------------------------------------|
+|			 HEADER                            |
+|-----------------------------------------------|
+
+| TEXTO / CONCEPTO      | IMAGEN      |
+|                           		  |                        |
+| eyebrow                  		  |                        |
+| título                     		  |   imagen        |
+| texto descriptivo         	  |   tatuaje         |
+| botones                   		  |   brutalista    |
+|                           		  |                         |
+
+|-----------------------------------------------|
+
+Relación aproximada:
+
+Texto:   45%
+Imagen:  55%
+
+Esta proporción prioriza impacto visual sin perder lectura conceptual.
+--------------------------------------------------------------------------------
+2. Columna izquierda — Bloque conceptual
+
+Contiene 4 niveles de jerarquía tipográfica.
+Orden:
+Eyebrow
+Título principal
+Texto descriptivo
+Botones CTA
+Eyebrow
+
+Texto:
+Estudio de arquitectura corporal
+
+Características:
+tamaño pequeño
+uppercase
+tracking amplio
+opacidad reducida
+
+Función:
+establecer marco conceptual antes del título.
+
+Título (Brand Statement)
+Texto:
+Arquitectura inscrita en la piel
+Debe dominar visualmente.
+
+Características recomendadas:
+3–4 líneas máximo
+peso tipográfico alto
+gran escala
+
+Ejemplo aproximado (máximo 2 líneas):
+Arquitectura inscrita
+en la piel
+
+Texto descriptivo
+Texto que compartiste:
+Concrete Void Studio opera desde 19.4326° N / 99.1332° W — 2240 m, en Ciudad de México. Desde esta latitud urbana exploramos el tatuaje como arquitectura: estructuras de tinta diseñadas para habitar la piel.
+
+Características:
+ancho de lectura controlado
+máximo 55–65 caracteres por línea
+
+Botones:
+Dos acciones jerarquizadas.
+
+Botón primario
+Iniciar intervención
+Función: conversión
+
+Botón secundario
+Explorar archivo
+Función: exploración
+
+Layout botones
+[ Iniciar intervención ]   [ Explorar archivo ]
+
+Separación recomendada:
+gap: 16–24px
+--------------------------------------------------------------------------------
+3. Columna derecha — Imagen hero
+
+Elemento visual dominante.
+
+Tipo de imagen recomendado:
+
+tatuaje geométrico
+composición brutalista
+alto contraste
+fondo oscuro
+
+Evitar:
+fondos complejos
+exceso de elementos
+Composición de la imagen
+
+Opción C — imagen con overlay tipográfico
+
+Se superponen elementos gráficos:
+
+COORDINATES
+19.4326° N
+99.1332° W
+
+o
+
+CONCRETE VOID
+
+Esto refuerza identidad.
+--------------------------------------------------------------------------------
+4. Altura del hero
+
+Debe ocupar mínimo el 90–100% del viewport.
+Recomendación:
+min-height: 100vh
+Para que el usuario perciba el hero como portada del estudio.
+--------------------------------------------------------------------------------
+5. Alineación vertical
+
+El bloque de texto debe centrarse ligeramente hacia arriba.
+
+No completamente centrado.
+
+padding-top: 12vh
+
+Esto evita que el header interfiera visualmente.
+--------------------------------------------------------------------------------
+6. Espaciado interno
+
+Recomendación:
+
+padding-left: 8vw
+padding-right: 8vw
+
+Mantiene coherencia con el header.
+--------------------------------------------------------------------------------
+7. Elemento atmosférico
+
+Para reforzar identidad arquitectónica.
+Se puede añadir un marcador editorial sutil:
+
+CDMX
+19.4326° N
+99.1332° W
+2240 m
+
+Ubicación:
+esquina inferior izquierda del hero.
+
+Estilo:
+tipografía mono
+muy pequeño
+opacidad baja
+--------------------------------------------------------------------------------
+8. Flujo hacia la siguiente sección
+
+El hero debe invitar al scroll.
+indicador de scroll
+↓
+Scroll
+--------------------------------------------------------------------------------
+Esquema completo del Hero
+1. Estructura macro
+
+El hero ocupa 100% del viewport y se organiza en dos columnas asimétricas.
+
+|------------------------------------------------------------------|
+|                           HEADER                           			          |
+|------------------------------------------------------------------|
+
+|        BLOQUE CONCEPTUAL (45%)      |      IMAGEN HERO (55%)     |
+|                        				                  |                        			    |
+|  Eyebrow         			                   |                        			    |
+|  Título principal            			         |                         			   |
+|  Texto descriptivo           			        |        Imagen fuerte    	   |
+|  Botones CTA                     	     		 |        tatuaje brutalista 		   |
+|                              				|        alto contraste        |
+|                                     |                            |
+
+|------------------------------------------------------------------|
+|                    INDICADOR DE SCROLL                           |
+|------------------------------------------------------------------|
+
+
+
+
+--------------------------------------------------------------------
+
+HEADER
+
+--------------------------------------------------------------------
+
+ESTUDIO DE ARQUITECTURA CORPORAL
+
+Arquitectura inscrita
+en la piel
+
+Concrete Void Studio opera desde 19.4326° N / 99.1332° W — 2240 m,
+en Ciudad de México. Desde esta latitud urbana exploramos el
+tatuaje como arquitectura.
+
+[ Iniciar intervención ]   [ Explorar archivo ]
+
+                                            [ imagen tatuaje ]
+                                            [ brutalista      ]
+                                            [ alto contraste  ]
+                                            [ overlay texto   ]
+
+--------------------------------------------------------------------
+
+CDMX
+19.4326° N
+99.1332° W
+2240 m
+
+                    ↓ Scroll
+
+--------------------------------------------------------------------
+
+Resultado conceptual del hero
+
+El visitante entiende inmediatamente:
+Concepto
+arquitectura aplicada al tatuaje
+Estética
+brutalismo / geometría
+Ubicación
+Ciudad de México
+Acción
+iniciar una intervención
+
+*************************************************************************
+2. LAYOUT DE  Statement Principal
+
+ Statement inmersivo (imagen full screen)
+
+1. Estructura del bloque
+
+El statement es una sección de imagen full screen con overlay tipográfico.
+
+Estructura conceptual:
+
+|------------------------------------------------|
+|                                                                          |
+|           IMAGEN FULL SCREEN                 |
+|           tatuaje brutalista                                |
+|           textura piel / alto contraste             |
+|                                                                          |
+|    TEXTO MONUMENTAL (overlay)       |
+|                                                			 |
+|------------------------------------------------|
+
+Altura recomendada:
+
+min-height: 85vh
+
+Esto evita competir con el hero (100vh) pero mantiene impacto.
+
+2. Escala tipográfica real
+
+El texto debe escalar según viewport para mantener efecto monumental.
+
+Desktop
+font-size: clamp(2.8rem, 5vw, 5.5rem);
+line-height: 1.08;
+font-weight: 600;
+letter-spacing: -0.02em;
+
+Resultado aproximado:
+
+45px – 90px
+
+TAMAÑOS PARA LOS DIFERENTES DISPOSITIVOS:
+…………..
+
+3. Composición tipográfica
+
+El texto debe dividirse en dos bloques para crear respiración visual.
+
+Contenido:
+El cuerpo se convierte
+en superficie arquitectónica.
+
+La piel es el concreto
+donde se inscriben estas estructuras.
+
+Máximo:
+4 líneas
+Esto mantiene fuerza visual.
+
+4. Posicionamiento del texto sobre la imagen
+
+El texto no debe ir centrado exactamente; debe tener ligero desplazamiento editorial.
+
+Posición recomendada:
+
+left: 8vw
+top: 52%
+transform: translateY(-50%)
+max-width: 720px
+
+Esto genera:
+
+alineación con el padding del hero
+consistencia estructural
+Esquema visual
+|------------------------------------------------|
+
+                 imagen brutalista
+
+    El cuerpo se convierte
+    en superficie arquitectónica.
+
+    La piel es el concreto
+    donde se inscriben estas estructuras.
+
+|------------------------------------------------|
+
+
+5. Control de ancho de lectura
+
+Para evitar que el texto se vuelva demasiado largo:
+max-width: 720px;
+Alternativa en grid:
+6 columnas de 12
+
+6. Contraste sobre la imagen
+Para garantizar legibilidad se recomienda overlay oscuro sutil.
+background: linear-gradient(
+rgba(0,0,0,0.55),
+rgba(0,0,0,0.45)
+);
+
+Esto evita perder contraste si la imagen es clara.
+
+7. Espaciados exactos
+
+Padding general de la sección:
+
+padding-left: 8vw;
+padding-right: 8vw;
+padding-top: 120px;
+padding-bottom: 120px;
+
+Separación entre bloques de texto:
+margin-top: 32px;
+Separación entre líneas:
+line-height: 1.08;
+
+8. Comportamiento responsive
+Desktop layout
+
+Texto alineado a la izquierda.
+Tablet layout
+El texto se mantiene overlay pero reduce ancho.
+
+9. Tratamiento de la imagen
+
+Propiedades recomendadas:
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+Esto garantiza consistencia en cualquier pantalla.
+
+10. Transición desde el hero
+
+Para que el flujo visual sea natural:
+el statement aparece sin separación brusca
+puede usarse un pequeño fade al hacer scroll
+
+Ejemplo conceptual:
+Hero → scroll → imagen statement aparece
+
+****************************************************************************
+3. LAYOUT ARCHIVO
+
+Función dentro de la narrativa del sitio:
+Hero → concepto
+Statement → identidad
+Archivo → obra
+
+Esta sección introduce las arquitecturas desarrolladas (tatuajes).
+
+1. Estructura general de la sección
+
+Layout vertical organizado en tres bloques principales:
+
+|------------------------------------------------|
+		    Eyebrow
+		      
+		    Título de sección
+		
+		    Texto descriptivo
+|------------------------------------------------|
+
+             GRID DE PROYECTOS (6)
+
+|------------------------------------------------|
+
+                       Botón CTA
+
+|------------------------------------------------|
+
+
+2. Cabecera de sección (Section Header)
+
+Este bloque presenta la sección de forma editorial.
+
+Eyebrow
+
+Texto:
+Arquitecturas desarrolladas
+
+Características:
+uppercase
+tamaño pequeño
+tracking amplio
+opacidad ligera
+
+Propósito:
+introducir el marco conceptual antes del título.
+
+Título
+Texto:
+Archivo
+Características:
+
+gran tamaño tipográfico
+peso medio/alto
+composición limpia
+
+Escala recomendada:
+font-size: clamp(2.5rem, 4vw, 3.5rem);
+Texto descriptivo
+Contenido:
+Registro visual de intervenciones donde la tinta
+se convierte en estructura, volumen y memoria.
+
+Características:
+ancho de lectura limitado
+55–65 caracteres por línea
+tipografía secundaria
+Espaciado interno
+
+Separación recomendada:
+
+eyebrow → título: 12px
+título → texto: 16px
+texto → grid: 64px
+
+Esto genera respiración editorial.
+
+3. Grid de proyectos
+
+El núcleo visual de la sección.
+
+Estructura del grid
+
+Grid de 6 elementos organizados en 3 columnas.
+
+|-------------------------------------------|
+
+     [Card]     [Card]     [Card]
+
+     [Card]     [Card]     [Card]
+
+|-------------------------------------------|
+
+
+4. Comportamiento visual del grid
+
+La galería debe sentirse limpia y estructural, no saturada.
+
+Principios:
+fondo oscuro
+imágenes dominantes
+poco texto visible inicialmente
+
+El contenido textual aparece solo en hover.
+
+5. Hover minimalista
+
+Al pasar el cursor sobre una imagen:
+
+aparece información mínima.
+
+Ejemplo:
+
+|---------------------|
+|                   	      |
+|     IMAGEN          |
+|                      	      |
+|---------------------|
+| Nombre pieza      |
+| Artista                   |
+|---------------------|
+
+Esto mantiene protagonismo de la obra.
+
+6. Botón inferior
+
+Debajo del grid se coloca el CTA hacia la galería completa.
+Texto:
+Explorar archivo completo
+Ubicación:
+centrado horizontalmente.
+Separación desde el grid:
+margin-top: 64px;
+
+7. Espaciado general de la sección
+
+Padding recomendado:
+padding-top: 140px;
+padding-bottom: 140px;
+padding-left: 8vw;
+padding-right: 8vw;
+
+8. Comportamiento responsive
+Tablet
+
+Grid cambia a 2 columnas.
+
+|---------------------------|
+
+      [Card]     [Card]
+
+      [Card]     [Card]
+
+      [Card]     [Card]
+
+|---------------------------|
+Mobile
+
+Grid de 1 columna.
+
+|-------------------|
+
+       [Card]
+
+       [Card]
+
+       [Card]
+
+       [Card]
+
+       [Card]
+
+       [Card]
+
+|-------------------|
+
+9. Esquema completo de la sección
+----------------------------------------------------------------
+
+	    Arquitecturas desarrolladas
+
+	     	            Archivo
+
+Registro visual de intervenciones donde la tinta se
+convierte en estructura, volumen y memoria.
+
+----------------------------------------------------------------
+
+	[ imagen ]   [ imagen ]   [ imagen ]
+	
+	[ imagen ]   [ imagen ]   [ imagen ]
+
+----------------------------------------------------------------
+
+		[ Explorar archivo completo ]
+
+----------------------------------------------------------------
+*************************************************************
+
+La card del Archivo debe priorizar la imagen y revelar información mínima. Su función es presentar la obra sin saturación textual, manteniendo coherencia con la estética brutalista y editorial del sitio.
+
+1. ESTRUCTURA BASE DE LA CARD
+
+Cada card contiene tres capas:
+
+Imagen principal
+Overlay interactivo
+Información textual
+
+Estructura conceptual:
+
+|-----------------------------|
+|                    		         |
+|                    		         |
+|    IMAGEN TATUAJE    |
+|                     			|
+|                      			|
+|-----------------------------|
+|   Nombre de la pieza       |
+|   Artista               		|
+|-----------------------------|
+
+Sin hover la card muestra solo la imagen.
+
+2. Estructura HTML conceptual
+
+Estructura semántica recomendada:
+<article class="archivo-card">
+	  <figure class="archivo-media">
+	   		 <img src="tattoo-01.jpg" alt="Tatuaje geométrico brutalista">
+	  </figure>
+	  <div class="archivo-overlay">
+		    <h3 class="archivo-titulo">Monolito Fragmentado</h3>
+		    <p class="archivo-artista">Por A. Rivera</p>
+	  </div>
+</article>
+
+3. Proporción de la card
+
+Se recomienda proporción vertical ligera.
+aspect-ratio: 4 / 5;
+
+Esto permite:
+mejor encuadre del tatuaje
+sensación editorial
+consistencia visual
+
+4. Comportamiento visual inicial
+
+Estado inicial:
+
+|-----------------------------|
+|                           		|
+|         imagen       		|
+|                         		         |
+|                            		|
+|-----------------------------|
+
+Características:
+overflow: hidden;
+border: 1px solid rgba(255,255,255,0.08);
+
+5. Hover minimalista
+
+Cuando el usuario pasa el cursor:
+
+la imagen oscurece ligeramente
+aparece el overlay con información
+Overlay
+background: rgba(0,0,0,0.6);
+opacity: 0;
+transition: opacity .3s ease;
+Hover activado
+.archivo-card:hover .archivo-overlay {
+opacity: 1;
+}
+
+Con hover:
+|-------------------------------|
+|                           		   |
+|IMAGEN OSCURECIDA   |
+|                             		   |
+|    Monolito Fragmentado  |
+|     por A. Rivera                   |
+|-------------------------------|
+
+6. Posicionamiento del overlay
+
+El overlay debe estar anclado a la parte inferior.
+
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 20px;
+
+Esto mantiene lectura natural.
+
+7. Jerarquía tipográfica
+Título de la pieza
+font-size: 1rem;
+font-weight: 600;
+letter-spacing: 0.02em;
+Ejemplo:
+Monolito Fragmentado
+
+Nombre del artista
+font-size: .85rem;
+opacity: .7;
+Ejemplo:
+Por A. Rivera
+
+8. Animación de imagen
+
+Para aportar dinamismo sutil se recomienda un zoom leve.
+.archivo-card img {
+transition: transform .5s ease;
+}
+
+.archivo-card:hover img {
+transform: scale(1.05);
+}
+
+Resultado:
+sensación premium
+interacción elegante
+
+9. Comportamiento en mobile
+
+En mobile no existe hover, por lo tanto:
+la información debe mostrarse siempre visible.
+
+Estructura:
+|-----------------------------|
+|                             |
+|         imagen              |
+|                             |
+|-----------------------------|
+| Monolito Fragmentado       |
+| por A. Rivera              |
+|-----------------------------|
+
+Implementación:
+
+@media (max-width:768px){
+
+.archivo-overlay{
+opacity:1;
+position:static;
+background:none;
+padding-top:12px;
+
+}
+
+}
+
+10. Espaciado interno de la card
+padding-bottom: 12px;
+
+Separación entre texto:
+gap: 4px;
+Esto mantiene una densidad editorial correcta.
+
+11. Estados interactivos adicionales
+Cursor
+cursor: pointer;
+Focus (accesibilidad)
+.archivo-card:focus {
+outline: 2px solid rgba(255,255,255,.3);
+}
+
+Resultado visual final
+|---------------------------------------------|
+
+      [imagen]   [imagen]   [imagen]
+
+      [imagen]   [imagen]   [imagen]
+
+|---------------------------------------------|
+
+hover → aparece información mínima
+
+**************************************************************************
+La línea divisoria conceptual debe funcionar como un puente narrativo entre el Archivo (resultado visual) y Arquitectos (autoría).
+No es un separador decorativo; es una pausa editorial que cambia el foco del objeto al autor.
+
+Debe ser muy breve, tipográficamente contundente y con bastante aire alrededor.
+1. Estructura de la línea divisoria
+
+Layout minimal:
+|-----------------------------------------------|
+	No hay esencia. Solo estructura.
+|-----------------------------------------------|
+
+Elementos:
+contenedor ancho
+frase breve (1–2 líneas)
+gran espacio vertical
+posible línea muy sutil arriba o abajo
+
+Estructura tipográfica
+Jerarquía visual clara.
+
+font-size: 28px – 36px
+font-weight: 500 o 600
+line-height: 1.4
+max-width: 700px
+text-align: center
+margin: auto
+
+Espaciado (clave para que respire)
+
+Vertical:
+padding-top: 120px
+padding-bottom: 120px
+En pantallas grandes puede ampliarse a:
+160px / 160px
+
+Línea gráfica opcional
+
+Si decides usar línea divisoria:
+
+width: 80px
+height: 1px
+background: currentColor
+opacity: 0.25
+margin: 40px auto
+
+Resultado visual:
+──────────
+
+No hay esencia. Solo estructura.
+──────────
+
+HTML sugerido
+<section class="concept-divider">
+  <p>
+    Las estructuras no aparecen.<br>
+    Se diseñan.
+  </p>
+</section>
+*************************************************************************
+LAYOUT ARQUITECTOS
+La sección ARQUITECTOS introduce a los autores del sistema visual del estudio. Debe transmitir autoría, precisión y carácter editorial, evitando estética de “equipo corporativo”. La presentación debe sentirse curada, casi como un catálogo de arquitectos o artistas.
+
+Estructura general 
+|--------------------------------------------------|
+
+	     EYEBROW
+	     Arquitectos de la tinta
+	
+	     TÍTULO
+	     Quienes diseñan las estructuras
+	
+	     DESCRIPCIÓN
+	     (2 líneas máximo)
+
+	  		 GRID
+	  [ retrato ]   [ retrato ]   [ retrato ]
+	       info		info		 info
+
+			   CTA
+|--------------------------------------------------|
+
+Eyebrow actualizado
+Etiqueta de sección:
+Arquitectos de la tinta
+Configuración tipográfica (sin cambios estructurales):
+
+font-size: 12px
+letter-spacing: 0.18em
+text-transform: uppercase
+opacity: 0.6
+margin-bottom: 16px
+
+Título de sección
+Quienes diseñan las estructuras
+
+Configuración tipográfica:
+
+font-size: 42px
+font-weight: 600
+line-height: 1.2
+max-width: 600px
+margin-bottom: 80px
+
+MINI TEXTO INTRODUCTORIO:
+Cada artista del estudio desarrolla un lenguaje estructural propio.
+Diseñan intervenciones donde la piel funciona como superficie arquitectónica.
+
+max-width: 520px
+font-size: 18px
+line-height: 1.6
+opacity: 0.75
+margin-bottom: 80px
+
+Grid de arquitectos
+
+Distribución simple y simétrica.
+Desktop
+grid-template-columns: repeat(3, 1fr)
+gap: 48px
+
+Visual:
+[ arquitecto ]   [ arquitecto ]   [ arquitecto ]
+Tablet
+grid-template-columns: repeat(2, 1fr)
+Mobile
+grid-template-columns: 1fr
+
+Estructura interna de cada arquitecto
+
+Cada elemento funciona como card editorial minimal.
+
+[ retrato ]
+
+NOMBRE
+
+rol / especialidad
+Retrato
+
+Debe ser muy sobrio.
+
+aspect-ratio: 3 / 4
+object-fit: cover
+filter: grayscale(100%)
+
+Esto refuerza estética brutalista.
+
+Nombre
+Elemento principal.
+
+font-size: 20px
+font-weight: 600
+margin-top: 18px
+margin-bottom: 6px
+
+Ejemplo:
+Adrian Kovač
+Rol / especialidad
+
+Texto secundario.
+
+Ejemplos:
+Biostructural Design
+Dermal Geometry
+Anatomical Systems
+
+Configuración:
+font-size: 14px
+opacity: 0.7
+letter-spacing: 0.04em
+
+
+Espaciado general de la sección
+
+Para mantener coherencia con las otras secciones:
+padding-top: 140px
+padding-bottom: 140px
+
+ESTRUCTURA HTML BASE
+<section class="architects">
+
+  <div class="section-header">
+    <span class="eyebrow">ARQUITECTOS</span>
+    <h2>Quienes diseñan las estructuras</h2>
+  </div>
+
+  <div class="architect-grid">
+
+    <article class="architect">
+      <img src="img/architect-1.jpg">
+      <h3>Nombre Apellido</h3>
+      <p>Especialidad</p>
+    </article>
+
+    <article class="architect">
+      <img src="img/architect-2.jpg">
+      <h3>Nombre Apellido</h3>
+      <p>Especialidad</p>
+    </article>
+
+    <article class="architect">
+      <img src="img/architect-3.jpg">
+      <h3>Nombre Apellido</h3>
+      <p>Especialidad</p>
+    </article>
+
+  </div>
+
+</section>
+
+ARQUITECTOS
+
+Quienes diseñan las estructuras
+
+
+[ retrato ]    [ retrato ]    [ retrato ]
+
+Adrian Kovac   Elena Voss     Mateo Ibarra
+Biostructural  Dermal         Anatomical
+Design         Geometry       Systems
+
+CTA final de sección
+
+El botón no debe sentirse comercial. Debe funcionar como extensión editorial.
+Ubicación:
+grid
+↓
+CTA centrado
+
+Espaciado:
+margin-top: 100px
+TEXTO DEL BTN
+Acceder al archivo de autores
+
+Estilo del botón
+
+Debe ser minimalista, coherente con brutalismo editorial.
+
+border: 1px solid currentColor
+padding: 14px 28px
+font-size: 14px
+letter-spacing: 0.08em
+text-transform: uppercase
+background: transparent
+
+Hover:
+background: currentColor
+color: #fff
+(El color final dependerá de la paleta que definan después.)
+
+Archivo
+↓
+"No hay esencia. Solo estructura."
+↓
+Arquitectos de la tinta
+↓
+Filosofía
+**************************************************************************************
+La sección FILOSOFÍA debe funcionar como el núcleo conceptual del sitio. Después de ver el Archivo y conocer a los Arquitectos, aquí se explica la lógica que sostiene el sistema.
+
+No debe convertirse en un bloque largo de texto; debe sentirse editorial, preciso y estructural, coherente con la estética arquitectónica del proyecto.
+
+Estructura final de la sección FILOSOFÍA
+
+Layout:
+|--------------------------------------------------|
+
+	EYEBROW
+	Filosofía
+	
+	TÍTULO
+	La lógica detrás de las estructuras
+	
+	MANIFIESTO COMPLETO
+	Arquitectura inscrita en la piel...
+	(parrafos del manifiesto)
+
+|--------------------------------------------------|
+
+Se mantiene una jerarquía clara:
+etiqueta de sección
+título conceptual
+subtítulo del manifiesto
+bloque editorial
+
+Eyebrow
+Filosofía
+
+Configuración:
+font-size: 12px
+letter-spacing: 0.18em
+text-transform: uppercase
+opacity: 0.6
+margin-bottom: 16px
+
+Título de sección
+La lógica detrás de las estructuras
+
+Encabezado del manifiesto
+Debe sentirse como un subtítulo editorial.
+Arquitectura inscrita en la piel
+
+Configuración:
+
+font-size: 24px
+font-weight: 500
+margin-bottom: 24px
+max-width: 640px
+
+Bloque editorial (manifiesto)
+
+Tu texto se organiza en párrafos cortos para mantener ritmo visual.
+
+Versión estructurada:
+**MANIFIESTO COMPLETO**
+
+Configuración tipográfica del manifiesto
+max-width: 720px
+font-size: 18px
+line-height: 1.75
+opacity: 0.85
+
+Espacio entre párrafos:
+margin-bottom: 28px
+
+Comportamiento responsive
+Desktop
+max-width: 720px
+Tablet
+max-width: 600px
+font-size: 17px
+Mobile
+max-width: 90%
+font-size: 16px
+line-height: 1.7
+
+Resultado visual esperado:
+
+Filosofía
+
+La lógica detrás de las estructuras
+
+
+Arquitectura inscrita en la piel
+
+Concrete Void Studio explora la relación
+entre arquitectura, memoria y decadencia…
+
+(parrafos editoriales)
+
+***
+
+Ajuste editorial recomendado
+
+Para reforzar el impacto visual, puedes resaltar una frase del manifiesto como cita tipográfica monumental:
+
+El cuerpo se convierte en superficie arquitectónica.
+La piel es el concreto donde se inscriben estas estructuras.
+
+Esto puede funcionar como punto de anclaje visual dentro del texto.
+
+Resaltar una frase del manifiesto funciona como ancla visual dentro del bloque editorial. Interrumpe la lectura lineal y refuerza el concepto central del estudio. La frase seleccionada debe sintetizar la idea arquitectónica del proyecto.
+
+Frase a destacar:
+El cuerpo se convierte en superficie arquitectónica.
+La piel es el concreto donde se inscriben estas estructuras.
+
+Función de la cita destacada
+
+La cita cumple tres funciones dentro de la sección:
+
+Ritmo visual
+Evita que el manifiesto se perciba como un bloque de texto largo.
+Jerarquía conceptual
+Señala el núcleo del discurso del estudio.
+Elemento tipográfico dominante
+Introduce una escala mayor dentro de la sección.
+
+Ubicación dentro del manifiesto
+
+Debe colocarse exactamente después del segundo párrafo, donde aparece naturalmente en el texto.
+
+Estructura:
+
+párrafo 1
+párrafo 2
+CITA DESTACADA
+párrafo 3
+párrafo 4
+
+Esto crea un ritmo editorial natural.
+
+Características tipográficas
+La cita debe sentirse monumental, pero legible.
+
+Configuración sugerida:
+font-size: 34px – 40px
+font-weight: 500
+line-height: 1.3
+letter-spacing: -0.01em
+
+Ancho máximo:
+max-width: 640px
+
+Alineación:
+text-align: left
+
+Espaciado
+
+El espacio alrededor es clave para que la cita respire.
+
+margin-top: 80px
+margin-bottom: 80px
+
+Tratamiento visual
+
+Existen tres formas coherentes con la estética del sitio.
+
+Monumental limpia 
+
+Solo tipografía grande.
+
+El cuerpo se convierte en superficie arquitectónica.
+La piel es el concreto donde se inscriben estas estructuras.
+
+Ventajas:
+elegante
+coherente con brutalismo editorial
+fácil de implementar
+
+Comportamiento responsive
+
+Desktop:
+font-size: 38px
+max-width: 640px
+
+Tablet:
+font-size: 30px
+max-width: 520px
+
+Mobile:
+font-size: 24px
+max-width: 100%
+
+HTML sugerido
+<blockquote class="manifesto-quote">
+	  El cuerpo se convierte en superficie arquitectónica.<br>
+	  La piel es el concreto donde se inscriben estas estructuras.
+</blockquote>
+
+CSS base
+.manifesto-quote{
+  font-size:38px;
+  line-height:1.3;
+  font-weight:500;
+  max-width:640px;
+  margin:80px 0;
+}
+
+Resultado visual esperado
+párrafo editorial
+párrafo editorial
+
+EL CUERPO SE CONVIERTE EN SUPERFICIE ARQUITECTÓNICA.
+LA PIEL ES EL CONCRETO DONDE SE INSCRIBEN
+ESTAS ESTRUCTURAS.
+
+párrafo editorial
+párrafo editorial
+---------------------------------------------------------------------------------------------
+Estructura para INTERVENCIÓN 
+
+La sección se reduce a tres elementos:
+
+encabezado
+bloque conceptual
+CTA hacia página interna
+
+1. Layout general
+|--------------------------------------------------|
+
+EYEBROW
+Intervenir la superficie
+
+TÍTULO
+Intervención
+
+TEXTO INTRODUCTORIO
+
+CTA
+
+|--------------------------------------------------|
+
+Minimalista y editorial.
+
+2. Eyebrow
+Intervenir la superficie
+
+Título
+Intervención
+
+Texto introductorio
+Toda pieza comienza como un proyecto.
+Aquí inicia el proceso para diseñar y construir
+una estructura pensada para habitar tu piel.
+
+CTA
+Explorar el proceso de intervención
+
+Resultado visual esperado:
+
+INTERVENIR LA SUPERFICIE
+
+Intervención
+
+Toda pieza comienza como un proyecto.
+Aquí inicia el proceso para diseñar y construir
+una estructura pensada para habitar tu piel.
+
+
+[ Explorar el proceso de intervención ]
+
+-------------------------------------------------------------------------------------
+LAYOUT PROTOCOLO
+1. Encabezado editorial
+
+Eyebrow
+Directrices de la intervención
+
+Título
+Protocolo
+
+Texto introductorio
+Información esencial sobre el proceso, preparación y cuidados posteriores.
+Lineamientos para que cada intervención se desarrolle correctamente.
+
+2. Bloque de preguntas (FAQ / Accordion)
+
+Estructura vertical con tres módulos interactivos.
+
+Comportamiento:
+
+Solo la pregunta visible por defecto
+Al hacer clic se despliega el contenido
+Animación suave (200–300 ms)
+Solo un bloque abierto a la vez
+
+Pregunta 01
+¿Cómo comienza una intervención?
+Toda pieza inicia con una conversación inicial.
+En ella se define la idea general, el área del cuerpo a intervenir y las referencias conceptuales que pueden orientar el diseño.
+A partir de este intercambio se desarrolla una propuesta visual que responde tanto a la anatomía como al lenguaje estético del estudio.
+
+Pregunta 02
+¿Qué preparación requiere la sesión?
+Antes de la intervención es importante que la piel se encuentre en buen estado y que el cuerpo esté descansado.
+Se recomienda evitar alcohol, mantener una hidratación adecuada y acudir con tiempo suficiente para revisar el diseño final antes de comenzar el trabajo.
+
+Pregunta 03
+¿Qué cuidados siguen después de la intervención?
+Una vez finalizada la pieza, se proporcionan indicaciones específicas para el proceso de cicatrización.
+El cuidado adecuado de la piel es fundamental para preservar la calidad del trazo, la profundidad del negro y la integridad del diseño con el paso del tiempo.
+
+3. CTA final
+Ubicado después del bloque de preguntas.
+
+Botón
+Solicitar una intervención
+
+Layout visual 
+*****
+
+[ EYEBROW ]
+
+PROTOCOLO
+
+Texto introductorio
+
+────────────────────────
+
++ ¿Cómo comienza una intervención?
+
++ ¿Qué preparación requiere la sesión?
+
++ ¿Qué cuidados siguen después de la intervención?
+
+────────────────────────
+
+[ Solicitar una intervención ]
+
+
+Detalles de diseño recomendados
+
+Separadores
+líneas finas
+gris oscuro / 20% opacity
+
+Tipografía preguntas
+
+misma familia del sitio
+ligeramente mayor que el cuerpo de texto
+
+Icono
+símbolo + / − minimal
+o
+chevron rotatorio
+
+Espaciado
+32–40px entre módulos
+
+Nombrar visualmente las preguntas como estructura arquitectónica:
+
+01 — Inicio del proyecto
+02 — Preparación de la sesión
+03 — Cicatrización y cuidado
+
+Se mantienen las preguntas debajo.
+
+Esto aporta orden editorial y carácter arquitectónico, coherente con el manifiesto.
+----------------------------------------------------------------------------------------------
+La sección Brand Statement Final funciona como cierre conceptual del home. Su objetivo no es convertir, sino reafirmar la identidad del estudio y dejar una última impresión visual fuerte. La presencia de imagen es adecuada porque el sitio hasta ahora se apoya principalmente en tipografía y estructura editorial.
+
+LAYOUT BRAND STATEMENT FINAL
+
+Imagen monumental + declaración
+
+Estructura simple y contundente. Ideal para un cierre fuerte.
+
+Layout
+
+[ IMAGEN GRANDE — ancho completo ]
+
+TEXTO BREVE
+
+*******
+Imagen sugerida
+un tatuaje real en alto contraste
+
+Texto
+
+La piel como superficie.
+La tinta como estructura.
+
+Cada intervención es una arquitectura construida con líneas, sombra y permanencia.
+
+Ventajas
+
+muy potente visualmente
+lectura rápida
+mantiene el tono editorial
+
+┌───────────────────────────────────────┐
+│                                       								      │
+│                                       								      │
+│          		   [ IMAGEN DEL TATUAJE ]      			       |
+│                                       								      │
+│                                       								      │
+│       			 Arquitectura inscrita          			      | 
+│           				 en la piel                 				     │   
+│                                       							              │
+└───────────────────────────────────────┘
+
+-----------------------------------------------------------------------------------------------------------------------
+El footer debe funcionar como cierre estructural del sitio: compacto, oscuro, editorial y coherente con la estética arquitectónica del proyecto. La información se organiza en tres bloques principales y un sub-footer final.
+
+LAYOUT FOOTER
+
+────────────────────────────────────────
+
+		[ LOGO SECUNDARIO ]
+		
+		Construcciones para un mundo en ruinas
+
+────────────────────────────────────────
+
+		REDES                     CONTACTO
+		
+		[svg] Instagram           email
+		[svg] X                   teléfono
+		[svg] YouTube             coordenadas
+		[svg] Cráneo
+
+────────────────────────────────────────
+
+		© 2026 Concrete Void Studio
+		
+		Desarrollo Insomne
+
+────────────────────────────────────────
+
+1. Bloque Identidad
+
+Ubicado en la parte superior del footer.
+
+Contenido
+
+Logo secundario
+Statement secundario
+
+Texto
+
+Construcciones para un mundo en ruinas
+
+Características visuales
+centrado
+statement en tipografía más ligera
+espacio amplio debajo del bloque
+
+Bloque Información
+
+Grid de dos columnas.
+
+REDES                CONTACTO
+
+Instagram            email
+X                    teléfono
+YouTube              coordenadas
+Cráneo
+Redes
+
+Los íconos deben ser SVG monocromáticos.
+
+Orden:
+Instagram
+X
+YouTube
+Cráneo (red ficticia)
+
+El ícono de cráneo funciona como elemento identitario del estudio.
+
+Contacto
+
+Datos en formato simple:
+email
+teléfono
+coordenadas
+
+Ejemplo estructural:
+contact@concretevoid.studio
++52 XXX XXX XXXX
+19°XX'XX"N
+99°XX'XX"W
+
+Sub-footer
+Zona inferior minimalista.
+
+© 2026 Concrete Void Studio
+Desarrollo Insomne
+
+Jerarquía
+copyright → pequeño
+Desarrollo Insomne → aún más discreto
+
+Layout completo
+-----------
+FOOTER
+
+LOGO SECUNDARIO
+
+Construcciones para un mundo en ruinas
+
+
+REDES                      CONTACTO
+
+Instagram                  email
+X                          teléfono
+YouTube                    coordenadas
+Cráneo
+
+
+© 2026 Concrete Void Studio
+
+Desarrollo Insomne
+
+
+Separadores
+líneas horizontales finas
+
+Hover redes
+SVG cambia de color, por definirse.
+Espaciado
+60–80px entre bloques

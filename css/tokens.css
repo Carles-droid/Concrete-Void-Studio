@@ -1,0 +1,171 @@
+/* ============================================================
+   TOKENS.CSS
+   Sistema de diseño — Concrete Void Studio
+   Variables globales: color, tipografía, espaciado, z-index
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   IMPORTACIÓN DE TIPOGRAFÍAS — Google Fonts
+   1. Bebas Neue      → display / títulos
+   2. Cormorant       → editorial / cuerpo
+   3. IBM Plex Mono   → técnica / labels / coordenadas
+   ------------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+
+
+/* ============================================================
+   ROOT — VARIABLES GLOBALES
+   ============================================================ */
+:root {
+
+  /* ----------------------------------------------------------
+     PALETA DE COLOR
+     Extraída de las referencias visuales brutalistas.
+     Sistema monocromático oscuro con acentos mínimos.
+     ---------------------------------------------------------- */
+
+  /* Negros y fondos */
+  --colorVoid:        #080808;   /* negro casi puro — fondo principal */
+  --colorAbyss:       #0f0f0f;   /* negro profundo — cards, overlays */
+  --colorCrater:      #161616;   /* negro elevado — header al hacer scroll */
+
+  /* Grises estructurales — extraídos del concreto */
+  --colorConcrete100: #1a1a1a;   /* gris muy oscuro — superficies */
+  --colorConcrete200: #2a2a2a;   /* gris oscuro — bordes sutiles */
+  --colorConcrete300: #3d3d3d;   /* gris medio — separadores */
+  --colorConcrete400: #5c5c5c;   /* gris medio-claro — iconos secundarios */
+  --colorConcrete500: #7a7a7a;   /* gris neutro — texto terciario */
+  --colorConcrete600: #9e9e9e;   /* gris claro — texto secundario */
+  --colorConcrete700: #c4c4c4;   /* gris muy claro — texto de apoyo */
+
+  /* Blancos y textos */
+  --colorAsh:         #e8e4df;   /* blanco roto — color principal de texto */
+  --colorDust:        #f0ece6;   /* blanco cálido — títulos principales */
+  --colorBone:        #f8f5f0;   /* casi blanco — máxima jerarquía */
+
+  /* Acento — uso muy restringido */
+  --colorAccent:      #c8bfb0;   /* beige concreto claro — hover, énfasis mínimo */
+  --colorAccentDim:   rgba(200, 191, 176, 0.15);  /* acento translúcido */
+
+  /* Overlays y transparencias */
+  --overlayLight:     rgba(0, 0, 0, 0.45);
+  --overlayMedium:    rgba(0, 0, 0, 0.60);
+  --overlayHeavy:     rgba(0, 0, 0, 0.80);
+  --overlayBorder:    rgba(255, 255, 255, 0.08);
+  --overlayBorderMid: rgba(255, 255, 255, 0.15);
+  --overlayBorderHi:  rgba(255, 255, 255, 0.25);
+
+
+  /* ----------------------------------------------------------
+     TIPOGRAFÍAS
+     ---------------------------------------------------------- */
+
+  /* Familias */
+  --fontDisplay:      'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+  --fontEditorial:    'Cormorant', 'Georgia', serif;
+  --fontTech:         'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Escala tipográfica — display (Bebas Neue) */
+  --sizeDisplayXl:    clamp(4rem, 8vw, 9rem);      /* hero title */
+  --sizeDisplayLg:    clamp(2.8rem, 5vw, 5.5rem);  /* statement visual */
+  --sizeDisplayMd:    clamp(2.2rem, 4vw, 3.5rem);  /* section titles */
+  --sizeDisplaySm:    clamp(1.6rem, 2.5vw, 2.2rem);/* sub-títulos */
+
+  /* Escala tipográfica — editorial (Cormorant) */
+  --sizeEditorialLg:  clamp(1.25rem, 1.8vw, 1.5rem); /* cita destacada grande */
+  --sizeEditorialMd:  clamp(1.05rem, 1.4vw, 1.2rem); /* cuerpo principal */
+  --sizeEditorialSm:  clamp(0.95rem, 1.2vw, 1.05rem);/* cuerpo secundario */
+
+  /* Escala tipográfica — técnica (IBM Plex Mono) */
+  --sizeTechMd:       0.875rem;   /* eyebrows, labels */
+  --sizeTechSm:       0.75rem;    /* coordenadas, micro-textos */
+  --sizeTechXs:       0.65rem;    /* copyright, datos mínimos */
+
+  /* Pesos */
+  --weightThin:       300;
+  --weightRegular:    400;
+  --weightMedium:     500;
+  --weightSemibold:   600;
+
+  /* Line-heights */
+  --lineHeightTight:  1.05;
+  --lineHeightSnug:   1.2;
+  --lineHeightNormal: 1.5;
+  --lineHeightRelaxed:1.75;
+
+  /* Letter-spacing */
+  --trackingTight:    -0.02em;
+  --trackingNormal:    0em;
+  --trackingWide:      0.08em;
+  --trackingXWide:     0.18em;
+  --trackingXXWide:    0.25em;
+
+
+  /* ----------------------------------------------------------
+     ESPACIADO
+     Escala modular basada en 8px
+     ---------------------------------------------------------- */
+  --space1:    4px;
+  --space2:    8px;
+  --space3:   12px;
+  --space4:   16px;
+  --space5:   24px;
+  --space6:   32px;
+  --space7:   40px;
+  --space8:   48px;
+  --space9:   64px;
+  --space10:  80px;
+  --space11: 100px;
+  --space12: 120px;
+  --space13: 140px;
+  --space14: 160px;
+
+  /* Padding lateral global del sitio */
+  --paddingSiteH:  clamp(24px, 8vw, 120px);
+
+
+  /* ----------------------------------------------------------
+     LAYOUT
+     ---------------------------------------------------------- */
+  --maxWidth:         1440px;
+  --maxWidthContent:  1200px;
+  --maxWidthText:     720px;
+  --maxWidthNarrow:   640px;
+
+  /* Alturas de header */
+  --headerHeightFull:    88px;   /* estado inicial */
+  --headerHeightScroll:  64px;   /* reducido al hacer scroll */
+
+  /* Grid del archivo */
+  --gridGap:    clamp(12px, 2vw, 24px);
+
+
+  /* ----------------------------------------------------------
+     Z-INDEX — jerarquía de capas
+     ---------------------------------------------------------- */
+  --zBase:        0;
+  --zAbove:      10;
+  --zOverlay:    20;
+  --zDropdown:   30;
+  --zHeader:     40;
+  --zMobileMenu: 50;
+  --zModal:      60;
+
+
+  /* ----------------------------------------------------------
+     BORDES Y RADIOS
+     ---------------------------------------------------------- */
+  --borderThin:   1px solid var(--overlayBorder);
+  --borderMid:    1px solid var(--overlayBorderMid);
+  --borderHi:     1px solid var(--overlayBorderHi);
+  --radius:       0px;   /* brutalismo — sin bordes redondeados */
+
+
+  /* ----------------------------------------------------------
+     TRANSICIONES
+     ---------------------------------------------------------- */
+  --transitionFast:   150ms ease;
+  --transitionMid:    300ms ease;
+  --transitionSlow:   500ms ease;
+
+}

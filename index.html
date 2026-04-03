@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- ============================================================
+    META BÁSICOS
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Concrete Void Studio — Estudio de arquitectura corporal. Tatuajes geométricos y brutalistas en Ciudad de México." />
+  <meta name="author" content="Concrete Void Studio" />
+
+  <!-- ============================================================
+    META OG (OPEN GRAPH — para redes sociales)
+  ============================================================ -->
+  <meta property="og:title" content="Concrete Void Studio" />
+  <meta property="og:description" content="Arquitectura inscrita en la piel. Estudio de tatuaje brutalista en CDMX." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="#" />
+  <!-- <meta property="og:image" content="assets/images/og-image.jpg" /> -->
+
+  <!-- ============================================================
+    FAVICON
+  ============================================================ -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicons/faviconPrimario.svg" />
+
+  <!-- ============================================================
+    CSS (orden de carga)
+  ============================================================ -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <title>Concrete Void Studio — Arquitectura inscrita en la piel</title>
+</head>
+
+<body>
+
+  <!-- ============================================================
+    HEADER
+    - Sticky, transparente sobre el hero
+    - Cambia a fondo sólido al hacer scroll (via JS)
+    - 3 zonas: logo / nav / cta
+  ============================================================ -->
+  <header class="siteHeader" id="siteHeader" role="banner">
+
+    <!-- Zona izquierda — Identidad -->
+    <div class="siteHeader__identity">
+      <a href="index.html" class="siteHeader__logoLink" aria-label="Concrete Void Studio — Inicio">
+        <img
+          src="assets/icons/logos/logoPrimario.svg"
+          alt="Concrete Void Studio"
+          class="siteHeader__logo"
+          width="160"
+          height="36"
+        />
+      </a>
+      <!-- Micro descriptor — desaparece al hacer scroll -->
+      <p class="siteHeader__descriptor" aria-hidden="true">
+        Concrete Void Studio<br />
+        <span>CDMX · 19.4326°N</span>
+      </p>
+    </div>
+
+    <!-- Zona central — Navegación principal (desktop) -->
+    <nav class="siteNav" id="siteNav" role="navigation" aria-label="Navegación principal">
+      <ul class="siteNav__list" role="list">
+        <li class="siteNav__item">
+          <a href="#estructura" class="siteNav__link">Estructura</a>
+        </li>
+        <li class="siteNav__item">
+          <a href="#archivo" class="siteNav__link">Archivo</a>
+        </li>
+        <li class="siteNav__item">
+          <a href="#arquitectos" class="siteNav__link">Arquitectos</a>
+        </li>
+        <li class="siteNav__item">
+          <a href="#filosofia" class="siteNav__link">Filosofía</a>
+        </li>
+        <li class="siteNav__item">
+          <a href="#intervencion" class="siteNav__link">Intervención</a>
+        </li>
+        <li class="siteNav__item">
+          <a href="#protocolo" class="siteNav__link">Protocolo</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Zona derecha — CTA principal -->
+    <div class="siteHeader__actions">
+      <a href="#intervencion" class="btnGhost" aria-label="Iniciar una intervención">
+        Iniciar intervención
+      </a>
+
+      <!-- Botón hamburguesa — solo visible en mobile -->
+      <button
+        class="menuToggle"
+        id="menuToggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="menuToggle__bar"></span>
+        <span class="menuToggle__bar"></span>
+        <span class="menuToggle__bar"></span>
+      </button>
+    </div>
+
+  </header>
+
+
+  <!-- ============================================================
+    MOBILE MENU OVERLAY
+    - Full screen
+    - Controlado por JS (aria-expanded en menuToggle)
+  ============================================================ -->
+  <div class="mobileMenu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+    <nav class="mobileMenu__nav" aria-label="Navegación mobile">
+      <ul class="mobileMenu__list" role="list">
+        <li class="mobileMenu__item">
+          <a href="#estructura" class="mobileMenu__link">Estructura</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="#archivo" class="mobileMenu__link">Archivo</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="#arquitectos" class="mobileMenu__link">Arquitectos</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="#filosofia" class="mobileMenu__link">Filosofía</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="#intervencion" class="mobileMenu__link">Intervención</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="#protocolo" class="mobileMenu__link">Protocolo</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mobileMenu__footer">
+      <a href="#intervencion" class="btnGhost mobileMenu__cta">Iniciar intervención</a>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+    MAIN CONTENT
+  ============================================================ -->
+  <main id="mainContent" role="main">
+
+
+    <!-- ==========================================================
+      HERO
+      - Dos columnas asimétricas (45% texto / 55% imagen)
+      - min-height: 100vh
+      - Elemento atmosférico en esquina inferior izquierda
+      - Indicador de scroll al fondo
+    ========================================================== -->
+    <section class="hero" id="estructura" aria-labelledby="heroTitle">
+
+      <div class="hero__inner">
+
+        <!-- Columna izquierda — Bloque conceptual -->
+        <div class="hero__content">
+
+          <!-- Eyebrow -->
+          <p class="eyebrow" aria-label="Categoría">
+            Estudio de arquitectura corporal
+          </p>
+
+          <!-- Título principal (Brand Statement) -->
+          <h1 class="hero__title" id="heroTitle">
+            Arquitectura inscrita<br />
+            en la piel
+          </h1>
+
+          <!-- Texto descriptivo -->
+          <p class="hero__description">
+            Concrete Void Studio opera desde 19.4326° N / 99.1332° W — 2240 m,
+            en Ciudad de México. Desde esta latitud urbana exploramos el tatuaje
+            como arquitectura: estructuras de tinta diseñadas para habitar la piel.
+          </p>
+
+          <!-- Botones CTA -->
+          <div class="hero__actions">
+            <a href="#intervencion" class="btnPrimary">
+              Iniciar intervención
+            </a>
+            <a href="#archivo" class="btnSecondary">
+              Explorar archivo
+            </a>
+          </div>
+
+        </div>
+        <!-- /hero__content -->
+
+        <!-- Columna derecha — Imagen hero -->
+        <div class="hero__media" aria-hidden="true">
+          <figure class="hero__figure">
+            <!--
+              Reemplazar src con imagen real.
+              Usar imagen de tatuaje geométrico / brutalista,
+              alto contraste, fondo oscuro.
+            -->
+            <img
+              src="assets/img/tattoos/tattoHero.png"
+              alt="Tatuaje geométrico brutalista — Concrete Void Studio"
+              class="hero__image"
+              loading="eager"
+              fetchpriority="high"
+            />
+
+            <!-- Overlay tipográfico sobre la imagen -->
+            <figcaption class="hero__imageOverlay" aria-hidden="true">
+              <span class="hero__imageOverlayText">CONCRETE VOID</span>
+              <span class="hero__imageOverlayCoords">19.4326° N / 99.1332° W</span>
+            </figcaption>
+
+          </figure>
+        </div>
+        <!-- /hero__media -->
+
+      </div>
+      <!-- /hero__inner -->
+
+    </section>
+    <!-- /hero -->
+
+
+  </main>
+  <!-- /main -->
+
+
+  <!-- ============================================================
+    JS (al final del body para no bloquear render)
+  ============================================================ -->
+  <script src="js/header.js"></script>
+  <script src="js/menu.js"></script>
+
+</body>
+</html>

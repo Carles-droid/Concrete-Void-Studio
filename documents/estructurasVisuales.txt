@@ -1,0 +1,388 @@
+
+ESTRUCTURAS VISUALES
+
+**HEADER
+
+LOGO | Estructura | Archivo | Arquitectos  | Filosofía |  Intervención | Protocolo | [Iniciar intervención]
+
+
+				***
+Versión mobile
+
+[ LOGO ]        [ ☰ ]
+
+Estructura
+Archivo
+Arquitectos
+Filosofía
+Intervención
+Protocolo
+
+******************************************************************************************
+
+**HERO
+
+El hero utiliza layout de dos columnas asimétricas.
+
+		|-----------------------------------------------|
+		|			 HEADER                            |
+		|-----------------------------------------------|
+		
+		| TEXTO / CONCEPTO      | IMAGEN      |
+		|                           		  |                        |
+		| eyebrow                  		  |                        |
+		| título                     		  |   imagen        |
+		| texto descriptivo         	  |   tatuaje         |
+		| botones                               |   brutalista    |
+		|      CTA 1         CTA 2	  |                         |
+		
+		|-----------------------------------------------|
+		
+		|------------------------------------------------|
+		|    INDICADOR DE SCROLL                      |
+		|------------------------------------------------|
+
+Relación aproximada:
+Texto:   45%
+Imagen:  55%
+Esta proporción prioriza impacto visual sin perder lectura conceptual.
+
+		--------------------------------------------------------------------
+
+			Arquitectura inscrita
+			en la piel
+		
+		Concrete Void Studio opera desde 19.4326° N / 99.1332° W — 2240 m,
+		en Ciudad de México. Desde esta latitud urbana exploramos el
+		tatuaje como arquitectura.
+		
+		[ Iniciar intervención ]   [ Explorar archivo ]
+		
+		                                            [ imagen tatuaje ]
+		                                            [ brutalista      ]
+		                                            [ alto contraste  ]
+		                                            [ overlay texto   ]
+		
+		--------------------------------------------------------------------
+
+					CDMX
+					19.4326° N
+					99.1332° W
+					2240 m
+					
+					                    ↓ Scroll
+
+********************************************************************************************
+STATEMENT PRINCIPAL
+
+		|------------------------------------------------|
+		|                                                                          |
+		|           IMAGEN FULL SCREEN                 |
+		|           tatuaje brutalista                                |
+		|           textura piel / alto contraste             |
+		|                                                                          |
+		|    TEXTO MONUMENTAL (overlay)       |
+		|                                                			 |
+		|------------------------------------------------|
+		
+		
+		
+		|------------------------------------------------|
+		
+		                 *imagen brutalista*
+		
+		    El cuerpo se convierte
+		    en superficie arquitectónica.
+		
+		    La piel es el concreto
+		    donde se inscriben estas estructuras.
+		
+		|------------------------------------------------|
+
+*******************************************************************************************
+
+ARCHIVO
+
+		|------------------------------------------------|
+				    Eyebrow
+				      
+				    Título de sección
+				
+				    Texto descriptivo
+		|------------------------------------------------|
+		
+		             GRID DE PROYECTOS (6)
+		
+		|------------------------------------------------|
+		
+		                       Botón CTA
+		
+		|------------------------------------------------|
+		
+						****
+						
+Resultado visual:						
+		----------------------------------------------------------------
+		
+			    Arquitecturas desarrolladas
+		
+			     	            Archivo
+		
+		Registro visual de intervenciones donde la tinta se
+		convierte en estructura, volumen y memoria.
+
+		----------------------------------------------------------------
+		
+			[ imagen ]   [ imagen ]   [ imagen ]
+			
+			[ imagen ]   [ imagen ]   [ imagen ]
+		
+		----------------------------------------------------------------
+		
+				[ Explorar archivo completo ]
+		
+		----------------------------------------------------------------
+
+				***
+GRID 3
+
+		|-------------------------------------------|
+		
+		     [Card]     [Card]     [Card]
+		
+		     [Card]     [Card]     [Card]
+		
+		|-------------------------------------------|
+
+				
+GRID 2
+				
+		|---------------------------|
+		
+		      [Card]     [Card]
+		
+		      [Card]     [Card]
+		
+		      [Card]     [Card]
+		
+		|---------------------------|
+
+GRID 1
+
+		|-------------------|
+		
+		       [Card]
+		
+		       [Card]
+		
+		       [Card]
+		
+		       [Card]
+		
+		       [Card]
+		
+		       [Card]
+		
+		|-------------------|
+
+				***
+
+CARD
+
+		|-----------------------------|
+		|                    		         |
+		|                    		         |
+		|    IMAGEN TATUAJE    |
+		|                     			|
+		|                      			|
+		|-----------------------------|
+		|   Nombre de la pieza       |
+		|   Artista               		|
+		|-----------------------------|
+
+Sin hover la card muestra solo la imagen.
+
+Estado inicial:
+
+		|-----------------------------|
+		|                           		|
+		|         imagen       		|
+		|                         		         |
+		|                            		|
+		|-----------------------------|
+
+Con hover:
+		|-------------------------------|
+		|                           		   |
+		|IMAGEN OSCURECIDA   |
+		|                             		   |
+		|-------------------------------|
+		|    Monolito Fragmentado  |
+		|     por A. Rivera                   |
+		|-------------------------------|
+
+****************************************************************************
+
+LÍNEA DIVISORIA
+
+		|-----------------------------------------------|
+			No hay esencia. Solo estructura.
+		|-----------------------------------------------|
+
+*************************************************************************
+
+ARQUITECTOS
+
+		|--------------------------------------------------|
+		
+			     EYEBROW
+			     Arquitectos de la tinta
+			
+			     TÍTULO
+			     Quienes diseñan las estructuras
+			
+			     DESCRIPCIÓN
+			     (2 líneas máximo)
+		
+			  		 GRID
+			  [ retrato ]   [ retrato ]   [ retrato ]
+			       info		info		 info
+		
+					   CTA
+		|--------------------------------------------------|
+
+*************************************************************************
+
+FILOSOFÍA
+
+		|--------------------------------------------------|
+		
+			EYEBROW
+			Filosofía
+			
+			TÍTULO
+			La lógica detrás de las estructuras
+			
+			MANIFIESTO COMPLETO
+			Arquitectura inscrita en la piel...
+			(parrafos del manifiesto)
+		
+		|--------------------------------------------------|
+
+CITA DESTACADA
+
+					párrafo editorial
+					párrafo editorial
+		
+		EL CUERPO SE CONVIERTE EN SUPERFICIE ARQUITECTÓNICA.
+		LA PIEL ES EL CONCRETO DONDE SE INSCRIBEN
+		ESTAS ESTRUCTURAS.
+		
+					párrafo editorial
+					párrafo editorial
+
+*************************************************************************
+
+INTERVENCIÓN
+
+		|--------------------------------------------------|
+		
+				EYEBROW
+				Intervenir la superficie
+				
+				TÍTULO
+				Intervención
+				
+				TEXTO INTRODUCTORIO
+				
+				CTA
+		
+		|--------------------------------------------------|
+
+Resultado visual:
+
+
+		INTERVENIR LA SUPERFICIE
+		
+		Intervención
+		
+		Toda pieza comienza como un proyecto.
+		Aquí inicia el proceso para diseñar y construir
+		una estructura pensada para habitar tu piel.
+		
+		
+		[ Explorar el proceso de intervención ]
+
+
+*************************************************************************
+
+PROTOCOLO
+
+		[ EYEBROW ]
+		
+		PROTOCOLO
+		
+		Texto introductorio
+		
+		────────────────────────
+		
+		+ ¿Cómo comienza una intervención?
+		
+		+ ¿Qué preparación requiere la sesión?
+		
+		+ ¿Qué cuidados siguen después de la intervención?
+		
+		────────────────────────
+		
+		[ Solicitar una intervención ]
+
+
+*************************************************************************
+
+BAND STATEMENT FINAL
+
+		[ IMAGEN GRANDE — ancho completo ]
+		
+		TEXTO BREVE
+
+Resultado visual
+
+		┌───────────────────────────────────────┐
+		│                                       								      │
+		│                                       								      │
+		│          		   [ IMAGEN DEL TATUAJE ]      			       |
+		│                                       								      │
+		│                                       								      │
+		│       			 Arquitectura inscrita          			      | 
+		│           				 en la piel                 				     │   
+		│                                       							              │
+		└───────────────────────────────────────┘
+		
+
+*************************************************************************
+
+FOOTER
+
+────────────────────────────────────────
+
+		[ LOGO SECUNDARIO ]
+		
+		Construcciones para un mundo en ruinas
+
+────────────────────────────────────────
+
+		REDES                     CONTACTO
+		
+		[svg] Instagram           email
+		[svg] X                           teléfono
+		[svg] YouTube             coordenadas
+		[svg] Cráneo
+
+────────────────────────────────────────
+
+		© 2026 Concrete Void Studio
+		
+		Desarrollo Insomne
+
+────────────────────────────────────────
+

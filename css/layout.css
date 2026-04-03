@@ -1,0 +1,511 @@
+/* ============================================================
+   LAYOUT.CSS
+   Estructura y posicionamiento: header, mobile menu, hero
+   ============================================================ */
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.siteHeader {
+  /* Posicionamiento sticky */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--zHeader);
+
+  /* Layout 3 zonas */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space6);
+
+  /* Dimensiones */
+  height: var(--headerHeightFull);
+  padding-inline: var(--paddingSiteH);
+
+  /* Estado inicial — transparente sobre el hero */
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+
+  /* Transición suave al hacer scroll */
+  transition:
+    height var(--transitionMid),
+    background-color var(--transitionMid),
+    border-color var(--transitionMid),
+    backdrop-filter var(--transitionMid);
+}
+
+/* Estado con scroll — clase añadida por JS */
+.siteHeader.isScrolled {
+  height: var(--headerHeightScroll);
+  background-color: var(--colorCrater);
+  border-bottom: var(--borderThin);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Estado con scroll — ocultar micro descriptor */
+.siteHeader.isScrolled .siteHeader__descriptor {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+}
+
+
+/* ------------------------------------------------------------
+   HEADER — Zona izquierda (identidad)
+   ------------------------------------------------------------ */
+.siteHeader__identity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space1);
+  flex-shrink: 0;
+}
+
+.siteHeader__logoLink {
+  display: block;
+  line-height: 0; /* elimina espacio fantasma debajo del img */
+  transition: opacity var(--transitionFast);
+}
+
+.siteHeader__logoLink:hover {
+  opacity: 0.75;
+}
+
+.siteHeader__logo {
+  height: 32px;
+  width: auto;
+}
+
+/* Micro descriptor debajo del logo */
+.siteHeader__descriptor {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingWide);
+  text-transform: uppercase;
+  opacity: 0.35;
+  line-height: 1.4;
+  transition:
+    opacity var(--transitionMid),
+    transform var(--transitionMid);
+}
+
+.siteHeader__descriptor span {
+  display: block;
+}
+
+
+/* ------------------------------------------------------------
+   HEADER — Zona central (navegación desktop)
+   ------------------------------------------------------------ */
+.siteNav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.siteNav__list {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+
+.siteNav__item {
+  /* Separador entre items con | */
+  display: flex;
+  align-items: center;
+}
+
+/* El separador | entre links */
+.siteNav__item + .siteNav__item::before {
+  content: '|';
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  opacity: 0.2;
+  padding-inline: var(--space3);
+  pointer-events: none;
+  user-select: none;
+}
+
+.siteNav__link {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechSm);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  text-transform: uppercase;
+  color: var(--colorAsh);
+  opacity: 0.7;
+  padding: var(--space2) var(--space3);
+  position: relative;
+  transition:
+    opacity var(--transitionFast),
+    color var(--transitionFast);
+}
+
+/* Rectángulo de hover — aparece como overlay */
+.siteNav__link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  transition: border-color var(--transitionFast);
+}
+
+.siteNav__link:hover {
+  opacity: 1;
+  color: var(--colorBone);
+}
+
+.siteNav__link:hover::before {
+  border-color: var(--overlayBorderMid);
+}
+
+/* Link activo */
+.siteNav__link.isActive {
+  opacity: 1;
+  color: var(--colorBone);
+}
+
+.siteNav__link.isActive::before {
+  border-color: var(--overlayBorderHi);
+}
+
+
+/* ------------------------------------------------------------
+   HEADER — Zona derecha (acciones)
+   ------------------------------------------------------------ */
+.siteHeader__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space4);
+  flex-shrink: 0;
+}
+
+/* Botón hamburguesa — oculto en desktop */
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space2);
+  transition: opacity var(--transitionFast);
+}
+
+.menuToggle:hover {
+  opacity: 0.7;
+}
+
+.menuToggle__bar {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background-color: var(--colorAsh);
+  transition: transform var(--transitionMid), opacity var(--transitionMid);
+  transform-origin: center;
+}
+
+/* Animación hamburguesa → X al abrir el menú */
+.menuToggle[aria-expanded="true"] .menuToggle__bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menuToggle[aria-expanded="true"] .menuToggle__bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menuToggle[aria-expanded="true"] .menuToggle__bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* ============================================================
+   MOBILE MENU OVERLAY
+   ============================================================ */
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--zMobileMenu);
+  background-color: var(--colorAbyss);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: var(--paddingSiteH);
+  padding-bottom: var(--space10);
+
+  /* Transición de entrada/salida */
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity var(--transitionMid);
+}
+
+/* Estado visible — clase añadida por JS + eliminar hidden */
+.mobileMenu.isOpen {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobileMenu__nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenu__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space5);
+  width: 100%;
+}
+
+.mobileMenu__link {
+  font-family: var(--fontDisplay);
+  font-size: clamp(2.2rem, 8vw, 3.5rem);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorAsh);
+  opacity: 0.6;
+  display: block;
+  transition:
+    opacity var(--transitionFast),
+    color var(--transitionFast);
+  line-height: var(--lineHeightSnug);
+}
+
+.mobileMenu__link:hover {
+  opacity: 1;
+  color: var(--colorBone);
+}
+
+.mobileMenu__footer {
+  padding-top: var(--space8);
+  border-top: var(--borderThin);
+}
+
+.mobileMenu__cta {
+  width: 100%;
+  max-width: 280px;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--headerHeightFull); /* espacio para el header fijo */
+  padding-inline: var(--paddingSiteH);
+  overflow: hidden;
+}
+
+/* Contenedor interno — dos columnas asimétricas */
+.hero__inner {
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  gap: clamp(var(--space8), 6vw, var(--space12));
+  flex: 1;
+  align-items: center;
+  padding-top: clamp(var(--space9), 8vh, var(--space12));
+  padding-bottom: clamp(var(--space9), 8vh, var(--space12));
+}
+
+
+/* ------------------------------------------------------------
+   HERO — Columna izquierda (bloque conceptual)
+   ------------------------------------------------------------ */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 600px;
+}
+
+/* Eyebrow ya tiene estilos en base.css */
+.hero__content .eyebrow {
+  margin-bottom: var(--space5);
+}
+
+/* Título principal */
+.hero__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayXl);
+  font-weight: var(--weightRegular);
+  line-height: var(--lineHeightTight);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorBone);
+  margin-bottom: var(--space6);
+}
+
+/* Texto descriptivo */
+.hero__description {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.8;
+  max-width: 52ch;
+  margin-bottom: var(--space8);
+}
+
+/* Botones CTA */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space4);
+}
+
+
+/* ------------------------------------------------------------
+   HERO — Columna derecha (imagen)
+   ------------------------------------------------------------ */
+.hero__media {
+  position: relative;
+  height: clamp(420px, 65vh, 700px);
+}
+
+.hero__figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: contrast(1.05) brightness(0.9);
+  transition: transform var(--transitionSlow);
+}
+
+.hero__figure:hover .hero__image {
+  transform: scale(1.02);
+}
+
+/* Overlay tipográfico sobre la imagen */
+.hero__imageOverlay {
+  position: absolute;
+  bottom: var(--space6);
+  left: var(--space5);
+  right: var(--space5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space1);
+  pointer-events: none;
+}
+
+.hero__imageOverlayText {
+  font-family: var(--fontDisplay);
+  font-size: clamp(1.5rem, 3vw, 2.8rem);
+  letter-spacing: var(--trackingXXWide);
+  color: var(--colorAsh);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.hero__imageOverlayCoords {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorAsh);
+  opacity: 0.25;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet — 1024px */
+@media (max-width: 1024px) {
+
+  /* Header — ocultar nav desktop, mostrar hamburguesa */
+  .siteNav {
+    display: none;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  /* Hero — stack vertical */
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space8);
+    padding-top: var(--space9);
+  }
+
+  .hero__media {
+    height: clamp(280px, 45vh, 480px);
+    order: -1; /* imagen primero en tablet */
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+}
+
+/* Mobile — 768px */
+@media (max-width: 768px) {
+
+  /* Header */
+  .btnGhost {
+    display: none; /* ocultar CTA del header en mobile */
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: var(--headerHeightScroll);
+  }
+
+  .hero__title {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .hero__media {
+    height: 55vw;
+    min-height: 220px;
+  }
+
+  .hero__coordinates {
+    display: none; /* ocultar en mobile por espacio */
+  }
+
+  .hero__scrollIndicator {
+    bottom: var(--space4);
+  }
+}
+
+/* Mobile pequeño — 480px */
+@media (max-width: 480px) {
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

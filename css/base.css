@@ -1,0 +1,233 @@
+/* ============================================================
+   BASE.CSS
+   Reset, estilos globales y fundamentos del documento
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   RESET MODERNO
+   Basado en Josh Comeau's CSS Reset
+   ------------------------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Scroll suave para navegación por anclas */
+  scroll-behavior: smooth;
+  /* Previene saltos de scroll por scrollbar */
+  scrollbar-gutter: stable;
+  /* Tamaño de fuente base */
+  font-size: 16px;
+  /* Mejora renderizado de texto */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--colorVoid);
+  color: var(--colorAsh);
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightRegular);
+  line-height: var(--lineHeightRelaxed);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Previene scroll horizontal no deseado */
+  overflow-x: hidden;
+}
+
+/* Imágenes y medios */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inputs heredan tipografía */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Previene overflow en textos largos */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Listas sin estilo por defecto en navegación */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Links base */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ------------------------------------------------------------
+   SCROLLBAR PERSONALIZADA
+   Coherente con la estética brutalista
+   ------------------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--colorVoid);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--colorConcrete300);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--colorConcrete500);
+}
+
+
+/* ------------------------------------------------------------
+   SELECCIÓN DE TEXTO
+   ------------------------------------------------------------ */
+::selection {
+  background-color: var(--colorAccent);
+  color: var(--colorVoid);
+}
+
+
+/* ------------------------------------------------------------
+   TIPOGRAFÍA GLOBAL
+   Clases utilitarias para las 3 familias
+   ------------------------------------------------------------ */
+
+/* Display — Bebas Neue */
+.fontDisplay {
+  font-family: var(--fontDisplay);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  font-weight: var(--weightRegular); /* Bebas solo tiene un peso */
+}
+
+/* Editorial — Cormorant */
+.fontEditorial {
+  font-family: var(--fontEditorial);
+  line-height: var(--lineHeightRelaxed);
+}
+
+/* Técnica — IBM Plex Mono */
+.fontTech {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechMd);
+  letter-spacing: var(--trackingWide);
+}
+
+
+/* ------------------------------------------------------------
+   COMPONENTES TIPOGRÁFICOS BASE
+   ------------------------------------------------------------ */
+
+/* Eyebrow — etiqueta de sección */
+.eyebrow {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingXWide);
+  text-transform: uppercase;
+  opacity: 0.55;
+  line-height: var(--lineHeightNormal);
+  margin-bottom: var(--space4);
+}
+
+/* Botones — base compartida */
+.btnPrimary,
+.btnSecondary,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechMd);
+  font-weight: var(--weightMedium);
+  letter-spacing: var(--trackingWide);
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    background-color var(--transitionMid),
+    color var(--transitionMid),
+    border-color var(--transitionMid),
+    opacity var(--transitionMid);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  line-height: 1;
+}
+
+/* Botón primario — fondo sólido */
+.btnPrimary {
+  background-color: var(--colorAsh);
+  color: var(--colorVoid);
+  border-color: var(--colorAsh);
+}
+
+.btnPrimary:hover {
+  background-color: var(--colorBone);
+  border-color: var(--colorBone);
+}
+
+/* Botón secundario — outline */
+.btnSecondary {
+  background-color: transparent;
+  color: var(--colorAsh);
+  border-color: var(--overlayBorderMid);
+}
+
+.btnSecondary:hover {
+  border-color: var(--colorAsh);
+  color: var(--colorBone);
+}
+
+/* Botón ghost — para header */
+.btnGhost {
+  background-color: transparent;
+  color: var(--colorAsh);
+  border-color: var(--overlayBorderHi);
+  padding: 10px 20px;
+  font-size: var(--sizeTechSm);
+}
+
+.btnGhost:hover {
+  background-color: var(--colorAsh);
+  color: var(--colorVoid);
+  border-color: var(--colorAsh);
+}
+
+
+/* ------------------------------------------------------------
+   UTILIDADES GENERALES
+   ------------------------------------------------------------ */
+
+/* Ocultar visualmente pero mantener accesibilidad */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Contenedor centrado global */
+.container {
+  width: 100%;
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+  padding-inline: var(--paddingSiteH);
+}
