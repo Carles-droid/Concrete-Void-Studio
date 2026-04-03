@@ -1065,3 +1065,118 @@
     font-size: var(--sizeEditorialMd);
   }
 }
+
+/* ============================================================
+   INTERVENCIÓN
+   ============================================================ */
+.intervencion {
+  padding-top: var(--space14);
+  padding-bottom: var(--space14);
+  padding-inline: var(--paddingSiteH);
+  border-top: var(--borderThin);
+  background-color: var(--colorAbyss);
+}
+ 
+/* Layout asimétrico: contenido 55% / imagen 45% */
+.intervencion__container {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: clamp(var(--space8), 6vw, var(--space12));
+  align-items: center;
+}
+ 
+/* Columna izquierda — contenido */
+.intervencion__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+ 
+.intervencion__content .eyebrow {
+  margin-bottom: var(--space4);
+}
+ 
+/* Título */
+.intervencion__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  margin-bottom: var(--space7);
+}
+ 
+/* Texto introductorio */
+.intervencion__texto {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialLg);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.8;
+  max-width: 48ch;
+  margin-bottom: var(--space9);
+}
+ 
+/* CTA — padding generoso para texto largo */
+.intervencion__cta {
+  padding: 14px 36px;
+  white-space: nowrap;
+}
+ 
+/* Columna derecha — imagen */
+.intervencion__media {
+  height: clamp(360px, 55vh, 600px);
+}
+ 
+.intervencion__figure {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+ 
+.intervencion__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(20%) contrast(1.05);
+  transition: transform var(--transitionSlow);
+}
+ 
+.intervencion__figure:hover .intervencion__image {
+  transform: scale(1.03);
+}
+ 
+/* Responsive */
+@media (max-width: 1024px) {
+  .intervencion__container {
+    grid-template-columns: 1fr;
+    gap: var(--space8);
+  }
+ 
+  .intervencion__media {
+    height: clamp(260px, 45vh, 440px);
+    order: -1; /* imagen primero en tablet */
+  }
+}
+ 
+@media (max-width: 768px) {
+  .intervencion {
+    padding-top: var(--space12);
+    padding-bottom: var(--space12);
+  }
+ 
+  .intervencion__texto {
+    font-size: var(--sizeEditorialMd);
+    max-width: 100%;
+  }
+ 
+  .intervencion__cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
