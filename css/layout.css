@@ -1,36 +1,27 @@
 /* ============================================================
    LAYOUT.CSS
-   Estructura y posicionamiento: header, mobile menu, hero
+   Estructura y posicionamiento de todas las secciones.
+   Responsive consolidado al final — un solo bloque por breakpoint.
    ============================================================ */
 
 
 /* ============================================================
    HEADER
    ============================================================ */
-
 .siteHeader {
-  /* Posicionamiento sticky */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: var(--zHeader);
-
-  /* Layout 3 zonas */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space6);
-
-  /* Dimensiones */
   height: var(--headerHeightFull);
   padding-inline: var(--paddingSiteH);
-
-  /* Estado inicial — transparente sobre el hero */
   background-color: transparent;
   border-bottom: 1px solid transparent;
-
-  /* Transición suave al hacer scroll */
   transition:
     height var(--transitionMid),
     background-color var(--transitionMid),
@@ -38,7 +29,6 @@
     backdrop-filter var(--transitionMid);
 }
 
-/* Estado con scroll — clase añadida por JS */
 .siteHeader.isScrolled {
   height: var(--headerHeightScroll);
   background-color: var(--colorCrater);
@@ -47,17 +37,12 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
-/* Estado con scroll — ocultar micro descriptor */
 .siteHeader.isScrolled .siteHeader__descriptor {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-4px);
 }
 
-
-/* ------------------------------------------------------------
-   HEADER — Zona izquierda (identidad)
-   ------------------------------------------------------------ */
 .siteHeader__identity {
   display: flex;
   flex-direction: column;
@@ -67,7 +52,7 @@
 
 .siteHeader__logoLink {
   display: block;
-  line-height: 0; /* elimina espacio fantasma debajo del img */
+  line-height: 0;
   transition: opacity var(--transitionFast);
 }
 
@@ -80,7 +65,6 @@
   width: auto;
 }
 
-/* Micro descriptor debajo del logo */
 .siteHeader__descriptor {
   font-family: var(--fontTech);
   font-size: var(--sizeTechXs);
@@ -97,10 +81,6 @@
   display: block;
 }
 
-
-/* ------------------------------------------------------------
-   HEADER — Zona central (navegación desktop)
-   ------------------------------------------------------------ */
 .siteNav {
   display: flex;
   align-items: center;
@@ -116,12 +96,10 @@
 }
 
 .siteNav__item {
-  /* Separador entre items con | */
   display: flex;
   align-items: center;
 }
 
-/* El separador | entre links */
 .siteNav__item + .siteNav__item::before {
   content: '|';
   font-family: var(--fontTech);
@@ -147,7 +125,6 @@
     color var(--transitionFast);
 }
 
-/* Rectángulo de hover — aparece como overlay */
 .siteNav__link::before {
   content: '';
   position: absolute;
@@ -156,29 +133,11 @@
   transition: border-color var(--transitionFast);
 }
 
-.siteNav__link:hover {
-  opacity: 1;
-  color: var(--colorBone);
-}
+.siteNav__link:hover        { opacity: 1; color: var(--colorBone); }
+.siteNav__link:hover::before { border-color: var(--overlayBorderMid); }
+.siteNav__link.isActive      { opacity: 1; color: var(--colorBone); }
+.siteNav__link.isActive::before { border-color: var(--overlayBorderHi); }
 
-.siteNav__link:hover::before {
-  border-color: var(--overlayBorderMid);
-}
-
-/* Link activo */
-.siteNav__link.isActive {
-  opacity: 1;
-  color: var(--colorBone);
-}
-
-.siteNav__link.isActive::before {
-  border-color: var(--overlayBorderHi);
-}
-
-
-/* ------------------------------------------------------------
-   HEADER — Zona derecha (acciones)
-   ------------------------------------------------------------ */
 .siteHeader__actions {
   display: flex;
   align-items: center;
@@ -186,7 +145,6 @@
   flex-shrink: 0;
 }
 
-/* Botón hamburguesa — oculto en desktop */
 .menuToggle {
   display: none;
   flex-direction: column;
@@ -202,9 +160,7 @@
   transition: opacity var(--transitionFast);
 }
 
-.menuToggle:hover {
-  opacity: 0.7;
-}
+.menuToggle:hover { opacity: 0.7; }
 
 .menuToggle__bar {
   display: block;
@@ -215,16 +171,13 @@
   transform-origin: center;
 }
 
-/* Animación hamburguesa → X al abrir el menú */
 .menuToggle[aria-expanded="true"] .menuToggle__bar:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
-
 .menuToggle[aria-expanded="true"] .menuToggle__bar:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
-
 .menuToggle[aria-expanded="true"] .menuToggle__bar:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
@@ -238,21 +191,16 @@
   inset: 0;
   z-index: var(--zMobileMenu);
   background-color: var(--colorAbyss);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-inline: var(--paddingSiteH);
   padding-bottom: var(--space10);
-
-  /* Transición de entrada/salida */
   opacity: 0;
   pointer-events: none;
-  transition:
-    opacity var(--transitionMid);
+  transition: opacity var(--transitionMid);
 }
 
-/* Estado visible — clase añadida por JS + eliminar hidden */
 .mobileMenu.isOpen {
   opacity: 1;
   pointer-events: all;
@@ -285,10 +233,7 @@
   line-height: var(--lineHeightSnug);
 }
 
-.mobileMenu__link:hover {
-  opacity: 1;
-  color: var(--colorBone);
-}
+.mobileMenu__link:hover  { opacity: 1; color: var(--colorBone); }
 
 .mobileMenu__footer {
   padding-top: var(--space8);
@@ -309,12 +254,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: var(--headerHeightFull); /* espacio para el header fijo */
+  padding-top: var(--headerHeightFull);
   padding-inline: var(--paddingSiteH);
   overflow: hidden;
 }
 
-/* Contenedor interno — dos columnas asimétricas */
 .hero__inner {
   display: grid;
   grid-template-columns: 45fr 55fr;
@@ -325,10 +269,6 @@
   padding-bottom: clamp(var(--space9), 8vh, var(--space12));
 }
 
-
-/* ------------------------------------------------------------
-   HERO — Columna izquierda (bloque conceptual)
-   ------------------------------------------------------------ */
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -336,12 +276,8 @@
   max-width: 600px;
 }
 
-/* Eyebrow ya tiene estilos en base.css */
-.hero__content .eyebrow {
-  margin-bottom: var(--space5);
-}
+.hero__content .eyebrow { margin-bottom: var(--space5); }
 
-/* Título principal */
 .hero__title {
   font-family: var(--fontDisplay);
   font-size: var(--sizeDisplayXl);
@@ -352,7 +288,6 @@
   margin-bottom: var(--space6);
 }
 
-/* Texto descriptivo */
 .hero__description {
   font-family: var(--fontEditorial);
   font-size: var(--sizeEditorialMd);
@@ -364,7 +299,6 @@
   margin-bottom: var(--space8);
 }
 
-/* Botones CTA */
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -372,10 +306,6 @@
   gap: var(--space4);
 }
 
-
-/* ------------------------------------------------------------
-   HERO — Columna derecha (imagen)
-   ------------------------------------------------------------ */
 .hero__media {
   position: relative;
   height: clamp(420px, 65vh, 700px);
@@ -397,11 +327,8 @@
   transition: transform var(--transitionSlow);
 }
 
-.hero__figure:hover .hero__image {
-  transform: scale(1.02);
-}
+.hero__figure:hover .hero__image { transform: scale(1.02); }
 
-/* Overlay tipográfico sobre la imagen */
 .hero__imageOverlay {
   position: absolute;
   bottom: var(--space6);
@@ -432,85 +359,6 @@
 
 
 /* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-/* Tablet — 1024px */
-@media (max-width: 1024px) {
-
-  /* Header — ocultar nav desktop, mostrar hamburguesa */
-  .siteNav {
-    display: none;
-  }
-
-  .menuToggle {
-    display: flex;
-  }
-
-  /* Hero — stack vertical */
-  .hero__inner {
-    grid-template-columns: 1fr;
-    gap: var(--space8);
-    padding-top: var(--space9);
-  }
-
-  .hero__media {
-    height: clamp(280px, 45vh, 480px);
-    order: -1; /* imagen primero en tablet */
-  }
-
-  .hero__content {
-    max-width: 100%;
-  }
-}
-
-/* Mobile — 768px */
-@media (max-width: 768px) {
-
-  /* Header */
-  .btnGhost {
-    display: none; /* ocultar CTA del header en mobile */
-  }
-
-  /* Hero */
-  .hero {
-    padding-top: var(--headerHeightScroll);
-  }
-
-  .hero__title {
-    font-size: clamp(3rem, 12vw, 5rem);
-  }
-
-  .hero__media {
-    height: 55vw;
-    min-height: 220px;
-  }
-
-  .hero__coordinates {
-    display: none; /* ocultar en mobile por espacio */
-  }
-
-  .hero__scrollIndicator {
-    bottom: var(--space4);
-  }
-}
-
-/* Mobile pequeño — 480px */
-@media (max-width: 480px) {
-
-  .hero__actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .btnPrimary,
-  .btnSecondary {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* ============================================================
    STATEMENT VISUAL
    ============================================================ */
 .statement {
@@ -520,14 +368,13 @@
   align-items: center;
   overflow: hidden;
 }
- 
-/* Imagen de fondo — ocupa todo el contenedor */
+
 .statement__media {
   position: absolute;
   inset: 0;
   z-index: var(--zBase);
 }
- 
+
 .statement__image {
   width: 100%;
   height: 100%;
@@ -535,8 +382,7 @@
   object-position: center;
   filter: contrast(1.08) brightness(0.75);
 }
- 
-/* Overlay oscuro para legibilidad */
+
 .statement__overlay {
   position: absolute;
   inset: 0;
@@ -546,8 +392,7 @@
     rgba(0, 0, 0, 0.42)
   );
 }
- 
-/* Bloque de texto — sobre la imagen */
+
 .statement__content {
   position: relative;
   z-index: var(--zAbove);
@@ -558,8 +403,7 @@
   flex-direction: column;
   gap: var(--space8);
 }
- 
-/* Texto monumental */
+
 .statement__text {
   font-family: var(--fontDisplay);
   font-size: var(--sizeDisplayLg);
@@ -568,126 +412,25 @@
   letter-spacing: var(--trackingWide);
   color: var(--colorBone);
 }
- 
- 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
- 
-/* Tablet — 1024px */
-@media (max-width: 1024px) {
- 
-  /* Header — ocultar nav desktop, mostrar hamburguesa */
-  .siteNav {
-    display: none;
-  }
- 
-  .menuToggle {
-    display: flex;
-  }
- 
-  /* Hero — stack vertical */
-  .hero__inner {
-    grid-template-columns: 1fr;
-    gap: var(--space8);
-    padding-top: var(--space9);
-  }
- 
-  .hero__media {
-    height: clamp(280px, 45vh, 480px);
-    order: -1; /* imagen primero en tablet */
-  }
- 
-  .hero__content {
-    max-width: 100%;
-  }
- 
-  /* Statement */
-  .statement {
-    min-height: 70vh;
-  }
- 
-  .statement__content {
-    max-width: 100%;
-    gap: var(--space6);
-  }
-}
- 
-/* Mobile — 768px */
-@media (max-width: 768px) {
- 
-  /* Header */
-  .btnGhost {
-    display: none; /* ocultar CTA del header en mobile */
-  }
- 
-  /* Hero */
-  .hero {
-    padding-top: var(--headerHeightScroll);
-  }
- 
-  .hero__title {
-    font-size: clamp(3rem, 12vw, 5rem);
-  }
- 
-  .hero__media {
-    height: 55vw;
-    min-height: 220px;
-  }
- 
-  .hero__scrollIndicator {
-    bottom: var(--space4);
-  }
- 
-  /* Statement */
-  .statement {
-    min-height: 60vh;
-  }
- 
-  .statement__content {
-    padding-block: var(--space10);
-    gap: var(--space5);
-  }
-}
- 
-/* Mobile pequeño — 480px */
-@media (max-width: 480px) {
- 
-  .hero__actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
- 
-  .btnPrimary,
-  .btnSecondary {
-    width: 100%;
-    justify-content: center;
-  }
-}
+
 
 /* ============================================================
-   ARCHIVO — layout de sección
+   ARCHIVO
    ============================================================ */
 .archivo {
   padding-top: var(--space13);
   padding-bottom: var(--space13);
   padding-inline: var(--paddingSiteH);
 }
- 
+
 .archivo__container {
   max-width: var(--maxWidthContent);
   margin-inline: auto;
 }
- 
-/* Cabecera editorial */
-.archivo__header {
-  margin-bottom: var(--space9);
-}
- 
-.archivo__header .eyebrow {
-  margin-bottom: var(--space3);
-}
- 
+
+.archivo__header        { margin-bottom: var(--space9); }
+.archivo__header .eyebrow { margin-bottom: var(--space3); }
+
 .archivo__title {
   font-family: var(--fontDisplay);
   font-size: var(--sizeDisplayMd);
@@ -697,7 +440,7 @@
   color: var(--colorBone);
   margin-bottom: var(--space4);
 }
- 
+
 .archivo__description {
   font-family: var(--fontEditorial);
   font-size: var(--sizeEditorialMd);
@@ -707,128 +450,19 @@
   opacity: 0.75;
   max-width: 52ch;
 }
- 
-/* Grid de 3 columnas */
+
 .archivo__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gridGap);
 }
- 
-/* CTA inferior */
+
 .archivo__cta {
   margin-top: var(--space9);
   display: flex;
   justify-content: center;
 }
- 
- 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
- 
-/* Tablet — 1024px */
-@media (max-width: 1024px) {
- 
-  /* Header — ocultar nav desktop, mostrar hamburguesa */
-  .siteNav {
-    display: none;
-  }
- 
-  .menuToggle {
-    display: flex;
-  }
- 
-  /* Hero — stack vertical */
-  .hero__inner {
-    grid-template-columns: 1fr;
-    gap: var(--space8);
-    padding-top: var(--space9);
-  }
- 
-  .hero__media {
-    height: clamp(280px, 45vh, 480px);
-    order: -1; /* imagen primero en tablet */
-  }
- 
-  .hero__content {
-    max-width: 100%;
-  }
- 
-  /* Statement */
-  .statement {
-    min-height: 70vh;
-  }
- 
-  .statement__content {
-    max-width: 100%;
-    gap: var(--space6);
-  }
- 
-  /* Archivo — 2 columnas */
-  .archivo__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
- 
-/* Mobile — 768px */
-@media (max-width: 768px) {
- 
-  /* Header */
-  .btnGhost {
-    display: none;
-  }
- 
-  /* Hero */
-  .hero {
-    padding-top: var(--headerHeightScroll);
-  }
- 
-  .hero__title {
-    font-size: clamp(3rem, 12vw, 5rem);
-  }
- 
-  .hero__media {
-    height: 55vw;
-    min-height: 220px;
-  }
- 
-  /* Statement */
-  .statement {
-    min-height: 60vh;
-  }
- 
-  .statement__content {
-    padding-block: var(--space10);
-    gap: var(--space5);
-  }
- 
-  /* Archivo */
-  .archivo {
-    padding-top: var(--space11);
-    padding-bottom: var(--space11);
-  }
- 
-  /* Archivo — 1 columna */
-  .archivo__grid {
-    grid-template-columns: 1fr;
-  }
-}
- 
-/* Mobile pequeño — 480px */
-@media (max-width: 480px) {
- 
-  .hero__actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
- 
-  .btnPrimary,
-  .btnSecondary {
-    width: 100%;
-    justify-content: center;
-  }
-}
+
 
 /* ============================================================
    LÍNEA DIVISORIA CONCEPTUAL
@@ -844,7 +478,7 @@
   border-top: var(--borderThin);
   border-bottom: var(--borderThin);
 }
- 
+
 .conceptDivider__text {
   font-family: var(--fontDisplay);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
@@ -855,31 +489,25 @@
   text-align: center;
   max-width: 700px;
 }
- 
- 
+
+
 /* ============================================================
-   ARQUITECTOS — layout de sección
+   ARQUITECTOS
    ============================================================ */
 .arquitectos {
   padding-top: var(--space13);
   padding-bottom: var(--space13);
   padding-inline: var(--paddingSiteH);
 }
- 
+
 .arquitectos__container {
   max-width: var(--maxWidthContent);
   margin-inline: auto;
 }
- 
-/* Cabecera editorial */
-.arquitectos__header {
-  margin-bottom: var(--space11);
-}
- 
-.arquitectos__header .eyebrow {
-  margin-bottom: var(--space3);
-}
- 
+
+.arquitectos__header         { margin-bottom: var(--space11); }
+.arquitectos__header .eyebrow { margin-bottom: var(--space3); }
+
 .arquitectos__title {
   font-family: var(--fontDisplay);
   font-size: var(--sizeDisplayMd);
@@ -890,7 +518,7 @@
   margin-bottom: var(--space5);
   max-width: 600px;
 }
- 
+
 .arquitectos__description {
   font-family: var(--fontEditorial);
   font-size: var(--sizeEditorialMd);
@@ -900,44 +528,19 @@
   opacity: 0.75;
   max-width: 52ch;
 }
- 
-/* Grid de 3 columnas simétricas */
+
 .arquitectos__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space8);
 }
- 
-/* CTA inferior */
+
 .arquitectos__cta {
   margin-top: var(--space11);
   display: flex;
   justify-content: center;
 }
- 
-/* Responsive — Arquitectos */
-@media (max-width: 1024px) {
-  .arquitectos__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
- 
-@media (max-width: 768px) {
-  .arquitectos {
-    padding-top: var(--space11);
-    padding-bottom: var(--space11);
-  }
- 
-  .arquitectos__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space6);
-  }
- 
-  .conceptDivider {
-    padding-top: var(--space10);
-    padding-bottom: var(--space10);
-  }
-}
+
 
 /* ============================================================
    FILOSOFÍA
@@ -948,28 +551,23 @@
   padding-inline: var(--paddingSiteH);
   border-top: var(--borderThin);
 }
- 
+
 .filosofia__container {
   max-width: var(--maxWidthContent);
   margin-inline: auto;
- 
-  /* Dos columnas: cabecera izquierda / manifiesto derecha */
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   gap: clamp(var(--space9), 8vw, var(--space14));
   align-items: start;
 }
- 
-/* Cabecera — columna izquierda, sticky mientras se lee el manifiesto */
+
 .filosofia__header {
   position: sticky;
   top: calc(var(--headerHeightScroll) + var(--space6));
 }
- 
-.filosofia__header .eyebrow {
-  margin-bottom: var(--space3);
-}
- 
+
+.filosofia__header .eyebrow { margin-bottom: var(--space3); }
+
 .filosofia__title {
   font-family: var(--fontDisplay);
   font-size: var(--sizeDisplayMd);
@@ -978,14 +576,12 @@
   line-height: var(--lineHeightTight);
   color: var(--colorBone);
 }
- 
-/* Manifiesto — columna derecha */
+
 .filosofia__manifiesto {
   display: flex;
   flex-direction: column;
 }
- 
-/* Subtítulo del manifiesto */
+
 .filosofia__subtitulo {
   font-family: var(--fontEditorial);
   font-size: clamp(1.2rem, 1.6vw, 1.5rem);
@@ -996,8 +592,7 @@
   margin-bottom: var(--space7);
   letter-spacing: var(--trackingNormal);
 }
- 
-/* Párrafos del manifiesto */
+
 .filosofia__parrafo {
   font-family: var(--fontEditorial);
   font-size: var(--sizeEditorialLg);
@@ -1008,16 +603,14 @@
   max-width: var(--maxWidthText);
   margin-bottom: var(--space6);
 }
- 
-/* Párrafo de cierre — ligeramente más prominente */
+
 .filosofia__parrafo--cierre {
   font-weight: var(--weightRegular);
   opacity: 1;
   color: var(--colorBone);
   margin-bottom: 0;
 }
- 
-/* Cita destacada monumental */
+
 .filosofia__cita {
   font-family: var(--fontDisplay);
   font-size: clamp(2rem, 3.2vw, 3rem);
@@ -1028,43 +621,11 @@
   max-width: var(--maxWidthNarrow);
   margin-top: var(--space10);
   margin-bottom: var(--space10);
- 
-  /* Sin estilo de cita por defecto */
   quotes: none;
   border: none;
   padding: 0;
 }
- 
-/* Responsive — Filosofía */
-@media (max-width: 1024px) {
-  /* Stack vertical: cabecera arriba, manifiesto abajo */
-  .filosofia__container {
-    grid-template-columns: 1fr;
-    gap: var(--space8);
-  }
- 
-  /* Quitar sticky en tablet — no tiene sentido en stack vertical */
-  .filosofia__header {
-    position: static;
-  }
-}
- 
-@media (max-width: 768px) {
-  .filosofia {
-    padding-top: var(--space11);
-    padding-bottom: var(--space11);
-  }
- 
-  .filosofia__cita {
-    font-size: clamp(1.6rem, 6vw, 2.2rem);
-    margin-top: var(--space8);
-    margin-bottom: var(--space8);
-  }
- 
-  .filosofia__parrafo {
-    font-size: var(--sizeEditorialMd);
-  }
-}
+
 
 /* ============================================================
    INTERVENCIÓN
@@ -1076,8 +637,7 @@
   border-top: var(--borderThin);
   background-color: var(--colorAbyss);
 }
- 
-/* Layout asimétrico: contenido 55% / imagen 45% */
+
 .intervencion__container {
   max-width: var(--maxWidthContent);
   margin-inline: auto;
@@ -1086,19 +646,15 @@
   gap: clamp(var(--space8), 6vw, var(--space12));
   align-items: center;
 }
- 
-/* Columna izquierda — contenido */
+
 .intervencion__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
- 
-.intervencion__content .eyebrow {
-  margin-bottom: var(--space4);
-}
- 
-/* Título */
+
+.intervencion__content .eyebrow { margin-bottom: var(--space4); }
+
 .intervencion__title {
   font-family: var(--fontDisplay);
   font-size: var(--sizeDisplayMd);
@@ -1108,8 +664,7 @@
   color: var(--colorBone);
   margin-bottom: var(--space7);
 }
- 
-/* Texto introductorio */
+
 .intervencion__texto {
   font-family: var(--fontEditorial);
   font-size: var(--sizeEditorialLg);
@@ -1120,24 +675,22 @@
   max-width: 48ch;
   margin-bottom: var(--space9);
 }
- 
-/* CTA — padding generoso para texto largo */
+
 .intervencion__cta {
   padding: 14px 36px;
   white-space: nowrap;
 }
- 
-/* Columna derecha — imagen */
+
 .intervencion__media {
   height: clamp(360px, 55vh, 600px);
 }
- 
+
 .intervencion__figure {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
- 
+
 .intervencion__image {
   width: 100%;
   height: 100%;
@@ -1146,37 +699,103 @@
   filter: grayscale(20%) contrast(1.05);
   transition: transform var(--transitionSlow);
 }
- 
-.intervencion__figure:hover .intervencion__image {
-  transform: scale(1.03);
-}
- 
-/* Responsive */
+
+.intervencion__figure:hover .intervencion__image { transform: scale(1.03); }
+
+
+/* ============================================================
+   RESPONSIVE — UN SOLO BLOQUE POR BREAKPOINT
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Tablet — máx. 1024px
+   ---------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .intervencion__container {
+
+  /* Header */
+  .siteNav    { display: none; }
+  .menuToggle { display: flex; }
+
+  /* Hero */
+  .hero__inner {
     grid-template-columns: 1fr;
     gap: var(--space8);
+    padding-top: var(--space9);
   }
- 
-  .intervencion__media {
-    height: clamp(260px, 45vh, 440px);
-    order: -1; /* imagen primero en tablet */
-  }
+  .hero__media   { height: clamp(280px, 45vh, 480px); order: -1; }
+  .hero__content { max-width: 100%; }
+
+  /* Statement */
+  .statement { min-height: 70vh; }
+  .statement__content { max-width: 100%; gap: var(--space6); }
+
+  /* Archivo */
+  .archivo__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Arquitectos */
+  .arquitectos__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Filosofía */
+  .filosofia__container { grid-template-columns: 1fr; gap: var(--space8); }
+  .filosofia__header    { position: static; }
+
+  /* Intervención */
+  .intervencion__container { grid-template-columns: 1fr; gap: var(--space8); }
+  .intervencion__media     { height: clamp(260px, 45vh, 440px); order: -1; }
 }
- 
+
+/* ----------------------------------------------------------
+   Mobile — máx. 768px
+   ---------------------------------------------------------- */
 @media (max-width: 768px) {
-  .intervencion {
-    padding-top: var(--space12);
-    padding-bottom: var(--space12);
-  }
- 
-  .intervencion__texto {
-    font-size: var(--sizeEditorialMd);
-    max-width: 100%;
-  }
- 
-  .intervencion__cta {
+
+  /* Header */
+  .btnGhost { display: none; }
+
+  /* Hero */
+  .hero        { padding-top: var(--headerHeightScroll); }
+  .hero__title { font-size: clamp(3rem, 12vw, 5rem); }
+  .hero__media { height: 55vw; min-height: 220px; }
+
+  /* Statement */
+  .statement { min-height: 60vh; }
+  .statement__content { padding-block: var(--space10); gap: var(--space5); }
+
+  /* Archivo */
+  .archivo       { padding-top: var(--space11); padding-bottom: var(--space11); }
+  .archivo__grid { grid-template-columns: 1fr; }
+
+  /* Línea divisoria */
+  .conceptDivider { padding-top: var(--space10); padding-bottom: var(--space10); }
+
+  /* Arquitectos */
+  .arquitectos       { padding-top: var(--space11); padding-bottom: var(--space11); }
+  .arquitectos__grid { grid-template-columns: 1fr; gap: var(--space6); }
+
+  /* Filosofía */
+  .filosofia         { padding-top: var(--space11); padding-bottom: var(--space11); }
+  .filosofia__cita   { font-size: clamp(1.6rem, 6vw, 2.2rem); margin-top: var(--space8); margin-bottom: var(--space8); }
+  .filosofia__parrafo { font-size: var(--sizeEditorialMd); }
+
+  /* Intervención */
+  .intervencion        { padding-top: var(--space12); padding-bottom: var(--space12); }
+  .intervencion__texto { font-size: var(--sizeEditorialMd); max-width: 100%; }
+  .intervencion__cta   {
     width: 100%;
     justify-content: center;
+    white-space: normal;
+    text-align: center;
+    padding: 16px 24px;
   }
+}
+
+/* ----------------------------------------------------------
+   Mobile pequeño — máx. 480px
+   ---------------------------------------------------------- */
+@media (max-width: 480px) {
+
+  .hero__actions { flex-direction: column; align-items: flex-start; }
+
+  .btnPrimary,
+  .btnSecondary  { width: 100%; justify-content: center; }
 }
