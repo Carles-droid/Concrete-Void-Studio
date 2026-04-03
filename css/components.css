@@ -1,11 +1,158 @@
 /* ============================================================
    COMPONENTS.CSS
    Componentes reutilizables del sitio
-   Se irán añadiendo conforme avance el desarrollo:
-   - cards del archivo
-   - accordion del protocolo
-   - cards de arquitectos
-   - etc.
    ============================================================ */
 
-/* Este archivo se desarrollará en la siguiente etapa */
+
+/* ============================================================
+   ARCHIVO CARD
+   ============================================================ */
+.archivoCard {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: var(--borderThin);
+  cursor: pointer;
+  background-color: var(--colorConcrete100);
+}
+
+/* Imagen */
+.archivoCard__media {
+  width: 100%;
+  height: 100%;
+}
+
+.archivoCard__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--transitionSlow);
+  filter: grayscale(20%);
+}
+
+/* Zoom sutil en hover */
+.archivoCard:hover .archivoCard__image {
+  transform: scale(1.05);
+}
+
+/* Overlay con información — anclado al fondo */
+.archivoCard__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space5) var(--space5) var(--space5);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transitionMid);
+}
+
+/* Mostrar overlay en hover */
+.archivoCard:hover .archivoCard__overlay {
+  opacity: 1;
+}
+
+/* Título de la pieza */
+.archivoCard__title {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechMd);
+  font-weight: var(--weightMedium);
+  letter-spacing: var(--trackingWide);
+  text-transform: uppercase;
+  color: var(--colorBone);
+  line-height: var(--lineHeightSnug);
+  margin-bottom: var(--space1);
+}
+
+/* Nombre del artista */
+.archivoCard__artist {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialSm);
+  font-weight: var(--weightThin);
+  color: var(--colorAsh);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Focus — accesibilidad */
+.archivoCard:focus-within {
+  outline: 1px solid var(--overlayBorderHi);
+  outline-offset: 2px;
+}
+
+/* Mobile — overlay siempre visible (no hay hover en touch) */
+@media (max-width: 768px) {
+  .archivoCard__overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      transparent 100%
+    );
+  }
+}
+
+/* ============================================================
+   ARQUITECTO CARD
+   ============================================================ */
+.arquitectoCard {
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* Retrato */
+.arquitectoCard__media {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  margin-bottom: var(--space5);
+}
+ 
+.arquitectoCard__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%);
+  transition: filter var(--transitionSlow), transform var(--transitionSlow);
+}
+ 
+/* Hover — desatura ligeramente y hace zoom sutil */
+.arquitectoCard:hover .arquitectoCard__image {
+  filter: grayscale(60%);
+  transform: scale(1.03);
+}
+ 
+/* Información textual */
+.arquitectoCard__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space1);
+}
+ 
+/* Nombre */
+.arquitectoCard__name {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplaySm);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorBone);
+  line-height: var(--lineHeightSnug);
+}
+ 
+/* Especialidad */
+.arquitectoCard__role {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechSm);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingXWide);
+  text-transform: uppercase;
+  color: var(--colorAsh);
+  opacity: 0.55;
+}

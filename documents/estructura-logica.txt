@@ -391,7 +391,7 @@ fondos complejos
 exceso de elementos
 Composición de la imagen
 
-Opción C — imagen con overlay tipográfico
+* imagen con overlay tipográfico
 
 Se superponen elementos gráficos:
 
@@ -430,32 +430,9 @@ padding-left: 8vw
 padding-right: 8vw
 
 Mantiene coherencia con el header.
+
 --------------------------------------------------------------------------------
-7. Elemento atmosférico
 
-Para reforzar identidad arquitectónica.
-Se puede añadir un marcador editorial sutil:
-
-CDMX
-19.4326° N
-99.1332° W
-2240 m
-
-Ubicación:
-esquina inferior izquierda del hero.
-
-Estilo:
-tipografía mono
-muy pequeño
-opacidad baja
---------------------------------------------------------------------------------
-8. Flujo hacia la siguiente sección
-
-El hero debe invitar al scroll.
-indicador de scroll
-↓
-Scroll
---------------------------------------------------------------------------------
 Esquema completo del Hero
 1. Estructura macro
 
@@ -473,17 +450,11 @@ El hero ocupa 100% del viewport y se organiza en dos columnas asimétricas.
 |  Botones CTA                     	     		 |        tatuaje brutalista 		   |
 |                              				|        alto contraste        |
 |                                     |                            |
-
-|------------------------------------------------------------------|
-|                    INDICADOR DE SCROLL                           |
-|------------------------------------------------------------------|
-
-
-
+------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------
 
-HEADER
+				   HEADER
 
 --------------------------------------------------------------------
 
@@ -502,15 +473,6 @@ tatuaje como arquitectura.
                                             [ brutalista      ]
                                             [ alto contraste  ]
                                             [ overlay texto   ]
-
---------------------------------------------------------------------
-
-CDMX
-19.4326° N
-99.1332° W
-2240 m
-
-                    ↓ Scroll
 
 --------------------------------------------------------------------
 
@@ -618,8 +580,6 @@ Esquema visual
 
 Para evitar que el texto se vuelva demasiado largo:
 max-width: 720px;
-Alternativa en grid:
-6 columnas de 12
 
 6. Contraste sobre la imagen
 Para garantizar legibilidad se recomienda overlay oscuro sutil.
@@ -1091,8 +1051,6 @@ En pantallas grandes puede ampliarse a:
 
 Línea gráfica opcional
 
-Si decides usar línea divisoria:
-
 width: 80px
 height: 1px
 background: currentColor
@@ -1102,7 +1060,9 @@ margin: 40px auto
 Resultado visual:
 ──────────
 
-No hay esencia. Solo estructura.
+Las estructuras no aparecen.
+Se diseñan. 
+
 ──────────
 
 HTML sugerido

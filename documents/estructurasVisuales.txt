@@ -38,10 +38,6 @@ El hero utiliza layout de dos columnas asimétricas.
 		
 		|-----------------------------------------------|
 		
-		|------------------------------------------------|
-		|    INDICADOR DE SCROLL                      |
-		|------------------------------------------------|
-
 Relación aproximada:
 Texto:   45%
 Imagen:  55%
@@ -64,13 +60,6 @@ Esta proporción prioriza impacto visual sin perder lectura conceptual.
 		                                            [ overlay texto   ]
 		
 		--------------------------------------------------------------------
-
-					CDMX
-					19.4326° N
-					99.1332° W
-					2240 m
-					
-					                    ↓ Scroll
 
 ********************************************************************************************
 STATEMENT PRINCIPAL
@@ -226,7 +215,8 @@ Con hover:
 LÍNEA DIVISORIA
 
 		|-----------------------------------------------|
-			No hay esencia. Solo estructura.
+			Las estructuras no aparecen.
+					Se diseñan. 
 		|-----------------------------------------------|
 
 *************************************************************************
@@ -242,7 +232,6 @@ ARQUITECTOS
 			     Quienes diseñan las estructuras
 			
 			     DESCRIPCIÓN
-			     (2 líneas máximo)
 		
 			  		 GRID
 			  [ retrato ]   [ retrato ]   [ retrato ]

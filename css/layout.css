@@ -509,3 +509,559 @@
     justify-content: center;
   }
 }
+
+/* ============================================================
+   STATEMENT VISUAL
+   ============================================================ */
+.statement {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+ 
+/* Imagen de fondo — ocupa todo el contenedor */
+.statement__media {
+  position: absolute;
+  inset: 0;
+  z-index: var(--zBase);
+}
+ 
+.statement__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.08) brightness(0.75);
+}
+ 
+/* Overlay oscuro para legibilidad */
+.statement__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.50),
+    rgba(0, 0, 0, 0.42)
+  );
+}
+ 
+/* Bloque de texto — sobre la imagen */
+.statement__content {
+  position: relative;
+  z-index: var(--zAbove);
+  padding-inline: var(--paddingSiteH);
+  padding-block: var(--space12);
+  max-width: var(--maxWidthText);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space8);
+}
+ 
+/* Texto monumental */
+.statement__text {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayLg);
+  font-weight: var(--weightRegular);
+  line-height: var(--lineHeightTight);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorBone);
+}
+ 
+ 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+ 
+/* Tablet — 1024px */
+@media (max-width: 1024px) {
+ 
+  /* Header — ocultar nav desktop, mostrar hamburguesa */
+  .siteNav {
+    display: none;
+  }
+ 
+  .menuToggle {
+    display: flex;
+  }
+ 
+  /* Hero — stack vertical */
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space8);
+    padding-top: var(--space9);
+  }
+ 
+  .hero__media {
+    height: clamp(280px, 45vh, 480px);
+    order: -1; /* imagen primero en tablet */
+  }
+ 
+  .hero__content {
+    max-width: 100%;
+  }
+ 
+  /* Statement */
+  .statement {
+    min-height: 70vh;
+  }
+ 
+  .statement__content {
+    max-width: 100%;
+    gap: var(--space6);
+  }
+}
+ 
+/* Mobile — 768px */
+@media (max-width: 768px) {
+ 
+  /* Header */
+  .btnGhost {
+    display: none; /* ocultar CTA del header en mobile */
+  }
+ 
+  /* Hero */
+  .hero {
+    padding-top: var(--headerHeightScroll);
+  }
+ 
+  .hero__title {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+ 
+  .hero__media {
+    height: 55vw;
+    min-height: 220px;
+  }
+ 
+  .hero__scrollIndicator {
+    bottom: var(--space4);
+  }
+ 
+  /* Statement */
+  .statement {
+    min-height: 60vh;
+  }
+ 
+  .statement__content {
+    padding-block: var(--space10);
+    gap: var(--space5);
+  }
+}
+ 
+/* Mobile pequeño — 480px */
+@media (max-width: 480px) {
+ 
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   ARCHIVO — layout de sección
+   ============================================================ */
+.archivo {
+  padding-top: var(--space13);
+  padding-bottom: var(--space13);
+  padding-inline: var(--paddingSiteH);
+}
+ 
+.archivo__container {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+}
+ 
+/* Cabecera editorial */
+.archivo__header {
+  margin-bottom: var(--space9);
+}
+ 
+.archivo__header .eyebrow {
+  margin-bottom: var(--space3);
+}
+ 
+.archivo__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  margin-bottom: var(--space4);
+}
+ 
+.archivo__description {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.75;
+  max-width: 52ch;
+}
+ 
+/* Grid de 3 columnas */
+.archivo__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gridGap);
+}
+ 
+/* CTA inferior */
+.archivo__cta {
+  margin-top: var(--space9);
+  display: flex;
+  justify-content: center;
+}
+ 
+ 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+ 
+/* Tablet — 1024px */
+@media (max-width: 1024px) {
+ 
+  /* Header — ocultar nav desktop, mostrar hamburguesa */
+  .siteNav {
+    display: none;
+  }
+ 
+  .menuToggle {
+    display: flex;
+  }
+ 
+  /* Hero — stack vertical */
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space8);
+    padding-top: var(--space9);
+  }
+ 
+  .hero__media {
+    height: clamp(280px, 45vh, 480px);
+    order: -1; /* imagen primero en tablet */
+  }
+ 
+  .hero__content {
+    max-width: 100%;
+  }
+ 
+  /* Statement */
+  .statement {
+    min-height: 70vh;
+  }
+ 
+  .statement__content {
+    max-width: 100%;
+    gap: var(--space6);
+  }
+ 
+  /* Archivo — 2 columnas */
+  .archivo__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+/* Mobile — 768px */
+@media (max-width: 768px) {
+ 
+  /* Header */
+  .btnGhost {
+    display: none;
+  }
+ 
+  /* Hero */
+  .hero {
+    padding-top: var(--headerHeightScroll);
+  }
+ 
+  .hero__title {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+ 
+  .hero__media {
+    height: 55vw;
+    min-height: 220px;
+  }
+ 
+  /* Statement */
+  .statement {
+    min-height: 60vh;
+  }
+ 
+  .statement__content {
+    padding-block: var(--space10);
+    gap: var(--space5);
+  }
+ 
+  /* Archivo */
+  .archivo {
+    padding-top: var(--space11);
+    padding-bottom: var(--space11);
+  }
+ 
+  /* Archivo — 1 columna */
+  .archivo__grid {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+/* Mobile pequeño — 480px */
+@media (max-width: 480px) {
+ 
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   LÍNEA DIVISORIA CONCEPTUAL
+   ============================================================ */
+.conceptDivider {
+  padding-top: var(--space12);
+  padding-bottom: var(--space12);
+  padding-inline: var(--paddingSiteH);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space6);
+  border-top: var(--borderThin);
+  border-bottom: var(--borderThin);
+}
+ 
+.conceptDivider__text {
+  font-family: var(--fontDisplay);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightSnug);
+  color: var(--colorBone);
+  text-align: center;
+  max-width: 700px;
+}
+ 
+ 
+/* ============================================================
+   ARQUITECTOS — layout de sección
+   ============================================================ */
+.arquitectos {
+  padding-top: var(--space13);
+  padding-bottom: var(--space13);
+  padding-inline: var(--paddingSiteH);
+}
+ 
+.arquitectos__container {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+}
+ 
+/* Cabecera editorial */
+.arquitectos__header {
+  margin-bottom: var(--space11);
+}
+ 
+.arquitectos__header .eyebrow {
+  margin-bottom: var(--space3);
+}
+ 
+.arquitectos__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  margin-bottom: var(--space5);
+  max-width: 600px;
+}
+ 
+.arquitectos__description {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.75;
+  max-width: 52ch;
+}
+ 
+/* Grid de 3 columnas simétricas */
+.arquitectos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space8);
+}
+ 
+/* CTA inferior */
+.arquitectos__cta {
+  margin-top: var(--space11);
+  display: flex;
+  justify-content: center;
+}
+ 
+/* Responsive — Arquitectos */
+@media (max-width: 1024px) {
+  .arquitectos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media (max-width: 768px) {
+  .arquitectos {
+    padding-top: var(--space11);
+    padding-bottom: var(--space11);
+  }
+ 
+  .arquitectos__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space6);
+  }
+ 
+  .conceptDivider {
+    padding-top: var(--space10);
+    padding-bottom: var(--space10);
+  }
+}
+
+/* ============================================================
+   FILOSOFÍA
+   ============================================================ */
+.filosofia {
+  padding-top: var(--space13);
+  padding-bottom: var(--space13);
+  padding-inline: var(--paddingSiteH);
+  border-top: var(--borderThin);
+}
+ 
+.filosofia__container {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+ 
+  /* Dos columnas: cabecera izquierda / manifiesto derecha */
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: clamp(var(--space9), 8vw, var(--space14));
+  align-items: start;
+}
+ 
+/* Cabecera — columna izquierda, sticky mientras se lee el manifiesto */
+.filosofia__header {
+  position: sticky;
+  top: calc(var(--headerHeightScroll) + var(--space6));
+}
+ 
+.filosofia__header .eyebrow {
+  margin-bottom: var(--space3);
+}
+ 
+.filosofia__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+}
+ 
+/* Manifiesto — columna derecha */
+.filosofia__manifiesto {
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* Subtítulo del manifiesto */
+.filosofia__subtitulo {
+  font-family: var(--fontEditorial);
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+  font-weight: var(--weightMedium);
+  font-style: italic;
+  color: var(--colorAsh);
+  opacity: 0.7;
+  margin-bottom: var(--space7);
+  letter-spacing: var(--trackingNormal);
+}
+ 
+/* Párrafos del manifiesto */
+.filosofia__parrafo {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialLg);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.85;
+  max-width: var(--maxWidthText);
+  margin-bottom: var(--space6);
+}
+ 
+/* Párrafo de cierre — ligeramente más prominente */
+.filosofia__parrafo--cierre {
+  font-weight: var(--weightRegular);
+  opacity: 1;
+  color: var(--colorBone);
+  margin-bottom: 0;
+}
+ 
+/* Cita destacada monumental */
+.filosofia__cita {
+  font-family: var(--fontDisplay);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightSnug);
+  color: var(--colorBone);
+  max-width: var(--maxWidthNarrow);
+  margin-top: var(--space10);
+  margin-bottom: var(--space10);
+ 
+  /* Sin estilo de cita por defecto */
+  quotes: none;
+  border: none;
+  padding: 0;
+}
+ 
+/* Responsive — Filosofía */
+@media (max-width: 1024px) {
+  /* Stack vertical: cabecera arriba, manifiesto abajo */
+  .filosofia__container {
+    grid-template-columns: 1fr;
+    gap: var(--space8);
+  }
+ 
+  /* Quitar sticky en tablet — no tiene sentido en stack vertical */
+  .filosofia__header {
+    position: static;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .filosofia {
+    padding-top: var(--space11);
+    padding-bottom: var(--space11);
+  }
+ 
+  .filosofia__cita {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    margin-top: var(--space8);
+    margin-bottom: var(--space8);
+  }
+ 
+  .filosofia__parrafo {
+    font-size: var(--sizeEditorialMd);
+  }
+}
