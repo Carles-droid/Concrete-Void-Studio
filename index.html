@@ -632,6 +632,181 @@
     </section>
     <!-- /intervencion -->
 
+    <!-- ==========================================================
+      PROTOCOLO
+      - Eyebrow / título / texto introductorio
+      - Accordion de 3 preguntas con numeración arquitectónica
+      - CTA final hacia solicitud de intervención
+    ========================================================== -->
+    <section class="protocolo" id="protocolo" aria-labelledby="protocoloTitle">
+ 
+      <div class="protocolo__container">
+ 
+        <!-- Cabecera de sección -->
+        <header class="protocolo__header">
+          <p class="eyebrow">Directrices de la intervención</p>
+          <h2 class="protocolo__title" id="protocoloTitle">Protocolo</h2>
+          <p class="protocolo__description">
+            Información esencial sobre el proceso, preparación y cuidados posteriores.
+            Lineamientos para que cada intervención se desarrolle correctamente.
+          </p>
+        </header>
+ 
+        <!-- Accordion de preguntas -->
+        <div class="protocolo__accordion" role="list">
+ 
+          <!-- Item 01 -->
+          <div class="accordionItem" role="listitem">
+            <button
+              class="accordionItem__trigger"
+              aria-expanded="false"
+              aria-controls="accordionPanel01"
+              id="accordionBtn01"
+            >
+              <span class="accordionItem__number" aria-hidden="true">01</span>
+              <span class="accordionItem__question">¿Cómo comienza una intervención?</span>
+              <span class="accordionItem__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              class="accordionItem__panel"
+              id="accordionPanel01"
+              role="region"
+              aria-labelledby="accordionBtn01"
+              hidden
+            >
+              <div class="accordionItem__content">
+                <p>
+                  Toda pieza inicia con una conversación inicial. En ella se define la idea general,
+                  el área del cuerpo a intervenir y las referencias conceptuales que pueden orientar
+                  el diseño.
+                </p>
+                <p>
+                  A partir de este intercambio se desarrolla una propuesta visual que responde
+                  tanto a la anatomía como al lenguaje estético del estudio.
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Item 02 -->
+          <div class="accordionItem" role="listitem">
+            <button
+              class="accordionItem__trigger"
+              aria-expanded="false"
+              aria-controls="accordionPanel02"
+              id="accordionBtn02"
+            >
+              <span class="accordionItem__number" aria-hidden="true">02</span>
+              <span class="accordionItem__question">¿Qué preparación requiere la sesión?</span>
+              <span class="accordionItem__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              class="accordionItem__panel"
+              id="accordionPanel02"
+              role="region"
+              aria-labelledby="accordionBtn02"
+              hidden
+            >
+              <div class="accordionItem__content">
+                <p>
+                  Antes de la intervención es importante que la piel se encuentre en buen estado
+                  y que el cuerpo esté descansado.
+                </p>
+                <p>
+                  Se recomienda evitar alcohol, mantener una hidratación adecuada y acudir con
+                  tiempo suficiente para revisar el diseño final antes de comenzar el trabajo.
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Item 03 -->
+          <div class="accordionItem" role="listitem">
+            <button
+              class="accordionItem__trigger"
+              aria-expanded="false"
+              aria-controls="accordionPanel03"
+              id="accordionBtn03"
+            >
+              <span class="accordionItem__number" aria-hidden="true">03</span>
+              <span class="accordionItem__question">¿Qué cuidados siguen después de la intervención?</span>
+              <span class="accordionItem__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              class="accordionItem__panel"
+              id="accordionPanel03"
+              role="region"
+              aria-labelledby="accordionBtn03"
+              hidden
+            >
+              <div class="accordionItem__content">
+                <p>
+                  Una vez finalizada la pieza, se proporcionan indicaciones específicas
+                  para el proceso de cicatrización.
+                </p>
+                <p>
+                  El cuidado adecuado de la piel es fundamental para preservar la calidad
+                  del trazo, la profundidad del negro y la integridad del diseño con el
+                  paso del tiempo.
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+        </div>
+        <!-- /protocolo__accordion -->
+ 
+        <!-- CTA final -->
+        <div class="protocolo__cta">
+          <a href="#intervencion" class="btnPrimary">
+            Solicitar una intervención
+          </a>
+        </div>
+ 
+      </div>
+ 
+    </section>
+    <!-- /protocolo -->
+
+    <!-- ==========================================================
+      BRAND STATEMENT FINAL
+      - Cierre conceptual del home
+      - Imagen full width con overlay tipográfico centrado
+      - Texto monumental en dos bloques
+    ========================================================== -->
+    <section class="brandStatement" aria-labelledby="brandStatementText">
+ 
+      <!-- Imagen de fondo full width -->
+      <figure class="brandStatement__media" aria-hidden="true">
+        <!--
+          Reemplazar src con imagen real.
+          Tatuaje en alto contraste, detalle de trazo,
+          o fotografía brutalista de impacto.
+        -->
+        <img
+          src="assets/img/final.png"
+          alt=""
+          class="brandStatement__image"
+          loading="lazy"
+        />
+        <div class="brandStatement__overlay" aria-hidden="true"></div>
+      </figure>
+ 
+      <!-- Texto centrado sobre la imagen -->
+      <div class="brandStatement__content" id="brandStatementText">
+        <p class="brandStatement__text">
+          Arquitectura inscrita<br />
+          en la piel.
+        </p>
+        <p class="brandStatement__subtext">
+          Cada intervención es una arquitectura construida<br />
+          con líneas, sombra y permanencia.
+        </p>
+      </div>
+ 
+    </section>
+    <!-- /brandStatement -->
+
 
 
 
@@ -645,6 +820,7 @@
   ============================================================ -->
   <script src="js/header.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/accordion.js"></script>
 
 </body>
 </html>

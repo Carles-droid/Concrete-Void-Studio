@@ -703,6 +703,142 @@
 .intervencion__figure:hover .intervencion__image { transform: scale(1.03); }
 
 
+
+
+/* ============================================================
+   PROTOCOLO
+   ============================================================ */
+.protocolo {
+  padding-top: var(--space13);
+  padding-bottom: var(--space13);
+  padding-inline: var(--paddingSiteH);
+  border-top: var(--borderThin);
+}
+
+.protocolo__container {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+}
+
+.protocolo__header {
+  margin-bottom: var(--space10);
+  max-width: var(--maxWidthNarrow);
+}
+
+.protocolo__header .eyebrow { margin-bottom: var(--space3); }
+
+.protocolo__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  margin-bottom: var(--space5);
+}
+
+.protocolo__description {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.75;
+  max-width: 52ch;
+}
+
+.protocolo__accordion {
+  border-top: var(--borderThin);
+  margin-bottom: var(--space10);
+}
+
+.protocolo__cta {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+/* ============================================================
+   BRAND STATEMENT FINAL
+   ============================================================ */
+.brandStatement {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Imagen full width */
+.brandStatement__media {
+  position: absolute;
+  inset: 0;
+  z-index: var(--zBase);
+}
+
+.brandStatement__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.1) brightness(0.65);
+  transition: transform var(--transitionSlow);
+}
+
+.brandStatement:hover .brandStatement__image {
+  transform: scale(1.02);
+}
+
+/* Overlay — gradiente más denso que el statement */
+.brandStatement__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.30) 0%,
+    rgba(0, 0, 0, 0.65) 60%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+/* Contenido centrado */
+.brandStatement__content {
+  position: relative;
+  z-index: var(--zAbove);
+  text-align: center;
+  padding-inline: var(--paddingSiteH);
+  padding-block: var(--space12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space6);
+  max-width: var(--maxWidthContent);
+}
+
+/* Texto principal monumental */
+.brandStatement__text {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayXl);
+  font-weight: var(--weightRegular);
+  line-height: var(--lineHeightTight);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorBone);
+}
+
+/* Subtexto editorial */
+.brandStatement__subtext {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialLg);
+  font-weight: var(--weightThin);
+  font-style: italic;
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.7;
+  max-width: 52ch;
+}
+
 /* ============================================================
    RESPONSIVE — UN SOLO BLOQUE POR BREAKPOINT
    ============================================================ */
@@ -787,6 +923,15 @@
     text-align: center;
     padding: 16px 24px;
   }
+
+  /* Protocolo */
+  .protocolo           { padding-top: var(--space11); padding-bottom: var(--space11); }
+  .protocolo__cta      { justify-content: center; }
+
+  /* Brand Statement Final */
+  .brandStatement      { min-height: 70vh; }
+  .brandStatement__text { font-size: clamp(2.5rem, 10vw, 5rem); }
+  .brandStatement__subtext { font-size: var(--sizeEditorialMd); }
 }
 
 /* ----------------------------------------------------------

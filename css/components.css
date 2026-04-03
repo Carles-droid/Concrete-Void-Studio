@@ -99,6 +99,7 @@
   }
 }
 
+
 /* ============================================================
    ARQUITECTO CARD
    ============================================================ */
@@ -106,14 +107,14 @@
   display: flex;
   flex-direction: column;
 }
- 
+
 /* Retrato */
 .arquitectoCard__media {
   aspect-ratio: 3 / 4;
   overflow: hidden;
   margin-bottom: var(--space5);
 }
- 
+
 .arquitectoCard__image {
   width: 100%;
   height: 100%;
@@ -122,20 +123,20 @@
   filter: grayscale(100%);
   transition: filter var(--transitionSlow), transform var(--transitionSlow);
 }
- 
+
 /* Hover — desatura ligeramente y hace zoom sutil */
 .arquitectoCard:hover .arquitectoCard__image {
   filter: grayscale(60%);
   transform: scale(1.03);
 }
- 
+
 /* Información textual */
 .arquitectoCard__info {
   display: flex;
   flex-direction: column;
   gap: var(--space1);
 }
- 
+
 /* Nombre */
 .arquitectoCard__name {
   font-family: var(--fontDisplay);
@@ -145,7 +146,7 @@
   color: var(--colorBone);
   line-height: var(--lineHeightSnug);
 }
- 
+
 /* Especialidad */
 .arquitectoCard__role {
   font-family: var(--fontTech);
@@ -155,4 +156,132 @@
   text-transform: uppercase;
   color: var(--colorAsh);
   opacity: 0.55;
+}
+
+
+/* ============================================================
+   ACCORDION — Protocolo
+   ============================================================ */
+.accordionItem {
+  border-bottom: var(--borderThin);
+}
+
+/* Trigger — botón de cada pregunta */
+.accordionItem__trigger {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space5);
+  padding: var(--space6) 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: opacity var(--transitionFast);
+}
+
+.accordionItem__trigger:hover {
+  opacity: 0.75;
+}
+
+/* Número arquitectónico */
+.accordionItem__number {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingXWide);
+  color: var(--colorAsh);
+  opacity: 0.35;
+  line-height: 1;
+  min-width: 24px;
+}
+
+/* Pregunta */
+.accordionItem__question {
+  font-family: var(--fontEditorial);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: var(--weightRegular);
+  color: var(--colorAsh);
+  line-height: var(--lineHeightSnug);
+  transition: color var(--transitionFast);
+}
+
+.accordionItem__trigger:hover .accordionItem__question,
+.accordionItem__trigger[aria-expanded="true"] .accordionItem__question {
+  color: var(--colorBone);
+}
+
+/* Icono + / − */
+.accordionItem__icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Línea horizontal — siempre visible */
+.accordionItem__icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--colorAsh);
+  opacity: 0.4;
+  transform: translateY(-50%);
+  transition: opacity var(--transitionFast);
+}
+
+/* Línea vertical — visible cuando está cerrado (forma +) */
+.accordionItem__icon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--colorAsh);
+  opacity: 0.4;
+  transform: translateX(-50%);
+  transition:
+    transform var(--transitionMid),
+    opacity var(--transitionMid);
+}
+
+/* Cuando está abierto — línea vertical rota 90° (forma −) */
+.accordionItem__trigger[aria-expanded="true"] .accordionItem__icon::after {
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+/* Panel de respuesta */
+.accordionItem__panel {
+  overflow: hidden;
+}
+
+/* Contenido interno con animación de altura */
+.accordionItem__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space4);
+  padding-top: 0;
+  padding-bottom: var(--space7);
+  padding-left: calc(24px + var(--space5)); /* alineado con la pregunta */
+  max-width: var(--maxWidthText);
+}
+
+.accordionItem__content p {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.8;
+}
+
+/* Número activo — más visible cuando el item está abierto */
+.accordionItem__trigger[aria-expanded="true"] .accordionItem__number {
+  opacity: 0.7;
 }
