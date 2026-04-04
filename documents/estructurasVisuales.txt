@@ -1,3 +1,23 @@
+ESTRUCTURA DE ARCHIVOS
+
+concrete-void-studio/
+├── index.html
+├── css/
+│   ├── tokens.css        ← variables, tipografía, colores
+│   ├── base.css          ← reset, globals
+│   ├── layout.css        ← header, hero, grid
+│   └── components.css    ← cards, buttons, accordion
+├── js/
+│   ├── header.js         ← scroll behavior
+│   ├── menu.js           ← mobile overlay
+│   └── accordion.js      ← protocolo FAQ
+├── assets/
+│   ├── logos/            ← tus SVGs
+│   ├── favicons/         ← tus favicons
+│   └── images/           ← tatuajes, retratos
+└── README.md
+
+******************************************************************************************
 
 ESTRUCTURAS VISUALES
 
