@@ -122,6 +122,7 @@
   object-position: center top;
   filter: grayscale(100%);
   transition: filter var(--transitionSlow), transform var(--transitionSlow);
+  border: 1px solid var(--colorConcrete100);
 }
 
 /* Hover — desatura ligeramente y hace zoom sutil */

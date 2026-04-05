@@ -46,6 +46,7 @@
 .siteHeader__identity {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: var(--space1);
   flex-shrink: 0;
 }
@@ -699,6 +700,7 @@
   object-position: center;
   filter: grayscale(20%) contrast(1.05);
   transition: transform var(--transitionSlow);
+  border: 1px solid var(--colorConcrete300);
 }
 
 .intervencion__figure:hover .intervencion__image { transform: scale(1.03); }
@@ -945,4 +947,191 @@
 
   .btnPrimary,
   .btnSecondary  { width: 100%; justify-content: center; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.siteFooter {
+  background-color: var(--colorAbyss);
+  border-top: var(--borderThin);
+  padding-top: var(--space8);
+  padding-bottom: var(--space8);
+  padding-inline: var(--paddingSiteH);
+}
+ 
+/* Bloque identidad — logo secundario + statement */
+.siteFooter__identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space4);
+  padding-bottom: var(--space8);
+  text-align: center;
+}
+ 
+.siteFooter__logoLink {
+  display: inline-block;
+  transition: opacity var(--transitionFast);
+}
+ 
+.siteFooter__logoLink:hover { opacity: 0.65; }
+ 
+.siteFooter__logo {
+  height: 170px;
+  width: auto;
+}
+ 
+.siteFooter__statement {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialSm);
+  font-style: italic;
+  font-weight: var(--weightThin);
+  color: var(--colorAsh);
+  opacity: 0.5;
+  letter-spacing: var(--trackingNormal);
+}
+ 
+/* Separador */
+.siteFooter__divider {
+  border: none;
+  border-top: var(--borderThin);
+  margin: 0;
+}
+ 
+/* Bloque información — grid 2 columnas */
+.siteFooter__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space8);
+  padding-top: var(--space8);
+  padding-bottom: var(--space8);
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+  width: 100%;
+}
+ 
+/* Label de columna */
+.siteFooter__label {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingXWide);
+  text-transform: uppercase;
+  color: var(--colorAsh);
+  opacity: 0.35;
+  margin-bottom: var(--space5);
+}
+ 
+/* Lista de redes */
+.siteFooter__redesList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space3);
+}
+ 
+.siteFooter__redesLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space3);
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechSm);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorAsh);
+  opacity: 0.55;
+  transition:
+    opacity var(--transitionFast),
+    color var(--transitionFast);
+}
+ 
+.siteFooter__redesLink:hover {
+  opacity: 1;
+  color: var(--colorBone);
+}
+ 
+.siteFooter__icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+ 
+/* Lista de contacto */
+.siteFooter__contactoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space3);
+}
+ 
+.siteFooter__contactoLink {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechSm);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorAsh);
+  opacity: 0.55;
+  transition: opacity var(--transitionFast), color var(--transitionFast);
+}
+ 
+.siteFooter__contactoLink:hover {
+  opacity: 1;
+  color: var(--colorBone);
+}
+ 
+/* Coordenadas */
+.siteFooter__coords {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorAsh);
+  opacity: 0.3;
+  margin-top: var(--space2);
+}
+ 
+/* Sub-footer */
+.siteFooter__subfooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space6);
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+  width: 100%;
+}
+ 
+.siteFooter__copyright {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorAsh);
+  opacity: 0.25;
+}
+ 
+.siteFooter__dev {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorAsh);
+  opacity: 0.2;
+}
+ 
+.siteFooter__devLink {
+  color: inherit;
+  transition: opacity var(--transitionFast);
+}
+ 
+.siteFooter__devLink:hover { opacity: 0.6; }
+ 
+/* Responsive — Footer */
+@media (max-width: 768px) {
+  .siteFooter__info {
+    grid-template-columns: 1fr;
+    gap: var(--space8);
+  }
+ 
+  .siteFooter__subfooter {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space3);
+    text-align: center;
+  }
 }
