@@ -1,0 +1,86 @@
+
+PROMPTS BRUTALISTAS
+
+El lenguaje visual del proyecto sugiere estos lineamientos:
+
+Estética: brutalismo, arquitectura, ruinas, geometría.
+Técnica: blackwork, alto contraste, sombras profundas.
+Ambiente: oscuro, editorial, minimalista.
+Composición: fotografía del tatuaje en piel real (brazo, torso, espalda), fondo negro o neutro.
+Iluminación: dramática, direccional, estilo estudio.
+Color: monocromático (negro y piel).
+
+
+********************************************************************
+
+ARCHIVO
+
+OPCIÓN A
+CARD 2
+brutalist architectural tattoo on human skin, fragmented concrete structure design, blackwork geometric tattoo inspired by abandoned brutalist buildings, cracked monolithic shapes and broken architectural lines, deep black ink and heavy shadows, minimal composition, dark background, high contrast studio lighting, skin texture visible, dystopian architectural aesthetic, editorial tattoo photography, ultra detailed, 4:5 composition
+CARD 3
+geometric blackwork tattoo inspired by urban voids and negative architectural space, large empty shapes surrounded by sharp brutalist lines, abstract city grid dissolving into darkness, minimalist architectural tattoo design, deep matte black ink, high contrast lighting, realistic human skin texture, dystopian atmosphere, contemporary brutalist aesthetic, editorial tattoo photography, dramatic shadows, 4:5 composition
+CARD 4
+occult geometric tattoo combining sacred symbols and brutalist architecture, blackwork sigil structure integrated with angular architectural forms, ritual geometry and sharp symmetrical lines, deep black ink with negative space, dark mysterious atmosphere, high contrast studio lighting, realistic skin texture, minimalist brutalist tattoo style, editorial tattoo photography, ultra detailed, 4:5 composition
+CARD 5
+dystopian brutalist tower tattoo design, vertical architectural structure tattooed on human skin, stacked concrete geometry and monolithic forms, blackwork tattoo with heavy shadows and strong lines, futuristic brutalist architecture aesthetic, dark background, dramatic lighting, ultra detailed ink texture, editorial tattoo photography, cinematic atmosphere, 4:5 composition
+CARD 6
+abstract brutalist architecture tattoo exploring concrete mass and empty space, heavy black geometric blocks contrasted with large negative spaces, minimalist blackwork tattoo composition, deep matte black ink on realistic skin, sharp architectural lines and void structures, dark background, high contrast lighting, modern brutalist aesthetic, editorial tattoo photography, ultra detailed, 4:5 composition
+
+style consistency: brutalist geometric blackwork tattoo
+lighting: high contrast studio lighting
+background: dark neutral background
+aspect ratio: 4:5
+
+***********************
+OPCIÓN B
+CARD 2
+brutalist geometric tattoo on human forearm, fragmented architectural structure inspired by abandoned concrete buildings, heavy blackwork tattoo, sharp angular lines, deep shadows, brutalist aesthetic, dystopian atmosphere, minimal composition, high contrast black ink on skin, studio lighting, dark neutral background, editorial tattoo photography, ultra detailed skin texture, contemporary architectural tattoo design
+CARD 3
+abstract brutalist tattoo representing urban void and negative space, geometric blackwork tattoo on upper arm, large blocks and intersecting lines suggesting collapsed architecture, minimal brutalist composition, strong negative space, deep matte black ink, dramatic side lighting, dark studio background, cinematic tattoo photography, dystopian architectural design aesthetic
+CARD 4
+occult geometric sigil tattoo combined with brutalist architectural shapes, symmetrical sacred geometry tattoo on chest, blackwork lines, circles and angular concrete-like forms, ritualistic symbol aesthetic, high contrast black ink, minimal dark background, dramatic lighting, architectural tattoo style, mysterious atmosphere, highly detailed skin and ink texture
+CARD 5
+dystopian brutalist tower tattoo design on upper arm, vertical architectural composition, stacked concrete structures and geometric slabs, heavy blackwork tattoo style, strong shadows and solid black areas, minimal background, dramatic studio lighting, architectural dystopia aesthetic, high contrast editorial tattoo photography
+CARD 6
+brutalist blackwork tattoo inspired by raw concrete architecture, abstract geometric structure interacting with negative space, tattoo on a woman back shoulder, thick black shapes and fine architectural lines, minimal brutalist composition, high contrast black ink, dark studio background, dramatic lighting, contemporary architectural tattoo design, ultra detailed skin texture
+
+blackwork tattoo, brutalist architecture inspired, high contrast, dark studio background, editorial tattoo photography, consistent style, aspect ratio: 4:5
+
+****************************************************
+ARQUITECTOS
+Para mantener coherencia con el lenguaje visual del sitio, los retratos deberían seguir estas reglas:
+
+Dirección visual recomendada
+
+retrato de perfil (side profile)
+escala de grises
+iluminación dramática tipo estudio
+fondo oscuro o concreto
+estética brutalista / editorial
+expresión neutral / contemplativa
+edad aproximada 30–40 años
+presencia sutil de tatuajes geométricos blackwork
+
+A continuación tienes tres prompts consistentes entre sí.
+
+Adrian Kurl — Biostructural Design
+portrait of a male tattoo artist, age 35, eastern european features, short hair, subtle geometric blackwork tattoos on neck and forearm, three quarter portrait angle (face turned slightly toward camera), brutalist aesthetic, architectural mindset, calm serious expression, dramatic studio lighting from one side, dark concrete background, monochrome black and white editorial portrait photography, high contrast shadows, minimal composition, cinematic lighting, ultra detailed skin texture, contemporary brutalist tattoo studio aesthetic
+
+black and white portrait, side profile, brutalist aesthetic, dramatic studio lighting, editorial photography, dark background, consistent visual style, 4:5 composition
+
+Elena Voss — Dermal Geometry
+side profile portrait of a female tattoo artist, age 32–38, sharp facial structure, short dark hair, minimal geometric blackwork tattoo visible near collarbone or neck, brutalist artistic aesthetic, calm focused expression, dramatic side lighting, dark studio background resembling raw concrete wall, monochrome black and white editorial portrait photography, high contrast lighting, minimalist composition, architectural atmosphere
+
+Mateo Ibarra — Anatomical Systems
+portrait of a male tattoo artist, age 34–40, latino features, short hair and trimmed beard, geometric blackwork tattoo visible on neck or temple area, head slightly tilted downward with eyes looking down, contemplative expression, brutalist architectural aesthetic, dramatic directional studio lighting, dark neutral background resembling raw concrete, monochrome black and white editorial portrait photography, high contrast shadows, minimalist cinematic composition, highly detailed skin texture
+
+black and white portrait, side profile, brutalist aesthetic, dramatic studio lighting, editorial photography, dark background, consistent visual style, 4:5 composition
+
+
+
+
+
+
+
+
