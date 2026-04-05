@@ -551,7 +551,7 @@
   padding-bottom: var(--space13);
   padding-inline: var(--paddingSiteH);
   border-top: var(--borderThin);
-  background-color: var(--colorAbyss);
+  background-color: var(--colorCrater);
 }
 
 .filosofia__container {
@@ -636,7 +636,7 @@
   padding-bottom: var(--space14);
   padding-inline: var(--paddingSiteH);
   border-top: var(--borderThin);
-  background-color: var(--colorAbyss);
+  background-color: var(--colorVoid);
 }
 
 .intervencion__container {
@@ -714,6 +714,7 @@
   padding-bottom: var(--space13);
   padding-inline: var(--paddingSiteH);
   border-top: var(--borderThin);
+  background-color: var(--colorCrater);
 }
 
 .protocolo__container {
