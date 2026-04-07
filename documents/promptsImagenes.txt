@@ -77,7 +77,18 @@ portrait of a male tattoo artist, age 34–40, latino features, short hair and t
 
 black and white portrait, side profile, brutalist aesthetic, dramatic studio lighting, editorial photography, dark background, consistent visual style, 4:5 composition
 
+****************************************************
 
+Prompt optimizado — Imagen final (Concrete Void Studio)
+
+wide cinematic interior of a brutalist tattoo studio called Concrete Void Studio, large industrial space with deteriorated concrete walls, exposed rebar emerging from cracked concrete surfaces, raw architectural textures, unfinished brutalist structure, yet extremely clean and organized tattoo workspace, minimal furniture, stainless steel tattoo equipment, dramatic architectural lighting entering from high windows, strong shadows and volumetric light, atmospheric dust in the air, dystopian yet elegant environment, monumental spatial composition, ultra wide angle perspective, dark moody atmosphere, brutalist architecture aesthetic, editorial architectural photography, high detail concrete textures, cinematic lighting, empty space in the center for typography overlay, designed as a full screen background image
+
+brutalist architecture interior, cinematic wide composition, dark atmospheric lighting, editorial photography, ultra detailed concrete texture, minimalist dystopian design
+
+pared brutalista izquierda  |  espacio abierto central  |  pared texturada derecha
+                luz superior / ventanas industriales
+                
+aspect ratio: 16:9
 
 
 

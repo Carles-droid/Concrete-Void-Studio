@@ -188,10 +188,10 @@
 
 /* Número arquitectónico */
 .accordionItem__number {
-  font-family: var(--fontTech);
-  font-size: var(--sizeTechXs);
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplaySm);
   font-weight: var(--weightRegular);
-  letter-spacing: var(--trackingXWide);
+  letter-spacing: var(--trackingNormal);
   color: var(--colorAsh);
   opacity: 0.35;
   line-height: 1;

@@ -1,0 +1,341 @@
+
+
+Para la sección ARCHIVO debes pensarla como un catálogo editorial, no como una galería masiva. La lógica narrativa del sitio es: concepto → obra → autores, por lo que Archivo funciona como primer contacto con el trabajo real del estudio.
+
+Por tratarse de un proyecto pequeño, conviene priorizar curaduría sobre cantidad.
+
+LAYOUT ARCHIVO
+
+1. Cantidad de imágenes
+Opción óptima
+12 imágenes
+
+Motivo:
+permite estructura limpia
+mantiene sensación de archivo curado
+no se percibe vacío
+no sobrecarga el sitio
+
+Distribución:
+3 columnas × 4 filas
+
+Ventajas:
+equilibrio visual
+scroll corto
+sensación de catálogo
+
+Estructura de la página ARCHIVO
+
+La sección debería seguir esta arquitectura:
+-----------------------------------------------------------------------------------------------
+			HEADER
+			
+			INTRO EDITORIAL
+			Eyebrow
+			Título
+			Texto
+			
+			FILTRO (opcional)
+			
+			GRID DE PROYECTOS
+			
+			CTA 
+-----------------------------------------------------------------------------------------------
+	
+			Arquitecturas desarrolladas
+			
+			ARCHIVO
+			
+			Registro visual de intervenciones donde la tinta
+			se convierte en estructura, volumen y memoria.
+			
+			[ img ]   [ img ]   [ img ]
+			
+			[ img ]   [ img ]   [ img ]
+			
+			[ img ]   [ img ]   [ img ]
+			
+			[ img ]   [ img ]   [ img ]
+			
+-----------------------------------------------------------------------------------------------
+
+Proporción de las imágenes
+aspect-ratio: 4 / 5
+
+Esto permite:
+ver mejor brazos o piernas
+mantener estética editorial
+evitar cortes raros del tatuaje
+Información dentro de cada card
+
+Estado inicial:
+Solo imagen.
+
+Hover:
+Nombre de la pieza
+Artista
+
+Composición de las imágenes:
+No usar tatuajes completamente aleatorios.
+
+Intenta variar:
+Tipos de encuadre
+
+plano brazo completo
+plano detalle
+espalda
+pierna
+composición geométrica
+tatuaje + contexto brutalista
+
+Esto va a crear un ritmo visual.
+
+No ordenar cronológicamente.
+Ordena por peso visual:
+
+fuerte
+medio
+fuerte
+
+medio
+fuerte
+medio
+
+Organización de archivos
+
+Para el proyecto:
+assets/
+	img/
+   		archivo/
+      			     tattoo-01.webp
+      ...
+
+Peso ideal de las imágenes
+Para rendimiento:
+1200px ancho máximo
+200–350 kb por imagen
+
+RESUMEN:
+12 imágenes
+grid 3×4
+cards 4:5
+hover minimalista
+------------------------------------------------------------------------------------------------------------
+
+La sección ARQUITECTOS debe presentar a cada artista como una unidad editorial horizontal, no como tarjetas. El objetivo es enfatizar identidad y autoría. Con 3 artistas, lo recomendable es usar bloques repetibles tipo “perfil” apilados verticalmente.
+
+LAYOUT ARQUITECTOS
+Cada arquitecto utiliza un layout de tres columnas.
+La estructura general sería:
+Distribución horizontal:
+
+[ FOTO ARTISTA ]   [ INFO ]   [ TATTOO REFERENCIA ]
+
+******************************
+
+────────────────────────────────────
+
+			ARQUITECTOS  (sección)
+			
+			eyebrow
+			TÍTULO
+			descripción 
+
+────────────────────────────────────
+
+			ARQUITECTO 01
+			[ FOTO ]     [ INFO ]     [ TATTOO ]
+
+────────────────────────────────────
+
+			ARQUITECTO 02
+			[ TATTOO]     [ INFO ]     [ FOTO]
+
+────────────────────────────────────
+
+			ARQUITECTO 03
+			[ FOTO ]     [ INFO ]     [ TATTOO ]
+
+────────────────────────────────────
+
+
+Proporción recomendada del grid:
+1fr   1.4fr   1fr
+
+Contenido de cada bloque:
+Columna 1 — Fotografía
+Contenido:
+retrato del artista
+preferentemente fondo neutro
+formato vertical
+
+Dimensión recomendada:
+aspect-ratio: 3 / 4
+
+Columna 2 — Información
+Jerarquía tipográfica:
+NOMBRE
+especialidad
+semblanza (3–5 líneas) *Texto breve describiendo trayectoria, enfoque conceptual y estilo visual.
+La semblanza debe ser breve, máximo:
+40–60 palabras
+
+Columna 3 — Tattoo de referencia
+Objetivo:
+mostrar un trabajo representativo del artista.
+aspect-ratio: 1 / 1
+
+Separación vertical entre artistas:
+6rem – 8rem
+
+IMPORTANTE:
+Para evitar monotonía visual:
+Artista 1
+foto — info — tattoo
+
+Artista 2
+tattoo — info — foto
+
+Artista 3
+foto — info — tattoo
+
+Esto se logra con:
+.arquitecto:nth-child(even){
+  direction: rtl;
+}
+
+assets/
+	img/
+		arquitectos/
+				 arquitecto-01.webp
+				 		...
+------------------------------------------------------------------------------------------------------------
+
+La sección INTERVENCIÓN funciona como punto operativo del sitio: convierte el interés generado por el portafolio y la filosofía en acción (agendar cita).
+Debe contener explicación del proceso + formulario, sin saturar la interfaz.
+
+LAYOUT INTERVENCIÓN
+
+Estructura general:
+
+────────────────────────────────────────────
+
+			INTERVENCIÓN
+			
+			eyebrow
+			TÍTULO
+			descripción breve
+
+────────────────────────────────────────────
+
+			[ INFO + IMG ]                [ FORMULARIO ]
+			
+			logo del estudio               		nombre
+			explicación del proceso       	 email
+			pasos para agendar            	 zona del cuerpo
+			tiempos de respuesta           	tamaño aproximado
+						                            descripción de la idea
+						                            referencias
+						                            artista preferido
+			
+			                               			 [ enviar solicitud ]
+
+────────────────────────────────────────────
+
+Layout principal
+
+Grid de dos columnas:
+
+┌───────────────────────────┐
+│                                              │                              │
+│   INFORMACIÓN             │FORMULARIO │
+│   + IMG                                │                             │
+│                                               │                             │
+└────────────────────────-------
+
+Distribución:
+1.2fr   1fr
+
+Columna izquierda:
+logo del estudio
+explicación del proceso
+pasos para agendar
+tiempos de respuesta
+
+*explicación:
+Si deseas desarrollar una estructura en el Concrete Void Studio,
+completa el formulario con los detalles de tu idea.
+El equipo revisará tu solicitud y responderá
+con disponibilidad y estimación.
+
+*pasos para agendar
+Trabajamos cada proyecto como una intervención
+única. Antes de agendar, revisamos la propuesta
+para determinar viabilidad técnica y agenda.
+
+01
+Envía tu solicitud con la idea general.
+02
+El estudio revisa la propuesta.
+03
+Recibirás confirmación y disponibilidad.
+
+Tiempo de respuesta estimado:
+48–72 horas.
+
+**LOS NÚMEROS DE LOS PASOS A SEGUIR (1, 2, 3, ETC) DEBEN DE TENER UN TAMAÑO MONUMENTAL
+
+
+Columna derecha:
+formulario
+nombre
+email
+idea del tatuaje
+tamaño aproximado
+ubicación en el cuerpo
+referencias
+botón enviar
+
+Ventajas:
+lectura clara
+jerarquía lógica
+formulario visible sin scroll
+
+*EL ESTILO DE FORMULARIO DEBE MOSTRAR ELEMENTOS MONUMENTALES PARA QUE SEA CONSISTENTE CON EL DISEÑO GENERAL DEL SITIO
+------------------------------------------------------------------------------------------------------------
+
+La sección PROTOCOLO debe mantener consistencia estructural con la home: una arquitectura vertical con módulos interactivos. Cada módulo representa un punto del protocolo y se revela mediante interacción (clic)
+
+El objetivo UX es informar sin saturar visualmente, manteniendo el ritmo de scroll.
+
+
+
+Estructura general de la sección
+────────────────────────────────────
+
+eyebrow
+TÍTULO
+descripción 
+
+────────────────────────────────────
+
+01 ¿Cómo comienza una intervención?
+Toda intervención inicia con una solicitud enviada a través del formulario del estudio. En esta etapa se revisa la idea general, la ubicación en el cuerpo y la escala aproximada de la pieza. Con esta información el equipo determina la viabilidad del proyecto y propone los siguientes pasos para desarrollarlo.
+
+02 ¿Qué preparación requiere la sesión?
+Antes de la cita es importante llegar descansado, hidratado y haber comido adecuadamente. También se recomienda evitar alcohol o sustancias que puedan afectar la sensibilidad de la piel. Estas condiciones permiten que la sesión se desarrolle de forma más estable y segura.
+
+03 ¿Cómo se desarrolla el diseño de la pieza?
+Cada tatuaje se diseña considerando la anatomía del cuerpo y el lenguaje visual del estudio. A partir de la propuesta inicial se construye una composición que equilibre forma, escala y ubicación. El diseño se revisa y ajusta antes de iniciar la sesión para asegurar claridad en la intervención.
+
+04 ¿Qué ocurre durante la intervención?
+Durante la sesión se realiza la transferencia del diseño y comienza la ejecución del tatuaje. El proceso se lleva a cabo en un entorno controlado, siguiendo protocolos estrictos de higiene y esterilización. La duración depende de la complejidad, tamaño y zona del cuerpo intervenida.
+
+05 ¿Qué cuidados siguen después de la intervención?
+Una vez terminada la sesión se proporcionan indicaciones específicas para el cuidado de la piel. Estas recomendaciones ayudan a proteger el tatuaje durante los primeros días y favorecen una cicatrización adecuada. Seguirlas correctamente es esencial para preservar la definición de la pieza.
+
+06 ¿Cómo evoluciona la cicatrización?
+La piel necesita tiempo para recuperarse y estabilizar el pigmento. Durante este periodo es importante mantener la zona limpia, hidratada y protegida del sol. Si es necesario, el estudio puede programar una revisión para evaluar la evolución del tatuaje o realizar pequeños ajustes.
+────────────────────────────────────
+
+Cada elemento es un módulo interactivo expandible.
