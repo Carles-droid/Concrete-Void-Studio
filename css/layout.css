@@ -1154,11 +1154,14 @@
 }
 
 .conteinerProx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: var(--maxWidthContent);
   margin-inline: auto;
   text-align: center;
   border: 1px solid var(--colorConcrete400);
-  padding: var(--space12);
+  padding: var(--space8);
 }
 
 .sectionProx__title {
@@ -1179,4 +1182,8 @@
   color: var(--colorAsh);
   opacity: 0.5;
   letter-spacing: var(--trackingNormal);
+}
+
+@media (max-width: 768px) {
+    align-items: center;
 }
