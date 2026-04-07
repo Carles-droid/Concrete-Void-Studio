@@ -299,6 +299,15 @@
   max-width: 52ch;
   margin-bottom: var(--space8);
 }
+.hero__description span {
+  font-weight: var(--weightMedium);
+  color: var(--colorVoid);
+  font-size: var(--sizeDisplaySm);
+  background-color: var(--colorBone);
+  padding: var(--space1);
+  font-family: var(--fontDisplay);
+  padding-bottom: 0;
+}
 
 .hero__actions {
   display: flex;
