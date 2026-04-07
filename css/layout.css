@@ -715,8 +715,6 @@
 .intervencion__figure:hover .intervencion__image { transform: scale(1.03); }
 
 
-
-
 /* ============================================================
    PROTOCOLO
    ============================================================ */
@@ -769,8 +767,6 @@
   display: flex;
   justify-content: flex-start;
 }
-
-
 
 /* ============================================================
    BRAND STATEMENT FINAL
@@ -1143,4 +1139,44 @@
     gap: var(--space3);
     text-align: center;
   }
+}
+
+/* SECCIÓN PROXIMAMENTE */
+
+.sectionProx {
+  padding-top: var(--space13);
+  padding-bottom: var(--space13);
+  padding-inline: var(--paddingSiteH);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space6);  
+}
+
+.conteinerProx {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+  text-align: center;
+  border: 1px solid var(--colorConcrete400);
+  padding: var(--space12);
+}
+
+.sectionProx__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  padding-bottom: var(--space6);
+}
+
+.sectionProx__subtitle {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialSm);
+  font-style: italic;
+  font-weight: var(--weightThin);
+  color: var(--colorAsh);
+  opacity: 0.5;
+  letter-spacing: var(--trackingNormal);
 }
