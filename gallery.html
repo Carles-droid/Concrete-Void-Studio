@@ -143,15 +143,233 @@
     </div>
   </div>
 
-  <section class="sectionProx">
-    <div class="conteinerProx">
-        <h1 class="sectionProx__title">Archivo</h1>
-        <p class="sectionProx__subtitle">Próximamente...</p>
+<!-- ==========================================================
+  ARCHIVO — sección principal
+  Insertar entre header y footer de archivo.html
+  Grid 3×4 = 12 cards editoriales
+  aspect-ratio: 4/5 | hover minimalista
+========================================================== -->
+<main id="mainContent" role="main">
+
+  <section class="paginaArchivo" aria-labelledby="paginaArchivoTitle">
+
+    <div class="paginaArchivo__container">
+
+      <!-- Cabecera editorial -->
+      <header class="paginaArchivo__header">
+        <p class="eyebrow">Arquitecturas desarrolladas</p>
+        <h1 class="paginaArchivo__title" id="paginaArchivoTitle">Archivo</h1>
+        <p class="paginaArchivo__description">
+          Registro visual de intervenciones donde la tinta
+          se convierte en estructura, volumen y memoria.
+        </p>
+      </header>
+
+      <!-- Grid 3 × 4 = 12 cards -->
+      <div class="paginaArchivo__grid" role="list">
+
+        <!-- Card 01 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo01.webp"
+              alt="Monolito Urbano — tatuaje geométrico brutalista"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Monolito Urbano</h2>
+            <p class="archivoCard__artist">Por A. Kovač</p>
+          </div>
+        </article>
+
+        <!-- Card 02 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo02.webp"
+              alt="Estructura Brutalista — tatuaje blackwork"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Estructura Brutalista</h2>
+            <p class="archivoCard__artist">Por E. Voss</p>
+          </div>
+        </article>
+
+        <!-- Card 03 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo03.webp"
+              alt="Torre Distópica — tatuaje arquitectónico"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Torre Distópica</h2>
+            <p class="archivoCard__artist">Por M. Ibarra</p>
+          </div>
+        </article>
+
+        <!-- Card 04 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo04.webp"
+              alt="Sigilo Arcano — tatuaje simbólico geométrico"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Sigilo Arcano</h2>
+            <p class="archivoCard__artist">Por A. Kovač</p>
+          </div>
+        </article>
+
+        <!-- Card 05 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo05.webp"
+              alt="Laberinto de Concreto — tatuaje blackwork brutalista"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Laberinto de Concreto</h2>
+            <p class="archivoCard__artist">Por E. Voss</p>
+          </div>
+        </article>
+
+        <!-- Card 06 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo06.webp"
+              alt="Concreto y Vacío — tatuaje blackwork"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Concreto y Vacío</h2>
+            <p class="archivoCard__artist">Por M. Ibarra</p>
+          </div>
+        </article>
+
+        <!-- Card 07 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo07.webp"
+              alt="Ruina Vertical — tatuaje brutalista"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Ruina Vertical</h2>
+            <p class="archivoCard__artist">Por A. Kovač</p>
+          </div>
+        </article>
+
+        <!-- Card 08 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo08.webp"
+              alt="Geometría Ritual — tatuaje ocultista"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Geometría Ritual</h2>
+            <p class="archivoCard__artist">Por E. Voss</p>
+          </div>
+        </article>
+
+        <!-- Card 09 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo09.webp"
+              alt="Sistema Arcano — tatuaje simbólico"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Sistema Arcano</h2>
+            <p class="archivoCard__artist">Por M. Ibarra</p>
+          </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo10.webp"
+              alt="Mapa de Decadencia — tatuaje arquitectónico"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Mapa de Decadencia</h2>
+            <p class="archivoCard__artist">Por A. Kovač</p>
+          </div>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo11.webp"
+              alt="Vacío Estructural — tatuaje blackwork"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Vacío Estructural</h2>
+            <p class="archivoCard__artist">Por E. Voss</p>
+          </div>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="archivoCard" role="listitem">
+          <figure class="archivoCard__media">
+            <img
+              src="assets/img/archivo/archivo12.webp"
+              alt="Fragmento Distópico — tatuaje brutalista"
+              class="archivoCard__image"
+              loading="lazy"
+            />
+          </figure>
+          <div class="archivoCard__overlay" aria-hidden="true">
+            <h2 class="archivoCard__title">Fragmento Distópico</h2>
+            <p class="archivoCard__artist">Por M. Ibarra</p>
+          </div>
+        </article>
+
+      </div>
+      <!-- /paginaArchivo__grid -->
+
     </div>
-    
+
   </section>
 
-  <!-- ============================================================
+</main>
+
+<!-- ============================================================
     FOOTER
     - Bloque identidad: logo secundario + brand statement
     - Bloque información: redes / contacto

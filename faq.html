@@ -139,13 +139,244 @@
     </div>
   </div>
 
-  <section class="sectionProx">
-    <div class="conteinerProx">
-        <h1 class="sectionProx__title">PROTOCOLO</h1>
-        <p class="sectionProx__subtitle">Próximamente...</p>
+  <!-- ==========================================================
+  PROTOCOLO — sección principal
+  Insertar entre header y footer de protocolo.html
+  Accordion de 6 módulos interactivos
+  Reutiliza accordion.js de la home page sin modificaciones
+========================================================== -->
+<main id="mainContent" role="main">
+
+  <section class="paginaProtocolo" aria-labelledby="paginaProtocoloTitle">
+
+    <div class="paginaProtocolo__container">
+
+      <!-- Cabecera editorial -->
+      <header class="paginaProtocolo__header">
+        <p class="eyebrow">Directrices de la intervención</p>
+        <h1 class="paginaProtocolo__title" id="paginaProtocoloTitle">
+          Protocolo
+        </h1>
+        <p class="paginaProtocolo__description">
+          Información esencial sobre el proceso, preparación y cuidados posteriores.
+          Lineamientos para que cada intervención se desarrolle correctamente.
+        </p>
+      </header>
+
+      <!-- Accordion de 6 módulos -->
+      <div class="protocolo__accordion" role="list">
+
+        <!-- Item 01 -->
+        <div class="accordionItem" role="listitem">
+          <button
+            class="accordionItem__trigger"
+            aria-expanded="false"
+            aria-controls="accordionPanel01"
+            id="accordionBtn01"
+          >
+            <span class="accordionItem__number" aria-hidden="true">01</span>
+            <span class="accordionItem__question">¿Cómo comienza una intervención?</span>
+            <span class="accordionItem__icon" aria-hidden="true"></span>
+          </button>
+          <div
+            class="accordionItem__panel"
+            id="accordionPanel01"
+            role="region"
+            aria-labelledby="accordionBtn01"
+            hidden
+          >
+            <div class="accordionItem__content">
+              <p>
+                Toda intervención inicia con una solicitud enviada a través del formulario
+                del estudio. En esta etapa se revisa la idea general, la ubicación en el
+                cuerpo y la escala aproximada de la pieza.
+              </p>
+              <p>
+                Con esta información el equipo determina la viabilidad del proyecto
+                y propone los siguientes pasos para desarrollarlo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 02 -->
+        <div class="accordionItem" role="listitem">
+          <button
+            class="accordionItem__trigger"
+            aria-expanded="false"
+            aria-controls="accordionPanel02"
+            id="accordionBtn02"
+          >
+            <span class="accordionItem__number" aria-hidden="true">02</span>
+            <span class="accordionItem__question">¿Qué preparación requiere la sesión?</span>
+            <span class="accordionItem__icon" aria-hidden="true"></span>
+          </button>
+          <div
+            class="accordionItem__panel"
+            id="accordionPanel02"
+            role="region"
+            aria-labelledby="accordionBtn02"
+            hidden
+          >
+            <div class="accordionItem__content">
+              <p>
+                Antes de la cita es importante llegar descansado, hidratado y haber
+                comido adecuadamente.
+              </p>
+              <p>
+                También se recomienda evitar alcohol o sustancias que puedan afectar
+                la sensibilidad de la piel. Estas condiciones permiten que la sesión
+                se desarrolle de forma más estable y segura.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 03 -->
+        <div class="accordionItem" role="listitem">
+          <button
+            class="accordionItem__trigger"
+            aria-expanded="false"
+            aria-controls="accordionPanel03"
+            id="accordionBtn03"
+          >
+            <span class="accordionItem__number" aria-hidden="true">03</span>
+            <span class="accordionItem__question">¿Cómo se desarrolla el diseño de la pieza?</span>
+            <span class="accordionItem__icon" aria-hidden="true"></span>
+          </button>
+          <div
+            class="accordionItem__panel"
+            id="accordionPanel03"
+            role="region"
+            aria-labelledby="accordionBtn03"
+            hidden
+          >
+            <div class="accordionItem__content">
+              <p>
+                Cada tatuaje se diseña considerando la anatomía del cuerpo y el lenguaje
+                visual del estudio. A partir de la propuesta inicial se construye una
+                composición que equilibre forma, escala y ubicación.
+              </p>
+              <p>
+                El diseño se revisa y ajusta antes de iniciar la sesión para asegurar
+                claridad en la intervención.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 04 -->
+        <div class="accordionItem" role="listitem">
+          <button
+            class="accordionItem__trigger"
+            aria-expanded="false"
+            aria-controls="accordionPanel04"
+            id="accordionBtn04"
+          >
+            <span class="accordionItem__number" aria-hidden="true">04</span>
+            <span class="accordionItem__question">¿Qué ocurre durante la intervención?</span>
+            <span class="accordionItem__icon" aria-hidden="true"></span>
+          </button>
+          <div
+            class="accordionItem__panel"
+            id="accordionPanel04"
+            role="region"
+            aria-labelledby="accordionBtn04"
+            hidden
+          >
+            <div class="accordionItem__content">
+              <p>
+                Durante la sesión se realiza la transferencia del diseño y comienza
+                la ejecución del tatuaje. El proceso se lleva a cabo en un entorno
+                controlado, siguiendo protocolos estrictos de higiene y esterilización.
+              </p>
+              <p>
+                La duración depende de la complejidad, tamaño y zona del cuerpo intervenida.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 05 -->
+        <div class="accordionItem" role="listitem">
+          <button
+            class="accordionItem__trigger"
+            aria-expanded="false"
+            aria-controls="accordionPanel05"
+            id="accordionBtn05"
+          >
+            <span class="accordionItem__number" aria-hidden="true">05</span>
+            <span class="accordionItem__question">¿Qué cuidados siguen después de la intervención?</span>
+            <span class="accordionItem__icon" aria-hidden="true"></span>
+          </button>
+          <div
+            class="accordionItem__panel"
+            id="accordionPanel05"
+            role="region"
+            aria-labelledby="accordionBtn05"
+            hidden
+          >
+            <div class="accordionItem__content">
+              <p>
+                Una vez terminada la sesión se proporcionan indicaciones específicas
+                para el cuidado de la piel. Estas recomendaciones ayudan a proteger
+                el tatuaje durante los primeros días y favorecen una cicatrización adecuada.
+              </p>
+              <p>
+                Seguirlas correctamente es esencial para preservar la definición de la pieza.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 06 -->
+        <div class="accordionItem" role="listitem">
+          <button
+            class="accordionItem__trigger"
+            aria-expanded="false"
+            aria-controls="accordionPanel06"
+            id="accordionBtn06"
+          >
+            <span class="accordionItem__number" aria-hidden="true">06</span>
+            <span class="accordionItem__question">¿Cómo evoluciona la cicatrización?</span>
+            <span class="accordionItem__icon" aria-hidden="true"></span>
+          </button>
+          <div
+            class="accordionItem__panel"
+            id="accordionPanel06"
+            role="region"
+            aria-labelledby="accordionBtn06"
+            hidden
+          >
+            <div class="accordionItem__content">
+              <p>
+                La piel necesita tiempo para recuperarse y estabilizar el pigmento.
+                Durante este periodo es importante mantener la zona limpia, hidratada
+                y protegida del sol.
+              </p>
+              <p>
+                Si es necesario, el estudio puede programar una revisión para evaluar
+                la evolución del tatuaje o realizar pequeños ajustes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /protocolo__accordion -->
+
+      <!-- CTA final -->
+      <div class="paginaProtocolo__cta">
+        <a href="contact.html" class="btnPrimary">
+          Solicitar una intervención
+        </a>
+      </div>
+
     </div>
-    
+
   </section>
+
+</main>
 
   <!-- ============================================================
     FOOTER

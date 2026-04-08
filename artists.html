@@ -139,15 +139,172 @@
     </div>
   </div>
 
-  <section class="sectionProx">
-    <div class="conteinerProx">
-        <h1 class="sectionProx__title">ARQUITECTOS</h1>
-        <p class="sectionProx__subtitle">Próximamente...</p>
+<!-- ==========================================================
+  ARQUITECTOS — sección principal
+  Insertar entre header y footer de arquitectos.html
+  Bloques horizontales: foto / info / tattoo (alternados)
+========================================================== -->
+<main id="mainContent" role="main">
+
+  <section class="paginaArquitectos" aria-labelledby="paginaArquitectosTitle">
+
+    <div class="paginaArquitectos__container">
+
+      <!-- Cabecera editorial -->
+      <header class="paginaArquitectos__header">
+        <p class="eyebrow">Arquitectos de la tinta</p>
+        <h1 class="paginaArquitectos__title" id="paginaArquitectosTitle">
+          Quienes diseñan<br />las estructuras
+        </h1>
+        <p class="paginaArquitectos__description">
+          Cada artista del estudio desarrolla un lenguaje estructural propio.
+          Diseñan intervenciones donde la piel funciona como superficie arquitectónica.
+        </p>
+      </header>
+
+      <!-- Lista de arquitectos -->
+      <div class="arquitectosList">
+
+        <!-- ================================================
+          ARQUITECTO 01 — foto | info | tattoo
+        ================================================ -->
+        <article class="arquitectoPerfil" aria-labelledby="arquitecto01Name">
+
+          <!-- Columna 1: Fotografía -->
+          <figure class="arquitectoPerfil__foto">
+            <img
+              src="assets/img/arquitectos/arquitecto01.webp"
+              alt="Retrato de Adrian Kovač"
+              class="arquitectoPerfil__fotoImg"
+              loading="lazy"
+            />
+          </figure>
+
+          <!-- Columna 2: Información -->
+          <div class="arquitectoPerfil__info">
+            <p class="eyebrow">Arquitecto 01</p>
+            <h2 class="arquitectoPerfil__name" id="arquitecto01Name">
+              Adrian Kovač
+            </h2>
+            <p class="arquitectoPerfil__role">Biostructural Design</p>
+            <p class="arquitectoPerfil__bio">
+              Trabaja en la intersección entre arquitectura brutalista y anatomía.
+              Sus piezas exploran la tensión entre estructura y decadencia,
+              construyendo composiciones donde el peso visual define el trazo.
+            </p>
+          </div>
+
+          <!-- Columna 3: Tattoo de referencia -->
+          <figure class="arquitectoPerfil__tattoo">
+            <img
+              src="assets/img/arquitectos/kovac-referencia.webp"
+              alt="Pieza de referencia de Adrian Kovač"
+              class="arquitectoPerfil__tattooImg"
+              loading="lazy"
+            />
+          </figure>
+
+        </article>
+        <!-- /arquitectoPerfil 01 -->
+
+        <hr class="arquitectosList__divider" aria-hidden="true" />
+
+        <!-- ================================================
+          ARQUITECTO 02 — tattoo | info | foto (invertido)
+        ================================================ -->
+        <article class="arquitectoPerfil arquitectoPerfil--invertido" aria-labelledby="arquitecto02Name">
+
+          <!-- Columna 1: Tattoo de referencia -->
+          <figure class="arquitectoPerfil__tattoo">
+            <img
+              src="assets/img/arquitectos/voss-referencia.webp"
+              alt="Pieza de referencia de Elena Voss"
+              class="arquitectoPerfil__tattooImg"
+              loading="lazy"
+            />
+          </figure>
+
+          <!-- Columna 2: Información -->
+          <div class="arquitectoPerfil__info">
+            <p class="eyebrow">Arquitecto 02</p>
+            <h2 class="arquitectoPerfil__name" id="arquitecto02Name">
+              Elena Voss
+            </h2>
+            <p class="arquitectoPerfil__role">Dermal Geometry</p>
+            <p class="arquitectoPerfil__bio">
+              Especializada en geometría aplicada a la piel. Sus composiciones
+              parten de sistemas matemáticos y estructuras modulares que se
+              adaptan a la curvatura del cuerpo con precisión quirúrgica.
+            </p>
+          </div>
+
+          <!-- Columna 3: Fotografía -->
+          <figure class="arquitectoPerfil__foto">
+            <img
+              src="assets/img/arquitectos/arquitecto02.webp"
+              alt="Retrato de Elena Voss"
+              class="arquitectoPerfil__fotoImg"
+              loading="lazy"
+            />
+          </figure>
+
+        </article>
+        <!-- /arquitectoPerfil 02 -->
+
+        <hr class="arquitectosList__divider" aria-hidden="true" />
+
+        <!-- ================================================
+          ARQUITECTO 03 — foto | info | tattoo
+        ================================================ -->
+        <article class="arquitectoPerfil" aria-labelledby="arquitecto03Name">
+
+          <!-- Columna 1: Fotografía -->
+          <figure class="arquitectoPerfil__foto">
+            <img
+              src="assets/img/arquitectos/arquitecto03.webp"
+              alt="Retrato de Mateo Ibarra"
+              class="arquitectoPerfil__fotoImg"
+              loading="lazy"
+            />
+          </figure>
+
+          <!-- Columna 2: Información -->
+          <div class="arquitectoPerfil__info">
+            <p class="eyebrow">Arquitecto 03</p>
+            <h2 class="arquitectoPerfil__name" id="arquitecto03Name">
+              Mateo Ibarra
+            </h2>
+            <p class="arquitectoPerfil__role">Anatomical Systems</p>
+            <p class="arquitectoPerfil__bio">
+              Su trabajo parte del cuerpo como territorio y la piel como plano
+              arquitectónico. Desarrolla piezas donde la simbología ocultista
+              se integra con la estructura corporal como un sistema coherente.
+            </p>
+          </div>
+
+          <!-- Columna 3: Tattoo de referencia -->
+          <figure class="arquitectoPerfil__tattoo">
+            <img
+              src="assets/img/arquitectos/ibarra-referencia.webp"
+              alt="Pieza de referencia de Mateo Ibarra"
+              class="arquitectoPerfil__tattooImg"
+              loading="lazy"
+            />
+          </figure>
+
+        </article>
+        <!-- /arquitectoPerfil 03 -->
+
+      </div>
+      <!-- /arquitectosList -->
+
     </div>
-    
+
   </section>
 
-  <!-- ============================================================
+</main>
+
+<!-- ============================================================
     FOOTER
     - Bloque identidad: logo secundario + brand statement
     - Bloque información: redes / contacto

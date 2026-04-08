@@ -139,13 +139,212 @@
     </div>
   </div>
 
-  <section class="sectionProx">
-    <div class="conteinerProx">
-        <h1 class="sectionProx__title">INTERVENCIÓN</h1>
-        <p class="sectionProx__subtitle">Próximamente...</p>
+  <!-- ==========================================================
+  INTERVENCIÓN — sección principal
+  Insertar entre header y footer de intervencion.html
+  Layout: info + proceso (izquierda) / formulario (derecha)
+========================================================== -->
+<main id="mainContent" role="main">
+
+  <section class="paginaIntervencion" aria-labelledby="paginaIntervencionTitle">
+
+    <div class="paginaIntervencion__container">
+
+      <!-- Cabecera editorial -->
+      <header class="paginaIntervencion__header">
+        <p class="eyebrow">Intervenir la superficie</p>
+        <h1 class="paginaIntervencion__title" id="paginaIntervencionTitle">
+          Intervención
+        </h1>
+        <p class="paginaIntervencion__description">
+          Si deseas desarrollar una estructura en Concrete Void Studio,
+          completa el formulario con los detalles de tu idea.
+          El equipo revisará tu solicitud y responderá con disponibilidad y estimación.
+        </p>
+      </header>
+
+      <!-- Grid principal: info | formulario -->
+      <div class="paginaIntervencion__grid">
+
+        <!-- Columna izquierda — información + proceso -->
+        <div class="paginaIntervencion__info">
+
+          <!-- Bloque proceso -->
+          <div class="intervencionProceso">
+            <p class="intervencionProceso__intro">
+              Trabajamos cada proyecto como una intervención única.
+              Antes de agendar, revisamos la propuesta para determinar
+              viabilidad técnica y agenda.
+            </p>
+
+            <!-- Pasos -->
+            <ol class="intervencionProceso__pasos" role="list">
+
+              <li class="intervencionPaso">
+                <span class="intervencionPaso__num" aria-hidden="true">01</span>
+                <p class="intervencionPaso__texto">
+                  Envía tu solicitud con la idea general.
+                </p>
+              </li>
+
+              <li class="intervencionPaso">
+                <span class="intervencionPaso__num" aria-hidden="true">02</span>
+                <p class="intervencionPaso__texto">
+                  El estudio revisa la propuesta.
+                </p>
+              </li>
+
+              <li class="intervencionPaso">
+                <span class="intervencionPaso__num" aria-hidden="true">03</span>
+                <p class="intervencionPaso__texto">
+                  Recibirás confirmación y disponibilidad.
+                </p>
+              </li>
+
+            </ol>
+
+            <!-- Tiempo de respuesta -->
+            <p class="intervencionProceso__tiempo">
+              <span class="intervencionProceso__tiempoLabel">
+                Tiempo de respuesta estimado
+              </span>
+              <span class="intervencionProceso__tiempoValor">
+                48–72 horas
+              </span>
+            </p>
+
+          </div>
+
+        </div>
+        <!-- /paginaIntervencion__info -->
+
+        <!-- Columna derecha — formulario -->
+        <div class="paginaIntervencion__formWrapper">
+
+          <form
+            class="intervencionForm"
+            id="intervencionForm"
+            novalidate
+            aria-label="Formulario de solicitud de intervención"
+          >
+
+            <!-- Nombre -->
+            <div class="formField">
+              <label class="formField__label" for="fieldNombre">
+                Nombre
+              </label>
+              <input
+                class="formField__input"
+                type="text"
+                id="fieldNombre"
+                name="nombre"
+                placeholder="Tu nombre completo"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="formField">
+              <label class="formField__label" for="fieldEmail">
+                Email
+              </label>
+              <input
+                class="formField__input"
+                type="email"
+                id="fieldEmail"
+                name="email"
+                placeholder="tu@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <!-- Zona del cuerpo -->
+            <div class="formField">
+              <label class="formField__label" for="fieldZona">
+                Zona del cuerpo
+              </label>
+              <input
+                class="formField__input"
+                type="text"
+                id="fieldZona"
+                name="zona"
+                placeholder="Brazo, espalda, pierna..."
+              />
+            </div>
+
+            <!-- Tamaño aproximado -->
+            <div class="formField">
+              <label class="formField__label" for="fieldTamano">
+                Tamaño aproximado
+              </label>
+              <select
+                class="formField__input formField__select"
+                id="fieldTamano"
+                name="tamano"
+              >
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="pequeno">Pequeño — menos de 5 cm</option>
+                <option value="mediano">Mediano — 5 a 15 cm</option>
+                <option value="grande">Grande — 15 a 30 cm</option>
+                <option value="extra">Extra grande — más de 30 cm</option>
+                <option value="manga">Manga o pieza completa</option>
+              </select>
+            </div>
+
+            <!-- Descripción de la idea -->
+            <div class="formField">
+              <label class="formField__label" for="fieldIdea">
+                Descripción de la idea
+              </label>
+              <textarea
+                class="formField__input formField__textarea"
+                id="fieldIdea"
+                name="idea"
+                rows="4"
+                placeholder="Describe tu idea, referencias visuales, conceptos..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Artista preferido -->
+            <div class="formField">
+              <label class="formField__label" for="fieldArtista">
+                Artista preferido
+              </label>
+              <select
+                class="formField__input formField__select"
+                id="fieldArtista"
+                name="artista"
+              >
+                <option value="" disabled selected>Sin preferencia</option>
+                <option value="kovac">Adrian Kovač — Biostructural Design</option>
+                <option value="voss">Elena Voss — Dermal Geometry</option>
+                <option value="ibarra">Mateo Ibarra — Anatomical Systems</option>
+              </select>
+            </div>
+
+            <!-- Submit -->
+            <div class="formField formField--submit">
+              <button type="submit" class="btnPrimary intervencionForm__submit">
+                Enviar solicitud
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+        <!-- /paginaIntervencion__formWrapper -->
+
+      </div>
+      <!-- /paginaIntervencion__grid -->
+
     </div>
-    
+
   </section>
+
+</main>
 
   <!-- ============================================================
     FOOTER

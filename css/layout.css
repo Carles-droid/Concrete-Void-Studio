@@ -1143,49 +1143,617 @@
 
 /* SECCIÓN PROXIMAMENTE */
 
-.sectionProx {
-  padding-top: var(--space13);
+/* 
+/* ============================================================
+   ARCHIVO.CSS
+   Estilos específicos de la página archivo.html
+   Depende de: tokens.css, base.css, components.css
+   (archivoCard ya está definido en components.css)
+   ============================================================ */
+
+/* Sección principal */
+.paginaArchivo {
+  padding-top: calc(var(--headerHeightFull) + var(--space13));
   padding-bottom: var(--space13);
   padding-inline: var(--paddingSiteH);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space6);  
 }
 
-.conteinerProx {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.paginaArchivo__container {
   max-width: var(--maxWidthContent);
   margin-inline: auto;
-  text-align: center;
-  border: 1px solid var(--colorConcrete400);
-  padding: var(--space8);
 }
 
-.sectionProx__title {
+/* Cabecera editorial */
+.paginaArchivo__header {
+  margin-bottom: var(--space10);
+}
+
+.paginaArchivo__header .eyebrow {
+  margin-bottom: var(--space3);
+}
+
+.paginaArchivo__title {
   font-family: var(--fontDisplay);
   font-size: var(--sizeDisplayMd);
   font-weight: var(--weightRegular);
   letter-spacing: var(--trackingWide);
   line-height: var(--lineHeightTight);
   color: var(--colorBone);
-  padding-bottom: var(--space6);
+  margin-bottom: var(--space4);
 }
 
-.sectionProx__subtitle {
+.paginaArchivo__description {
   font-family: var(--fontEditorial);
-  font-size: var(--sizeEditorialSm);
-  font-style: italic;
+  font-size: var(--sizeEditorialMd);
   font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
   color: var(--colorAsh);
-  opacity: 0.5;
-  letter-spacing: var(--trackingNormal);
+  opacity: 0.75;
+  max-width: 52ch;
+}
+
+/* Grid 3 × 4 */
+.paginaArchivo__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gridGap);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .paginaArchivo__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-    align-items: center;
+  .paginaArchivo {
+    padding-top: calc(var(--headerHeightScroll) + var(--space10));
+    padding-bottom: var(--space11);
+  }
+
+  .paginaArchivo__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   ARQUITECTOS.CSS
+   Estilos específicos de la página arquitectos.html
+   Depende de: tokens.css, base.css, components.css
+   ============================================================ */
+
+/* Sección principal */
+.paginaArquitectos {
+  padding-top: calc(var(--headerHeightFull) + var(--space13));
+  padding-bottom: var(--space13);
+  padding-inline: var(--paddingSiteH);
+}
+
+.paginaArquitectos__container {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+}
+
+/* Cabecera editorial */
+.paginaArquitectos__header {
+  margin-bottom: var(--space13);
+}
+
+.paginaArquitectos__header .eyebrow {
+  margin-bottom: var(--space3);
+}
+
+.paginaArquitectos__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  margin-bottom: var(--space5);
+}
+
+.paginaArquitectos__description {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.75;
+  max-width: 52ch;
+}
+
+/* Separador entre arquitectos */
+.arquitectosList__divider {
+  border: none;
+  border-top: var(--borderThin);
+  margin: var(--space12) 0;
+}
+
+/* ============================================================
+   BLOQUE DE PERFIL — layout horizontal 3 columnas
+   ============================================================ */
+.arquitectoPerfil {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: clamp(var(--space6), 4vw, var(--space10));
+  align-items: start;
+}
+
+/* Fotografía del artista */
+.arquitectoPerfil__foto {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.arquitectoPerfil__fotoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%);
+  transition: filter var(--transitionSlow), transform var(--transitionSlow);
+}
+
+.arquitectoPerfil:hover .arquitectoPerfil__fotoImg {
+  filter: grayscale(50%);
+  transform: scale(1.02);
+}
+
+/* Bloque de información */
+.arquitectoPerfil__info {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--space4);
+}
+
+.arquitectoPerfil__info .eyebrow {
+  margin-bottom: var(--space3);
+}
+
+.arquitectoPerfil__name {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplaySm);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  margin-bottom: var(--space3);
+}
+
+.arquitectoPerfil__role {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechSm);
+  letter-spacing: var(--trackingXWide);
+  text-transform: uppercase;
+  color: var(--colorAsh);
+  opacity: 0.5;
+  margin-bottom: var(--space6);
+}
+
+.arquitectoPerfil__bio {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.8;
+  max-width: 42ch;
+}
+
+/* Tattoo de referencia */
+.arquitectoPerfil__tattoo {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.arquitectoPerfil__tattooImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.05);
+  transition: transform var(--transitionSlow);
+}
+
+.arquitectoPerfil:hover .arquitectoPerfil__tattooImg {
+  transform: scale(1.03);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+
+  /* Stack vertical en tablet — foto arriba, info centro, tattoo abajo */
+  .arquitectoPerfil {
+    grid-template-columns: 1fr;
+    gap: var(--space6);
+    max-width: 540px;
+    margin-inline: auto;
+  }
+
+  /* En invertido el orden visual se mantiene por DOM, no por CSS */
+  .arquitectoPerfil--invertido {
+    direction: ltr;
+  }
+
+  .arquitectoPerfil__foto,
+  .arquitectoPerfil__tattoo {
+    aspect-ratio: 3 / 2;
+  }
+
+  .arquitectoPerfil__tattoo {
+    aspect-ratio: 1 / 1;
+  }
+
+  .arquitectoPerfil__bio {
+    max-width: 100%;
+  }
+
+  .arquitectosList__divider {
+    margin: var(--space10) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .paginaArquitectos {
+    padding-top: calc(var(--headerHeightScroll) + var(--space10));
+    padding-bottom: var(--space11);
+  }
+
+  .paginaArquitectos__header {
+    margin-bottom: var(--space10);
+  }
+}
+
+/* ============================================================
+   INTERVENCION.CSS
+   Estilos específicos de la página intervencion.html
+   Depende de: tokens.css, base.css, components.css
+   ============================================================ */
+
+/* Sección principal */
+.paginaIntervencion {
+  padding-top: calc(var(--headerHeightFull) + var(--space13));
+  padding-bottom: var(--space13);
+  padding-inline: var(--paddingSiteH);
+}
+
+.paginaIntervencion__container {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+}
+
+/* Cabecera editorial */
+.paginaIntervencion__header {
+  margin-bottom: var(--space12);
+  max-width: 640px;
+}
+
+.paginaIntervencion__header .eyebrow {
+  margin-bottom: var(--space3);
+}
+
+.paginaIntervencion__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  margin-bottom: var(--space5);
+}
+
+.paginaIntervencion__description {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.75;
+}
+
+/* Grid principal — info 1.2fr / formulario 1fr */
+.paginaIntervencion__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(var(--space9), 8vw, var(--space14));
+  align-items: start;
+}
+
+
+/* ============================================================
+   PROCESO — columna izquierda
+   ============================================================ */
+.intervencionProceso__intro {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.75;
+  max-width: 48ch;
+  margin-bottom: var(--space9);
+}
+
+/* Lista de pasos */
+.intervencionProceso__pasos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space6);
+  margin-bottom: var(--space9);
+  border-top: var(--borderThin);
+  padding-top: var(--space6);
+}
+
+.intervencionPaso {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space5);
+  align-items: start;
+}
+
+.intervencionPaso__num {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingXWide);
+  color: var(--colorAsh);
+  opacity: 0.3;
+  padding-top: 3px;
+  min-width: 24px;
+}
+
+.intervencionPaso__texto {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.85;
+}
+
+/* Tiempo de respuesta */
+.intervencionProceso__tiempo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space2);
+  padding-top: var(--space6);
+  border-top: var(--borderThin);
+}
+
+.intervencionProceso__tiempoLabel {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingXWide);
+  text-transform: uppercase;
+  color: var(--colorAsh);
+  opacity: 0.35;
+}
+
+.intervencionProceso__tiempoValor {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplaySm);
+  letter-spacing: var(--trackingWide);
+  color: var(--colorBone);
+  line-height: 1;
+}
+
+
+/* ============================================================
+   FORMULARIO — columna derecha
+   Estilo monumental coherente con la estética del sitio
+   ============================================================ */
+.paginaIntervencion__formWrapper {
+  position: sticky;
+  top: calc(var(--headerHeightScroll) + var(--space6));
+}
+
+.intervencionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Campo genérico */
+.formField {
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--borderThin);
+  padding-bottom: var(--space5);
+  padding-top: var(--space5);
+  gap: var(--space3);
+  transition: border-color var(--transitionFast);
+}
+
+.formField:first-child {
+  border-top: var(--borderThin);
+}
+
+.formField:focus-within {
+  border-bottom-color: var(--overlayBorderHi);
+}
+
+/* Label */
+.formField__label {
+  font-family: var(--fontTech);
+  font-size: var(--sizeTechXs);
+  letter-spacing: var(--trackingXWide);
+  text-transform: uppercase;
+  color: var(--colorAsh);
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity var(--transitionFast);
+}
+
+.formField:focus-within .formField__label {
+  opacity: 0.8;
+}
+
+/* Input, select y textarea — estilo monumental */
+.formField__input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialLg);
+  font-weight: var(--weightThin);
+  color: var(--colorBone);
+  width: 100%;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: color var(--transitionFast);
+}
+
+.formField__input::placeholder {
+  color: var(--colorAsh);
+  opacity: 0.2;
+}
+
+.formField__input:focus {
+  color: var(--colorBone);
+}
+
+/* Select — flecha personalizada */
+.formField__select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23e8e4df' stroke-width='1' fill='none' stroke-opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  padding-right: var(--space7);
+}
+
+.formField__select option {
+  background-color: var(--colorCrater);
+  color: var(--colorAsh);
+}
+
+/* Textarea */
+.formField__textarea {
+  resize: none;
+  line-height: var(--lineHeightRelaxed);
+}
+
+/* Submit */
+.formField--submit {
+  border-bottom: none;
+  padding-top: var(--space7);
+  gap: 0;
+}
+
+.intervencionForm__submit {
+  width: 100%;
+  justify-content: center;
+  padding: 18px 36px;
+  font-size: var(--sizeTechMd);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .paginaIntervencion__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space10);
+  }
+
+  .paginaIntervencion__formWrapper {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .paginaIntervencion {
+    padding-top: calc(var(--headerHeightScroll) + var(--space10));
+    padding-bottom: var(--space11);
+  }
+
+  .paginaIntervencion__header {
+    margin-bottom: var(--space9);
+  }
+}
+
+/* ============================================================
+   PROTOCOLO.CSS
+   Estilos específicos de la página protocolo.html
+   Depende de: tokens.css, base.css, components.css
+   El accordion hereda todos sus estilos de components.css —
+   no se necesita redefinir nada del accordionItem.
+   ============================================================ */
+
+/* Sección principal */
+.paginaProtocolo {
+  padding-top: calc(var(--headerHeightFull) + var(--space13));
+  padding-bottom: var(--space13);
+  padding-inline: var(--paddingSiteH);
+}
+
+.paginaProtocolo__container {
+  max-width: var(--maxWidthContent);
+  margin-inline: auto;
+}
+
+/* Cabecera editorial */
+.paginaProtocolo__header {
+  margin-bottom: var(--space11);
+  max-width: 640px;
+}
+
+.paginaProtocolo__header .eyebrow {
+  margin-bottom: var(--space3);
+}
+
+.paginaProtocolo__title {
+  font-family: var(--fontDisplay);
+  font-size: var(--sizeDisplayMd);
+  font-weight: var(--weightRegular);
+  letter-spacing: var(--trackingWide);
+  line-height: var(--lineHeightTight);
+  color: var(--colorBone);
+  margin-bottom: var(--space5);
+}
+
+.paginaProtocolo__description {
+  font-family: var(--fontEditorial);
+  font-size: var(--sizeEditorialMd);
+  font-weight: var(--weightThin);
+  line-height: var(--lineHeightRelaxed);
+  color: var(--colorAsh);
+  opacity: 0.75;
+  max-width: 52ch;
+}
+
+/* Accordion — hereda todo de components.css */
+.paginaProtocolo__container .protocolo__accordion {
+  border-top: var(--borderThin);
+  margin-bottom: var(--space10);
+  max-width: var(--maxWidthContent);
+}
+
+/* CTA final */
+.paginaProtocolo__cta {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .paginaProtocolo {
+    padding-top: calc(var(--headerHeightScroll) + var(--space10));
+    padding-bottom: var(--space11);
+  }
+
+  .paginaProtocolo__cta {
+    justify-content: center;
+  }
 }
 
 /* Botón de WhatsApp Flotante */
