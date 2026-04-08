@@ -1,0 +1,246 @@
+
+ESTRATEGIA PARA MOSTRAR EL DEMO DE SITIO WEB 
+**********************************************************
+Objetivo
+Convertir tu demo de sitio para estudio de tatuajes en un canal de captación de clientes vía Instagram (DM). El enfoque es B2B directo: contactar estudios o tatuadores independientes y ofrecerles un sitio web profesional adaptado a su trabajo.
+
+Preparar tu perfil de Instagram
+Tu perfil debe verse profesional.
+
+Bio sugerida:
+Diseño web para estudios de tatuaje
+Portfolios profesionales
+Agenda online
+Optimización SEO
+
+↓ demo del sitio
+Link:
+demo del sitio
+**********************************************************
+Propuesta de valor (lo que vas a vender)
+Tu discurso debe centrarse en problemas reales de los tatuadores.
+
+Problemas comunes:
+dependen solo de Instagram
+mensajes desordenados
+clientes poco claros
+pierden tiempo respondiendo DMs
+
+Tu solución:
+sitio web profesional
++
+portafolio organizado
++
+formulario para citas
+
+Beneficios claros:
+filtra clientes
+mejora imagen profesional
+reduce mensajes inútiles
+centraliza información
+**********************************************************
+Estrategia de contacto en Instagram
+Búsqueda de prospectos
+
+Busca:
+tattoo studio + ciudad
+tattoo artist + ciudad
+blackwork tattoo
+minimal tattoo studio
+**********************************************************
+Cantidad de mensajes
+Ritmo recomendado:
+20 – 30 mensajes diarios
+
+En 30 días:
+600 – 900 contactos
+
+Con tasa de respuesta típica:
+5% – 10%
+
+Resultados esperados:
+30 – 60 conversaciones
+Prioriza:
+5k – 40k seguidores
+artistas activos
+estudios medianos
+**********************************************************
+
+Script inicial (primer mensaje)
+
+Debe ser corto y natural.
+
+Ejemplo:
+Hola, vi tu trabajo y me gustó mucho el estilo.
+Soy desarrollador web y estoy trabajando en sitios especializados para estudios de tatuaje.
+Hice un demo para mostrar cómo podría verse un portfolio profesional para artistas.
+
+Si te interesa verlo, puedo enviarte el link.
+
+Clave:
+NO vendas en el primer mensaje
+Solo generar interés.
+**********************************************************
+
+Segundo mensaje (si responden)
+
+Ejemplo:
+
+Este es el demo que desarrollé pensando en estudios de tatuaje:
+
+[link]
+
+La idea es tener un sitio donde:
+
+el portafolio esté organizado
+los clientes envíen solicitudes claras
+el estudio no dependa solo de Instagram.
+**********************************************************
+Precios sugeridos (mercado freelance)
+Sitio básico (contenido estático)
+
+Incluye:
+Home
+Portafolio
+Artistas
+Información del estudio
+formulario de contacto
+
+Tecnología:
+HTML
+CSS
+JS
+
+Precio sugerido:
+$250 – $450 USD
+
+o en MXN:
+$4,500 – $8,000
+
+Tiempo:
+1 – 2 semanas
+---------
+Sitio con backend
+
+Incluye:
+todo lo anterior
+panel para subir tatuajes
+gestión de artistas
+formulario que guarda solicitudes
+agenda o citas
+
+Tecnologías posibles:
+Node
+Firebase
+Supabase
+Strapi
+
+Precio sugerido:
+$700 – $1500 USD
+
+MXN:
+$12,000 – $25,000
+
+Tiempo:
+3 – 5 semanas
+**********************************************************
+
+Ofertas que aumentan conversiones
+
+Puedes ofrecer:
+
+Oferta 1
+primer mes hosting gratis
+Oferta 2
+diseño personalizado del portfolio
+Oferta 3
+optimización SEO básica
+**********************************************************
+
+Estrategia de cierre
+
+Cuando el artista muestra interés:
+pregunta si tiene sitio web
+pregunta si recibe muchas solicitudes por DM
+explica cómo el sitio ayuda
+
+Ejemplo:
+Muchos estudios reciben mensajes desordenados en Instagram.
+El sitio ayuda a que las solicitudes lleguen con información clara (zona del cuerpo, tamaño, idea, etc.).
+
+**********************************************************
+Pipeline de ventas simple
+
+Organiza prospectos en una hoja.
+
+Columnas:
+
+usuario
+seguidores
+contactado
+respondió
+interesado
+cliente
+
+Esto evita perder leads.
+**********************************************************
+
+Proyección realista
+
+Si haces esto durante 3 meses:
+
+≈ 2000 contactos
+≈ 120 respuestas
+≈ 20 interesados
+≈ 4 – 8 clientes
+
+Con ticket promedio:
+
+$500 USD
+
+Ingresos aproximados:
+
+$2000 – $4000
+**********************************************************
+
+DM 1 — Enfoque directo y profesional
+
+Hola, ¿qué tal?
+Estuve revisando su trabajo y me llamó la atención el estilo que manejan.
+Soy desarrollador web y recientemente desarrollé un concepto de sitio web especializado para estudios de tatuaje. La idea es que el estudio tenga una presencia más profesional que Instagram: portafolio organizado, información clara para clientes y una forma más fácil de agendar citas.
+
+Actualmente estoy ofreciendo dos opciones:
+
+1. Sitio web profesional (contenido estático)
+Portafolio, artistas, información del estudio y contacto.
+Ideal para estudios que quieren una presencia sólida en internet.
+Precio aproximado: $250–400 USD
+
+2. Sitio web con sistema de gestión (backend)
+Incluye panel para subir trabajos, actualizar portafolio y gestionar contenido sin depender de un programador.
+Precio aproximado: $700–1200 USD
+
+Si te interesa, puedo compartirte el demo del concepto que desarrollé para que lo revises.
+-------------------------------------------
+DM 2 — Enfoque consultivo / valor primero
+
+Hola, ¿cómo estás?
+Soy desarrollador web y estoy trabajando con un concepto de páginas web diseñadas específicamente para estudios de tatuaje.
+Instagram funciona muy bien para mostrar trabajo, pero un sitio web propio ayuda a que el estudio se vea más profesional, además de permitir:
+
+• Mostrar el portafolio completo de forma organizada
+• Explicar estilos y artistas del estudio
+• Tener información clara para nuevos clientes
+• Facilitar contacto o agendamiento
+
+Estoy ofreciendo dos formatos:
+
+Sitio web portafolio (estático)
+Diseño personalizado, optimizado para mostrar tatuajes y artistas.
+Precio aproximado: $250–400 USD
+
+Sitio web con panel de administración
+Permite subir nuevos trabajos y actualizar contenido fácilmente.
+Precio aproximado: $700–1200 USD
+
+Si te interesa, con gusto puedo mostrarte el demo del concepto que desarrollé.

@@ -27,9 +27,7 @@ sensación de catálogo
 Estructura de la página ARCHIVO
 
 La sección debería seguir esta arquitectura:
------------------------------------------------------------------------------------------------
-			HEADER
-			
+-----------------------------------------------------------------------------------------------			
 			INTRO EDITORIAL
 			Eyebrow
 			Título
@@ -90,24 +88,13 @@ tatuaje + contexto brutalista
 
 Esto va a crear un ritmo visual.
 
-No ordenar cronológicamente.
-Ordena por peso visual:
-
-fuerte
-medio
-fuerte
-
-medio
-fuerte
-medio
-
 Organización de archivos
 
 Para el proyecto:
 assets/
 	img/
    		archivo/
-      			     tattoo-01.webp
+      			     archivo01.webp
       ...
 
 Peso ideal de las imágenes
@@ -228,13 +215,13 @@ Estructura general:
 
 ────────────────────────────────────────────
 
-			[ INFO + IMG ]                [ FORMULARIO ]
+			[  INFO + IMG ]                [ FORMULARIO ]
 			
-			logo del estudio               		nombre
+						              		nombre
 			explicación del proceso       	 email
 			pasos para agendar            	 zona del cuerpo
 			tiempos de respuesta           	tamaño aproximado
-						                            descripción de la idea
+	                + img del estudio 		         descripción de la idea
 						                            referencias
 						                            artista preferido
 			
@@ -282,9 +269,6 @@ Recibirás confirmación y disponibilidad.
 
 Tiempo de respuesta estimado:
 48–72 horas.
-
-**LOS NÚMEROS DE LOS PASOS A SEGUIR (1, 2, 3, ETC) DEBEN DE TENER UN TAMAÑO MONUMENTAL
-
 
 Columna derecha:
 formulario
