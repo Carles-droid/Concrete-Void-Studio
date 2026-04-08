@@ -6,7 +6,7 @@ El lenguaje visual del proyecto sugiere estos lineamientos:
 Estética: brutalismo, arquitectura, ruinas, geometría.
 Técnica: blackwork, alto contraste, sombras profundas.
 Ambiente: oscuro, editorial, minimalista.
-Composición: fotografía del tatuaje en piel real (brazo, torso, espalda), fondo negro o neutro.
+Composición: fotografía del tatuaje en piel real (muslo, torso, espalda, cráneo, pierna), fondo negro o neutro.
 Iluminación: dramática, direccional, estilo estudio.
 Color: monocromático (negro y piel).
 
@@ -15,7 +15,7 @@ Color: monocromático (negro y piel).
 
 ARCHIVO
 
-OPCIÓN A
+OPCIÓN A -ESTILOS CONCRETE VOID STUDIO
 CARD 2
 brutalist architectural tattoo on human skin, fragmented concrete structure design, blackwork geometric tattoo inspired by abandoned brutalist buildings, cracked monolithic shapes and broken architectural lines, deep black ink and heavy shadows, minimal composition, dark background, high contrast studio lighting, skin texture visible, dystopian architectural aesthetic, editorial tattoo photography, ultra detailed, 4:5 composition
 CARD 3
@@ -26,11 +26,33 @@ CARD 5
 dystopian brutalist tower tattoo design, vertical architectural structure tattooed on human skin, stacked concrete geometry and monolithic forms, blackwork tattoo with heavy shadows and strong lines, futuristic brutalist architecture aesthetic, dark background, dramatic lighting, ultra detailed ink texture, editorial tattoo photography, cinematic atmosphere, 4:5 composition
 CARD 6
 abstract brutalist architecture tattoo exploring concrete mass and empty space, heavy black geometric blocks contrasted with large negative spaces, minimalist blackwork tattoo composition, deep matte black ink on realistic skin, sharp architectural lines and void structures, dark background, high contrast lighting, modern brutalist aesthetic, editorial tattoo photography, ultra detailed, 4:5 composition
+CARD 7 Brutalist Cathedral Backpiece
+ woman standing with back facing camera in front of a raw brutalist 
+concrete wall, wearing dark clothing slightly lowered to reveal a large 
+brutalist cathedral architecture tattoo covering the upper back, 
+monumental concrete volumes and geometric voids in blackwork tattoo 
+style, deep shadows and solid blacks, high contrast tattoo on real skin,
+ cinematic editorial tattoo photography, dramatic directional studio 
+lighting from the side, desaturated tones, shallow depth of field, 
+minimal brutalist environment, 4:5 composition 
+CARD 8 Abandoned Factory Sleeve
+male model standing sideways against a bright textured brutalist concrete wall, wearing a light shirt slightly lifted revealing a brutalist industrial architecture tattoo on the left side of the torso (rib area), pipes, scaffolding and factory structures forming a dense architectural blackwork composition, bold lines and solid black ink, the man's face partially cropped so only the nose and mouth are visible, eyes not visible, realistic tattoo on human skin, bright editorial tattoo photography, soft diffused studio lighting, neutral tones, shallow depth of field, medium portrait framing, 4:5 composition, brutalist aesthetic, editorial tattoo photography, textured concrete wall background, soft studio lighting, monochrome blackwork tattoo, realistic skin texture, high contrast between black ink and skin, minimal environment
+CARD 9 Occult Geometric Tattoo
+female model standing against a bright brutalist concrete wall, long hair dyed purple falling over the shoulders, wearing minimal dark clothing revealing an occult geometric tattoo on the right thigh, ritualistic symbols combined with brutalist architectural geometry in blackwork tattoo style, bold black ink and sharp lines, the woman's face cropped so only the lower half of the face and nose are visible, eyes not visible, realistic tattoo on human skin, bright editorial tattoo photography, shallow depth of field, medium portrait framing, 4:5 composition, brutalist aesthetic, editorial tattoo photography, textured concrete wall background, monochrome blackwork tattoo, realistic skin texture, high contrast between black ink and skin, minimal environment
+CARD 10 Ruined Hospital Leg Piece
+male model standing next to a bright textured concrete wall, wearing neutral clothing revealing a brutalist architecture tattoo on the left calf, architectural corridors and geometric concrete structures translated into blackwork tattoo design, bold black ink and crisp lines, the man slightly turned away so his face is mostly hidden and only the nose profile may be visible, eyes not visible, realistic tattoo on human skin, bright editorial tattoo photography, shallow depth of field, medium portrait framing, 4:5 composition, brutalist aesthetic, editorial tattoo photography, textured concrete wall background, monochrome blackwork tattoo, realistic skin texture, high contrast between black ink and skin, minimal environment
+CARD 11 Brutalist Skull Architecture Tattoo
+female model standing in front of a bright brutalist concrete wall, wearing a sleeveless light shirt revealing a brutalist skull architecture tattoo across the neck and clavicle area, surreal skull fused with geometric brutalist structures in blackwork tattoo style, bold black ink and strong contrast, the woman's face partially cropped so only the lower half and nose are visible, eyes not visible, her hand visible with fingernails painted green, realistic tattoo on human skin, bright editorial tattoo photography, high contrast studio lighting with subtle shadows, shallow depth of field, medium portrait framing, 4:5 composition, brutalist aesthetic, editorial tattoo photography, textured concrete wall background, high studio lighting, monochrome blackwork tattoo, realistic skin texture, high contrast between black ink and skin, minimal environment
+CARD 11 Endless Staircase Back Tattoo
+male model with shaved head standing with his back to the camera against a bright textured concrete wall, wearing a light shirt slightly lowered revealing a vertical brutalist staircase tattoo running along the spine and upper back, monumental stairs disappearing into geometric voids in blackwork tattoo style, bold black ink and crisp architectural lines, the entire back of the head visible but face not visible, realistic tattoo on human skin, bright editorial tattoo photography, soft diffused studio lighting, neutral palette, shallow depth of field, medium portrait framing, 4:5 composition, brutalist aesthetic, editorial tattoo photography, textured concrete wall background, soft studio lighting, monochrome blackwork tattoo, realistic skin texture, high contrast between black ink and skin, minimal environment
 
 style consistency: brutalist geometric blackwork tattoo
 lighting: high contrast studio lighting
 background: dark neutral background
 aspect ratio: 4:5
+
+
+
 
 ***********************
 OPCIÓN B
@@ -45,7 +67,21 @@ dystopian brutalist tower tattoo design on upper arm, vertical architectural com
 CARD 6
 brutalist blackwork tattoo inspired by raw concrete architecture, abstract geometric structure interacting with negative space, tattoo on a woman back shoulder, thick black shapes and fine architectural lines, minimal brutalist composition, high contrast black ink, dark studio background, dramatic lighting, contemporary architectural tattoo design, ultra detailed skin texture
 
+  style consistency: brutalist geometric blackwork tattoo  
+  lighting: high contrast studio lighting  
+  background: dark neutral background  
+  aspect ratio: 4:5  
+
+cinematic editorial tattoo photography, brutalist aesthetic, industrial ruins environment, dark moody lighting, gritty textures, realistic human skin, monochrome blackwork tattoo, high contrast, shallow depth of field, 4:5
+
 blackwork tattoo, brutalist architecture inspired, high contrast, dark studio background, editorial tattoo photography, consistent style, aspect ratio: 4:5
+
+editorial tattoo photography, brutalist aesthetic, blackwork tattoo, monochrome black ink, high contrast shadows, real human skin texture, dramatic studio lighting, dark minimal background, 4:5 composition
+
+
+
+
+
 
 ****************************************************
 ARQUITECTOS
