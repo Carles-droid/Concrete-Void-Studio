@@ -1222,6 +1222,7 @@
 /* ============================================================
    ARQUITECTOS.CSS
    Estilos específicos de la página arquitectos.html
+   Layout: 2 columnas — foto (4/5) izquierda / info derecha
    Depende de: tokens.css, base.css, components.css
    ============================================================ */
 
@@ -1274,18 +1275,18 @@
 }
 
 /* ============================================================
-   BLOQUE DE PERFIL — layout horizontal 3 columnas
+   BLOQUE DE PERFIL — 2 columnas: foto izquierda / info derecha
    ============================================================ */
 .arquitectoPerfil {
   display: grid;
-  grid-template-columns: 1fr 1.4fr 1fr;
-  gap: clamp(var(--space6), 4vw, var(--space10));
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(var(--space8), 6vw, var(--space12));
   align-items: start;
 }
 
-/* Fotografía del artista */
+/* Fotografía — aspect-ratio 4/5 */
 .arquitectoPerfil__foto {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
 }
 
@@ -1295,7 +1296,9 @@
   object-fit: cover;
   object-position: center top;
   filter: grayscale(100%);
-  transition: filter var(--transitionSlow), transform var(--transitionSlow);
+  transition:
+    filter var(--transitionSlow),
+    transform var(--transitionSlow);
 }
 
 .arquitectoPerfil:hover .arquitectoPerfil__fotoImg {
@@ -1303,10 +1306,12 @@
   transform: scale(1.02);
 }
 
-/* Bloque de información */
+/* Información — columna derecha */
 .arquitectoPerfil__info {
   display: flex;
   flex-direction: column;
+  /* Centrado vertical respecto a la foto */
+  justify-content: center;
   padding-top: var(--space4);
 }
 
@@ -1341,64 +1346,12 @@
   line-height: var(--lineHeightRelaxed);
   color: var(--colorAsh);
   opacity: 0.8;
-  max-width: 42ch;
-}
-
-/* Tattoo de referencia */
-.arquitectoPerfil__tattoo {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-}
-
-.arquitectoPerfil__tattooImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: contrast(1.05);
-  transition: transform var(--transitionSlow);
-}
-
-.arquitectoPerfil:hover .arquitectoPerfil__tattooImg {
-  transform: scale(1.03);
+  max-width: 44ch;
 }
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 1024px) {
-
-  /* Stack vertical en tablet — foto arriba, info centro, tattoo abajo */
-  .arquitectoPerfil {
-    grid-template-columns: 1fr;
-    gap: var(--space6);
-    max-width: 540px;
-    margin-inline: auto;
-  }
-
-  /* En invertido el orden visual se mantiene por DOM, no por CSS */
-  .arquitectoPerfil--invertido {
-    direction: ltr;
-  }
-
-  .arquitectoPerfil__foto,
-  .arquitectoPerfil__tattoo {
-    aspect-ratio: 3 / 2;
-  }
-
-  .arquitectoPerfil__tattoo {
-    aspect-ratio: 1 / 1;
-  }
-
-  .arquitectoPerfil__bio {
-    max-width: 100%;
-  }
-
-  .arquitectosList__divider {
-    margin: var(--space10) 0;
-  }
-}
-
 @media (max-width: 768px) {
   .paginaArquitectos {
     padding-top: calc(var(--headerHeightScroll) + var(--space10));
@@ -1407,6 +1360,25 @@
 
   .paginaArquitectos__header {
     margin-bottom: var(--space10);
+  }
+
+  /* Stack vertical en mobile */
+  .arquitectoPerfil {
+    grid-template-columns: 1fr;
+    gap: var(--space6);
+  }
+
+  /* En mobile la foto ocupa ancho completo con altura limitada */
+  .arquitectoPerfil__foto {
+    aspect-ratio: 4 / 3;
+  }
+
+  .arquitectoPerfil__bio {
+    max-width: 100%;
+  }
+
+  .arquitectosList__divider {
+    margin: var(--space10) 0;
   }
 }
 

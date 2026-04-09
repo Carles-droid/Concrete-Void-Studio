@@ -139,10 +139,11 @@
     </div>
   </div>
 
-<!-- ==========================================================
+  <!-- ==========================================================
   ARQUITECTOS — sección principal
   Insertar entre header y footer de arquitectos.html
-  Bloques horizontales: foto / info / tattoo (alternados)
+  Layout: 2 columnas — foto 4/5 izquierda / info derecha
+  Mismo orden para los 3 arquitectos
 ========================================================== -->
 <main id="mainContent" role="main">
 
@@ -166,14 +167,14 @@
       <div class="arquitectosList">
 
         <!-- ================================================
-          ARQUITECTO 01 — foto | info | tattoo
+          ARQUITECTO 01
         ================================================ -->
         <article class="arquitectoPerfil" aria-labelledby="arquitecto01Name">
 
-          <!-- Columna 1: Fotografía -->
+          <!-- Columna 1: Fotografía aspect-ratio 4/5 -->
           <figure class="arquitectoPerfil__foto">
             <img
-              src="assets/img/arquitectos/arquitecto01.webp"
+              src="assets/img/artists/adrian02.webp"
               alt="Retrato de Adrian Kovač"
               class="arquitectoPerfil__fotoImg"
               loading="lazy"
@@ -194,32 +195,21 @@
             </p>
           </div>
 
-          <!-- Columna 3: Tattoo de referencia -->
-          <figure class="arquitectoPerfil__tattoo">
-            <img
-              src="assets/img/arquitectos/kovac-referencia.webp"
-              alt="Pieza de referencia de Adrian Kovač"
-              class="arquitectoPerfil__tattooImg"
-              loading="lazy"
-            />
-          </figure>
-
         </article>
-        <!-- /arquitectoPerfil 01 -->
 
         <hr class="arquitectosList__divider" aria-hidden="true" />
 
         <!-- ================================================
-          ARQUITECTO 02 — tattoo | info | foto (invertido)
+          ARQUITECTO 02
         ================================================ -->
-        <article class="arquitectoPerfil arquitectoPerfil--invertido" aria-labelledby="arquitecto02Name">
+        <article class="arquitectoPerfil" aria-labelledby="arquitecto02Name">
 
-          <!-- Columna 1: Tattoo de referencia -->
-          <figure class="arquitectoPerfil__tattoo">
+          <!-- Columna 1: Fotografía aspect-ratio 4/5 -->
+          <figure class="arquitectoPerfil__foto">
             <img
-              src="assets/img/arquitectos/voss-referencia.webp"
-              alt="Pieza de referencia de Elena Voss"
-              class="arquitectoPerfil__tattooImg"
+              src="assets/img/artists/elena02.webp"
+              alt="Retrato de Elena Voss"
+              class="arquitectoPerfil__fotoImg"
               loading="lazy"
             />
           </figure>
@@ -238,30 +228,19 @@
             </p>
           </div>
 
-          <!-- Columna 3: Fotografía -->
-          <figure class="arquitectoPerfil__foto">
-            <img
-              src="assets/img/arquitectos/arquitecto02.webp"
-              alt="Retrato de Elena Voss"
-              class="arquitectoPerfil__fotoImg"
-              loading="lazy"
-            />
-          </figure>
-
         </article>
-        <!-- /arquitectoPerfil 02 -->
 
         <hr class="arquitectosList__divider" aria-hidden="true" />
 
         <!-- ================================================
-          ARQUITECTO 03 — foto | info | tattoo
+          ARQUITECTO 03
         ================================================ -->
         <article class="arquitectoPerfil" aria-labelledby="arquitecto03Name">
 
-          <!-- Columna 1: Fotografía -->
+          <!-- Columna 1: Fotografía aspect-ratio 4/5 -->
           <figure class="arquitectoPerfil__foto">
             <img
-              src="assets/img/arquitectos/arquitecto03.webp"
+              src="assets/img/artists/mateo02.webp"
               alt="Retrato de Mateo Ibarra"
               class="arquitectoPerfil__fotoImg"
               loading="lazy"
@@ -282,18 +261,7 @@
             </p>
           </div>
 
-          <!-- Columna 3: Tattoo de referencia -->
-          <figure class="arquitectoPerfil__tattoo">
-            <img
-              src="assets/img/arquitectos/ibarra-referencia.webp"
-              alt="Pieza de referencia de Mateo Ibarra"
-              class="arquitectoPerfil__tattooImg"
-              loading="lazy"
-            />
-          </figure>
-
         </article>
-        <!-- /arquitectoPerfil 03 -->
 
       </div>
       <!-- /arquitectosList -->
@@ -303,6 +271,7 @@
   </section>
 
 </main>
+
 
 <!-- ============================================================
     FOOTER
