@@ -128,8 +128,154 @@ pared brutalista izquierda  |  espacio abierto central  |  pared texturada derec
                 
 aspect ratio: 16:9
 
+****************************************************
+PROMPT PARA DESARROLLAR LA ESTRUCTURA
+
+
+Proceso para desarrollar tu sitio web
+
+1. Definición del enfoque
+Primero se define qué necesitas exactamente:
+tipo de sitio (portafolio simple o con panel para actualizar)
+objetivo principal (mostrar trabajo, conseguir citas, posicionarte)
+estilo del tatuaje (blackwork, fine line, etc.)
+
+2. Curaduría del portfolio
+Seleccionamos tu material:
+15–30 tatuajes representativos
+organización por estilo o tipo (opcional)
+
+3. Identidad visual del sitio
+Se define cómo se va a ver:
+colores (acorde a tu estilo)
+tipografías
+composición visual
+tono del sitio (minimalista, oscuro, etc.)
+
+El objetivo es que el sitio se sienta como una extensión de tu trabajo.
+
+4. Diseño del sitio (estructura visual)
+
+Se crea el diseño antes de programar:
+
+layout de cada sección
+cómo se ve en móvil
+jerarquía del contenido
+
+Aquí puedes revisar y pedir ajustes.
+
+5. Desarrollo
+
+Se construye el sitio:
+
+código optimizado (rápido y ligero)
+responsive (funciona perfecto en celular)
+integración con WhatsApp / Instagram
+6. Contacto y citas
+
+Se implementa la forma en que te van a contactar:
+
+botón de WhatsApp
+formulario (opcional)
+estructura para filtrar clientes
+
+Esto ayuda a recibir solicitudes más claras y ahorrar tiempo en mensajes.
+
+7. Publicación
+
+Se sube el sitio a internet:
+
+dominio (tu nombre o marca)
+hosting
+certificado de seguridad (https)
+
+Tu página queda accesible 24/7.
+
+8. Ajustes finales
+
+Se revisa:
+
+que todo funcione
+textos / imágenes / enlaces
+9. Entrega
+
+El sitio se entrega listo para usarse.
+
+Dependiendo del tipo de sitio:
+
+sitio estático → puedes solicitar actualizaciones cuando lo necesites
+sitio con sistema → se explica cómo gestionar tu contenido
 
 
 
+*****************************
 
 
+A retro futuristic computer terminal screen, dark environment, green monochrome glow, brutalist aesthetic, high contrast, realistic CRT monitor, cinematic lighting.
+
+Display structured terminal text in Spanish:
+
+[SERVICIO]
+Sitio web para tatuador
+
+[OBJETIVO]
+→ Mostrar tu trabajo de forma profesional
+→ Atraer más clientes
+→ Facilitar contacto y citas
+
+[PROCESO]
+
+01 Definición
+→ tipo de sitio (estático/dinámico)
+→ objetivo (mostrar portfolio/gestionar citas)
+→ estilo de tatuajes
+
+02 Curaduría
+→ selección de tatuajes más representativos
+→ organización del portfolio
+
+03 Identidad visual
+→ colores
+→ tipografías
+→ estilo del sitio
+
+INSOMNE
+
+Monospace font, clean alignment, sharp focus, no distortion, minimal noise, highly legible text, centered composition
+aspect-ratio 4:5 
+
+
+---
+
+
+A retro futuristic terminal interface on a CRT monitor, dark background, green glowing text, brutalist minimal design, cinematic shadows, ultra sharp.
+
+Display structured text:
+
+[PROCESO]
+
+04 Diseño
+→ estructura del sitio (secciones)
+→ versión móvil (responsive design)
+→ ajustes
+
+05 Desarrollo
+→ código ligero y optimizado
+→ integración con WhatsApp
+
+06 Contacto (opcional)
+→ clientes envían información clara
+
+07 Publicación
+→ dominio + hosting + seguridad
+
+08 Entrega
+→ sitio listo para usar
+
+[RESULTADO]
+→ más información sobre ti y tu trabajo
+→ mejor organización que Instagram
+
+INSOMNE
+
+Monospace typography, clean layout, high readability, realistic terminal UI, professional composition, aspect-ratio 4:5

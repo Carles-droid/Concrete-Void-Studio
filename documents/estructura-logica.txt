@@ -1,4 +1,19 @@
 
+
+<head>
+  <title>Concrete Void Studio</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Concrete Void Studio" />
+  <meta property="og:description" content="Blackwork brutalista. Arquitectura en piel." />
+  <meta property="og:image" content="https://tusitio.com/assets/og/cover-brutalist.jpg" />
+  <meta property="og:url" content="https://tusitio.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+
 Estructura Home Page
 
 1. Hero

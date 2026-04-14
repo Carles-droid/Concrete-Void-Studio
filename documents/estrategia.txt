@@ -16,6 +16,12 @@ Optimización SEO
 ↓ demo del sitio
 Link:
 demo del sitio
+
+Diseño web especializado para estudios de tatuaje  
+Portfolios profesionales + agenda  
+Transforma tu trabajo en una web que refleje tu concepto
+↓ Ver demo
+
 **********************************************************
 Propuesta de valor (lo que vas a vender)
 Tu discurso debe centrarse en problemas reales de los tatuadores.
@@ -74,7 +80,6 @@ Ejemplo:
 Hola, vi tu trabajo y me gustó mucho el estilo.
 Soy desarrollador web y estoy trabajando en sitios especializados para estudios de tatuaje.
 Hice un demo para mostrar cómo podría verse un portfolio profesional para artistas.
-
 Si te interesa verlo, puedo enviarte el link.
 
 Clave:
@@ -244,3 +249,7 @@ Permite subir nuevos trabajos y actualizar contenido fácilmente.
 Precio aproximado: $700–1200 USD
 
 Si te interesa, con gusto puedo mostrarte el demo del concepto que desarrollé.
+
+************************
+PROMPT ANUNCIO
+
